@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'transparent',
   },
   mi: {
+    margin: '20px 0 !important',   
     zIndex:'1000',
     '&:hover': {
       backgroundColor: '#000000',
@@ -126,23 +127,23 @@ function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button key={'About us'}>
+        <ListItem button key={'About us'} className={classes.mi}>
           <ListItemIcon><AboutIcon /></ListItemIcon>
           <a className="mobile-link" href='#About_Us' >ABOUT US</a>
         </ListItem>
-        <ListItem button key={'Services'}>
+        <ListItem button key={'Services'} className={classes.mi}>
           <ListItemIcon><ServicesIcon /></ListItemIcon>
           <a className="mobile-link" href='#Services'>SERVICES</a>
         </ListItem>
-        <ListItem button key={'Fleet'}>
+        <ListItem button key={'Fleet'} className={classes.mi}>
           <ListItemIcon><FleetIcon /></ListItemIcon>
           <a className="mobile-link" href='#Fleet' >FLEET</a>
         </ListItem>
-        <ListItem button key={'Fleet'}>
+        <ListItem button key={'Fleet'} className={classes.mi}>
           <ListItemIcon><NewsIcon /></ListItemIcon>
           <a className="mobile-link" href='#News' >NEWS</a>
         </ListItem>
-        <ListItem button key={'Fleet'}>
+        <ListItem button key={'Fleet'} className={classes.mi}>
           <ListItemIcon><ContactPhoneIcon /></ListItemIcon>
           <a className="mobile-link" href='#Contact' >CONTACT</a>
         </ListItem>
