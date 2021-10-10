@@ -18,6 +18,9 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1em',
     textAlign: 'left',
     color: '#ffffff',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column'
+    },
   },
   logo: {
     width: '200px',
@@ -33,6 +36,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       width: '200px',
       overflow: 'hidden',
+      margin: '30px 5px',
     }
   },
   link: {
