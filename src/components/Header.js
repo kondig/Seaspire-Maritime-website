@@ -212,7 +212,7 @@ function MenuAppBar(props) {
                 
                </Typography>
                <SwipeableTemporaryDrawer></SwipeableTemporaryDrawer>
-                <div>
+                {/*<div>
                   <IconButton
                     aria-label="account of current user"
                     aria-controls="menu-appbar"
@@ -253,7 +253,7 @@ function MenuAppBar(props) {
                       <a className="mobile-link" href='#contact'>CONTACT</a>
                     </MenuItem>
                   </Menu>
-                </div>
+                </div>*/}
 
             </Toolbar>
           </AppBar>

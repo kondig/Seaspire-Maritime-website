@@ -1,9 +1,10 @@
-# Sea Secret
+# Seaspire Maritime
   v1.0.0
 
 
 ## Libraries
   @material-ui
+  react-fontawesome
 
 
 ### Single-page React app

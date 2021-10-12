@@ -25,7 +25,7 @@ const Body = (props) => (
       <p className="news-title"></p>
     </div>
     <div className="about" id="About_Us">
-      <section className="about_title" > ABOUT US </section>
+      <span className="title" > ABOUT US </span>
       <p className="about_tag"> Sea-<span className="spire"><b>spire</b></span>:<br/><i>noun [sē - spī(ə)r]</i><br/> a slender tapering shoot/formation, <br/> a summit, a pinnacle. </p>
     </div>
     <div className="text" >
@@ -39,7 +39,7 @@ const Body = (props) => (
      </p>
     </div>
     <div className="services" id="Services">
-      <span className="services_title" > SERVICES </span>    
+      <span className="title" > SERVICES </span>    
     </div>
     <section className="services_text">
         {/*<span className="services_subtitle"> Seaspire Maritime Services </span>*/}
@@ -51,7 +51,7 @@ const Body = (props) => (
     <Service image={service2} direction={`RL`} service={'Operations'}  desc={`Praesent ullamco distinctio vel nemo bibendum perspiciatis minus autem odit tempore a occaecati! Lobortis pellentesque quisque. Ornare! Accusantium necessitatibus purus interdum! Tristique conubia ducimus mollis pellentesque interdum natus cupiditate, perferendis minim venenatis! Autem praesentium ornare voluptatum cubilia, molestias purus fringilla sollicitudin nostrud minim quod, modi ut at.`} />
     <Service image={service3} direction={`LR`} service={'Technical Management'}  desc={`Seaspire’s management team in close cooperation with Tide Line, have managed to lower the operating expenses of the vessels by focusing on specific technical aspects and well-planned maintenance schedules, while at the same time keeping a high-quality profile.`} />
     <div className="fleet" id="Fleet" >
-      <span className="fleet_title"> FLEET </span>
+      <span className="title"> FLEET </span>
     </div>
     <section className="text">
         <h3> Our Fleet </h3>
@@ -59,7 +59,7 @@ const Body = (props) => (
     </section>
     <Slider />
     <div className="other" id="News">
-      <span className="other_title" > NEWS </span>
+      <span className="title" > NEWS </span>
     </div>
     <div className="text">
       1. Announcement 1 <br/>

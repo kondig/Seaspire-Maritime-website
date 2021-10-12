@@ -581,6 +581,17 @@ a.phone {
   font-weight: 700;
   color: #000000;
 }
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 54px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.2em;
+  text-shadow: 2px 2px #666666;
+}
 .about_title {
   position: absolute;
   top: 50%;
@@ -597,7 +608,8 @@ a.phone {
   right: 8%;
   color: #000000;
   font-size:24px;
-  letter-spacing: 1px;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px #cccccc;
 }
 .spire {
   color: #e08121;
