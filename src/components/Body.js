@@ -14,6 +14,9 @@ import service1 from '../images/service_commercial.jpg';
 import service2 from '../images/service_operations2.jpg';
 import service3 from '../images/service_technicalmgmt.jpg';
 
+import {SmTimeline} from './timeline';
+import {SmAccordion} from './accordion';
+
 const Body = (props) => (
 <div>
   <div className="mainlogo" id="logo" ></div>
@@ -62,10 +65,13 @@ const Body = (props) => (
       <span className="title" > NEWS </span>
     </div>
     <div className="text">
-      1. Announcement 1 <br/>
-      2. Announcement 2 <br/>
-      3. Announcement 3 <br/>
+      <SmTimeline />
+      <br/>
     </div>
+    <div className="news-container">
+      <SmAccordion />
+    </div>
+    
     {/*<Sticky enabled={true} top={200} bottomBoundary={3000} className='sticky' >
       <FontAwesome className='scrollArrowBot' onClick={() => scrollToComponent(logo, {offset: -300, align: 'top', duration: 2500})} name='angle-up' data-hover='SCROLL UP' spin={false} size='2x' />
     </Sticky>*/}

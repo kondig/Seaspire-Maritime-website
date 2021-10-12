@@ -592,6 +592,12 @@ a.phone {
   letter-spacing: 0.2em;
   text-shadow: 2px 2px #666666;
 }
+.news-container {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
 .about_title {
   position: absolute;
   top: 50%;
