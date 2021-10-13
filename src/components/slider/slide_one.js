@@ -7,39 +7,30 @@ const SlideOne = (props) => {
     backgroundImage: "url(" + slideImg + ")",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    // height: '500px',
-    // height: '700px'
   }
   let text = {
-    height: '200px',
     width: '100%',
     backgroundColor: '#333',
-    // padding: '20px 20px',
     padding: '0',
     margin: '0',
   }
   let shipTable = {
-    // width: '700px',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'stretch',
     alignContent: 'stretch',
     justifyContent: 'flex-start',
     display: 'inline-block',
-    // border: '1px solid yellow',
-    // width: '250px'
   }
   let vesselTable = {
     width: '100%',
+    height: '250px',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'stretch',
     alignContent: 'stretch',
     justifyContent: 'center',
-    // border: '1px solid red',
-    // position: 'absolute',
-    // left: '50%',
-    // transform:  'translateX(-50%)',
+    backgroundColor: '#333',
   }
   let cat ={
     backgroundColor: '#333',
@@ -47,7 +38,6 @@ const SlideOne = (props) => {
     fontSize: '20px',
     width: '200px',
     padding: '10px 10px',
-    // border: '2px solid #ffffff',
   }
   let spec ={
     backgroundColor: '#333',
@@ -55,7 +45,6 @@ const SlideOne = (props) => {
     fontSize: '18px',
     textAlign: 'center',
     padding: '10px 10px',
-    // border: '2px solid #AFBDC5',
   }
 
   return (

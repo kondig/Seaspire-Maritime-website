@@ -24,9 +24,6 @@ const Body = (props) => (
     {/*<Sticky enabled={true} top={50} bottomBoundary={1000} className='sticky' >
       <FontAwesome className='scrollArrowTop' onClick={() => scrollToComponent(Fleet, {offset: 0, align: 'top', duration: 2500})} name='chevron-down' data-hover='SCROLL DOWN' spin={false} size='1x' />
     </Sticky>*/}
-    <div className="news-section">
-      <p className="news-title"></p>
-    </div>
     <div className="about" id="About_Us">
       <span className="title" > ABOUT US </span>
       <p className="about_tag"> Sea-<span className="spire"><b>spire</b></span>:<br/><i>noun [sē - spī(ə)r]</i><br/> a slender tapering shoot/formation, <br/> a summit, a pinnacle. </p>

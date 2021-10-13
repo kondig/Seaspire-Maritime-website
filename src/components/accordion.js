@@ -20,7 +20,7 @@ function SmAccordion() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>2021 Oct. 12</Typography>
+          <Typography sx={{ width: '45%', flexShrink: 0 }}>2021 Oct. 12</Typography>
           <Typography sx={{ color: 'text.secondary' }}>New site</Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -36,7 +36,7 @@ function SmAccordion() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>2021 Feb. 12</Typography>
+          <Typography sx={{ width: '45%', flexShrink: 0 }}>2021 Feb. 12</Typography>
           <Typography sx={{ color: 'text.secondary' }}>Announcement</Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -53,13 +53,13 @@ function SmAccordion() {
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}> 2020 Mar. 09 </Typography>
+          <Typography sx={{ width: '45%', flexShrink: 0 }}> 2020 Mar. 09 </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
             New office
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography sx={{ textAlign: 'left' }}>
             Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
             amet egestas eros, vitae egestas augue. Duis vel est augue.
           </Typography>
@@ -71,10 +71,10 @@ function SmAccordion() {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>2020 Dec. 09</Typography>
+          <Typography sx={{ width: '45%', flexShrink: 0 }}>2020 Dec. 09</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography sx={{ textAlign: 'left' }}>
             Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
             amet egestas eros, vitae egestas augue. Duis vel est augue.
           </Typography>

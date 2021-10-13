@@ -8,18 +8,15 @@ const SlideFour = (props) => {
     backgroundImage: "url(" + slideImg + ")",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    // height: '700px'
   }
   let text = {
-    height: '200px',
+    
     backgroundColor: '#ffffff',
     color: '#1A6D8F',
-    // padding: '20px 20px',
     padding: '0',
     margin: '0',
   }
   let shipTable = {
-    // width: '700px',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'stretch',
@@ -29,15 +26,13 @@ const SlideFour = (props) => {
   }
   let vesselTable = {
     width: '100%',
+    height: '200px',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'stretch',
     alignContent: 'stretch',
     justifyContent: 'center',
-    // border: '1px solid red',
-    // position: 'absolute',
-    // left: '50%',
-    // transform:  'translateX(-50%)',
+    backgroundColor: '#ffffff',
   }
   let cat ={
     backgroundColor: '#ffffff',
@@ -45,7 +40,6 @@ const SlideFour = (props) => {
     fontSize: '20px',
     width: '200px',
     padding: '10px 10px',
-    // border: '2px solid #ffffff',
   }
   let spec ={
     backgroundColor: '#ffffff',
@@ -53,7 +47,6 @@ const SlideFour = (props) => {
     fontSize: '18px',
     textAlign: 'center',
     padding: '10px 10px',
-    // border: '2px solid #AFBDC5',
   }
   return (
     <div className="slide">
