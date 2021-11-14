@@ -1,5 +1,5 @@
 import React from 'react';
-import {SmTimeline} from './timeline';
+// import {SmTimeline} from './timeline';
 import {SmAccordion} from './accordion';
 
 // import {ScrollTop} from './scrollTop';
@@ -11,9 +11,8 @@ const News = (props) => (
         <div className="other" id="News">
           <span className="title" > NEWS </span>
         </div>
-        <div className="text">
-          <SmTimeline />
-          <br/>
+        <div className="section-text">
+          {/*<SmTimeline />*/}
           {/*<button onClick={iqRegisterProdAsync}>Default</button>*/}
         </div>
         <div className="news-container">

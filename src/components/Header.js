@@ -145,7 +145,7 @@ function SwipeableTemporaryDrawer() {
         </ListItem>
         <ListItem button key={'Fleet'} className={classes.mi}>
           <ListItemIcon><ContactPhoneIcon /></ListItemIcon>
-          <a className="mobile-link" href='#Contact' >CONTACT</a>
+          <a className="mobile-link" href='/#Contact' >CONTACT</a>
         </ListItem>
       </List>
       <Divider />
@@ -272,7 +272,7 @@ function MenuAppBar(props) {
                     <li> <a href='/fleet'>FLEET</a> </li>
                     <li> <a href='/services'>SERVICES</a> </li>
                     <li> <a href='/news'>NEWS</a> </li>
-                    <li> <a href='#contact'>CONTACT</a> </li>
+                    <li> <a href='/#contact'>CONTACT</a> </li>
                   </ul>
                 </div>
             </Toolbar>

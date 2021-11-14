@@ -56,7 +56,7 @@ function Footer(props) {
   const classes = useStyles();
     return (
       <div>
-        <div className={classes.footer}>
+        <div className={classes.footer} id="contact">
           <img src={logo} alt="footer-logo" className={classes.logo} />
           <div>
             <a className={classes.link} href="https://goo.gl/maps/aXGjQqYLnQzScZqD6" target="_blank" rel="noopener noreferrer">

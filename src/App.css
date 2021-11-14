@@ -39,9 +39,9 @@
   width: 100%;
 }
 .about { height: 700px; background-image: url('./images/seaspire3.jpg'); }
-.services { height: 500px; background-image: url('./images/shipyard.jpg'); }
-.fleet { height: 600px; background-image: url('./images/fleet.jpg'); }
-.other {  height: 500px; background-image: url('./images/aegeanSpire.jpg'); }
+.services { height: 400px; background-image: url('./images/shipyard.jpg'); }
+.fleet { height: 400px; background-image: url('./images/fleet.jpg'); }
+.other {  height: 400px; background-image: url('./images/aegeanSpire.jpg'); }
 
 .bm-burger-button {
   position: fixed;
@@ -410,13 +410,6 @@ h5 {
   height: 350px;
   z-index: 1;
 }
-#contact {
-  position: absolute;
-  left: 25%;
-  bottom: 7%;
-  padding: 5px;
-  z-index: 1;
-}
 a.linkedin {
   color: #1A6D8F;
   background-color: #ffffff;
@@ -536,25 +529,33 @@ a.phone {
   letter-spacing: 0.2em;
 }
 
-.services_text {
+.section-text {
   background-color: #ffffff;
   color: #666666;
   margin: 30px auto;
-  /*height: 400px;*/
   width: 70%;
   position: relative;
   letter-spacing: 1px;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 1.4em;
+  line-height: 1.6em;
   text-align: center;
 }
-.services_text strong {
+.section-text h3 {
+    color: #1A6D8F;
+    font-size: 1.6em;
+    line-height: 1.9em;
+    font-weight: 700;
+}
+.section-text h5 {
   color: #1A6D8F;
-  font-size: 25px;
-  color: yellow;
+  font-size: 1.4em;
+  line-height: 1.6em;
+  font-weight: 700;
   position: relative;
   text-align: left;
-  top: 10%;
+  background-color: transparent;
+  padding: 10px 0px;
+  margin:5px 0px;
 }
 .services_subtitle {
   font-weight: 700;
@@ -710,8 +711,7 @@ a.phone {
     flex-wrap: wrap !important;
     align-items: flex-start !important;
   }
-  #map,
-  #contact,
+  #map
   /*#logo,*/
   /*#disclaimer,*/
   .footer-logo,

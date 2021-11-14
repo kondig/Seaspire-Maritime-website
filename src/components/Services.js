@@ -12,9 +12,7 @@ const Services = (props) => (
         <div className="services" id="Services">
           <span className="title" > SERVICES </span>
         </div>
-        <section className="services_text">
-            {/*<span className="services_subtitle"> Seaspire Maritime Services </span>*/}
-            <br/>
+        <section className="section-text">
             Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society.
         </section>
         <br/> <br/>
