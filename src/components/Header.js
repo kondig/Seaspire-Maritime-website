@@ -50,10 +50,10 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px',
   },
   bar: {
-    backgroundColor: 'transparent',
+    backgroundColor: '#ffffff',
   },
   mi: {
-    margin: '20px 0 !important',   
+    margin: '20px 0 !important',
     zIndex:'1000',
     '&:hover': {
       backgroundColor: '#000000',
@@ -129,19 +129,19 @@ function SwipeableTemporaryDrawer() {
       <List>
         <ListItem button key={'About us'} className={classes.mi}>
           <ListItemIcon><AboutIcon /></ListItemIcon>
-          <a className="mobile-link" href='#About_Us' >ABOUT US</a>
+          <a className="mobile-link" href='/' >ABOUT US</a>
         </ListItem>
         <ListItem button key={'Services'} className={classes.mi}>
           <ListItemIcon><ServicesIcon /></ListItemIcon>
-          <a className="mobile-link" href='#Services'>SERVICES</a>
+          <a className="mobile-link" href='/services'>SERVICES</a>
         </ListItem>
         <ListItem button key={'Fleet'} className={classes.mi}>
           <ListItemIcon><FleetIcon /></ListItemIcon>
-          <a className="mobile-link" href='#Fleet' >FLEET</a>
+          <a className="mobile-link" href='/fleet' >FLEET</a>
         </ListItem>
         <ListItem button key={'Fleet'} className={classes.mi}>
           <ListItemIcon><NewsIcon /></ListItemIcon>
-          <a className="mobile-link" href='#News' >NEWS</a>
+          <a className="mobile-link" href='/news' >NEWS</a>
         </ListItem>
         <ListItem button key={'Fleet'} className={classes.mi}>
           <ListItemIcon><ContactPhoneIcon /></ListItemIcon>
@@ -209,7 +209,7 @@ function MenuAppBar(props) {
                 <img src={logo} className={classes.logo} alt="Seaspire Maritime" />
                </ShowOnScroll>
                <Typography variant="h6" className={classes.title}>
-                
+
                </Typography>
                <SwipeableTemporaryDrawer></SwipeableTemporaryDrawer>
                 {/*<div>
@@ -249,7 +249,7 @@ function MenuAppBar(props) {
                     <MenuItem onClick={handleClose} className={classes.mi}>
                       <a className="mobile-link" href='#News'>NEWS</a>
                     </MenuItem>
-                    <MenuItem onClick={handleClose} className={classes.mi}> 
+                    <MenuItem onClick={handleClose} className={classes.mi}>
                       <a className="mobile-link" href='#contact'>CONTACT</a>
                     </MenuItem>
                   </Menu>
@@ -258,7 +258,6 @@ function MenuAppBar(props) {
             </Toolbar>
           </AppBar>
         </ElevationScroll>
-        <Toolbar id="back-to-top-anchor" />
       </Box>
       <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}>
         <ElevationScroll {...props}>
@@ -269,18 +268,18 @@ function MenuAppBar(props) {
                </ShowOnScroll>
                 <div className="menu">
                   <ul>
-                    <li> <a href='#About_Us'>ABOUT US</a> </li>
-                    <li> <a href='#Fleet'>FLEET</a> </li>
-                    <li> <a href='#Services'>SERVICES</a> </li>
-                    <li> <a href='#History'>NEWS</a> </li>
+                    <li> <a href='/'>ABOUT US</a> </li>
+                    <li> <a href='/fleet'>FLEET</a> </li>
+                    <li> <a href='/services'>SERVICES</a> </li>
+                    <li> <a href='/news'>NEWS</a> </li>
                     <li> <a href='#contact'>CONTACT</a> </li>
                   </ul>
                 </div>
             </Toolbar>
           </AppBar>
         </ElevationScroll>
-        <Toolbar id="back-to-top-anchor" />
       </Box>
+      <Toolbar id="back-to-top-anchor" />
     </div>
   );
 }

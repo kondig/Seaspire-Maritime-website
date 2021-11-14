@@ -4,20 +4,80 @@ import FontAwesome from 'react-fontawesome';
 // import scrollToComponent from 'react-scroll-to-component';
 import {Slider} from './slider/slider';
 
-import {Service} from './card';
+import BackToTop from './scrollTop';
+import Toolbar from '@material-ui/core/Toolbar';
 
-import {ScrollTop} from './scrollTop';
-import Fab from '@material-ui/core/Fab';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+var iqPreviousUrl = document.referrer;
+var iqviaRegisterProdWs = "https://2-gether.gr/epharmacy/webservice.asmx/GetIQTransaction";
+var iqviaRegisterVisitWs = "https://2-gether.gr/epharmacy/webservice.asmx/GetIQVisit";
+var iqDomainName = window.location.href;
+var iqProductOrders = [];
 
-import service1 from '../images/service_commercial.jpg';
-import service2 from '../images/service_operations2.jpg';
-import service3 from '../images/service_technicalmgmt.jpg';
+/// function to submit ordered product to iqvia
+function iqRegisterProdAsync() {
 
-import {SmTimeline} from './timeline';
-import {SmAccordion} from './accordion';
+var iqValue = iqOrderToString();
+    console.log(iqProductOrders);
+  $.ajax({
+    type: "POST",
+    url: iqviaRegisterProdWs,
+        // headers: { 'Access-Control-Allow-Origin': '*' },
+        // beforeSend: function(xhr) {
+        //     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+        // },
+    data: '{"iqData": "'+iqValue+'"}',
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function (res) { callback_response(res) },
+    error: function (res) { error_response(res) }
+  });
+}
 
-const Body = (props) => (
+/// function to submit customer visit to iqvia
+function iqRegisterVisitAsync() {
+
+  var iqValue = iqDomainName + '|-|' + iqPreviousUrl;
+$
+.ajax({
+    type: "POST",
+    url: iqviaRegisterVisitWs,
+    data: '{"iqData": "' + iqValue + '"}',
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function (res) { callback_response(res) },
+    error: function (res) { error_response(res) }
+  });
+}
+
+/// responses
+function callback_response(res) {
+}
+function error_response(res) {
+  console.log(res.getAllRespondHeaders);
+  alert(res);
+}
+
+/// function to stringify the order
+function iqOrderToString() {
+  var iqOrderStr = "";
+  var iqfLen = iqProductOrders.length;
+  iqOrderStr += iqDomainName + '<|>';
+
+  for (var i = 0; i < iqfLen; i++) {
+
+    for (var p in iqProductOrders[i]) {
+
+      if (iqProductOrders[i].hasOwnProperty(p)) {
+        iqOrderStr += iqProductOrders[i][p] + '|-|';
+      }
+    }
+
+    iqOrderStr += '<|>';
+  }
+  return iqOrderStr;
+}
+
+const Body = () => (
 <div>
   <div className="mainlogo" id="logo" ></div>
   <div className="site-page">
@@ -38,18 +98,6 @@ const Body = (props) => (
           Seaspire’s vision is to always be an exemplar maritime management and operating company that provides its customers with reliable, safe and efficient services. Committed to its people and shareholders, Seaspire aims to the future by further expanding its fleet and services…
      </p>
     </div>
-    <div className="services" id="Services">
-      <span className="title" > SERVICES </span>    
-    </div>
-    <section className="services_text">
-        {/*<span className="services_subtitle"> Seaspire Maritime Services </span>*/}
-        <br/>
-        Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society.
-    </section>
-    <br/> <br/>
-    <Service image={service1} direction={`LR`} service={'Commercial Management'}  desc={`All our vessels are fully capable to offer worldwide ship transportation through all trade routes and of a wide range of cargo types. Seaspire is fixing directly with first class Charterers such as ADMI, Dreyfus, Cofco, SIMS. It is also fixing repeatedly with operators such as Clipper & Itiro. Since 2014, our vessels have carried over 1,000,000 metric tons of all dry bulk cargo types.`} />
-    <Service image={service2} direction={`RL`} service={'Operations'}  desc={`Praesent ullamco distinctio vel nemo bibendum perspiciatis minus autem odit tempore a occaecati! Lobortis pellentesque quisque. Ornare! Accusantium necessitatibus purus interdum! Tristique conubia ducimus mollis pellentesque interdum natus cupiditate, perferendis minim venenatis! Autem praesentium ornare voluptatum cubilia, molestias purus fringilla sollicitudin nostrud minim quod, modi ut at.`} />
-    <Service image={service3} direction={`LR`} service={'Technical Management'}  desc={`Seaspire’s management team in close cooperation with Tide Line, have managed to lower the operating expenses of the vessels by focusing on specific technical aspects and well-planned maintenance schedules, while at the same time keeping a high-quality profile.`} />
     <div className="fleet" id="Fleet" >
       <span className="title"> FLEET </span>
     </div>
@@ -58,25 +106,9 @@ const Body = (props) => (
         <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
     </section>
     <Slider />
-    <div className="other" id="News">
-      <span className="title" > NEWS </span>
-    </div>
-    <div className="text">
-      <SmTimeline />
-      <br/>
-    </div>
-    <div className="news-container">
-      <SmAccordion />
-    </div>
-    
     {/*<Sticky enabled={true} top={200} bottomBoundary={3000} className='sticky' >
       <FontAwesome className='scrollArrowBot' onClick={() => scrollToComponent(logo, {offset: -300, align: 'top', duration: 2500})} name='angle-up' data-hover='SCROLL UP' spin={false} size='2x' />
     </Sticky>*/}
-    <ScrollTop {...props}>
-        <Fab size="small" aria-label="scroll back to top" className="scroll-top">
-            <KeyboardArrowUpIcon />
-        </Fab>
-    </ScrollTop>
   </div>
 </div>
 )

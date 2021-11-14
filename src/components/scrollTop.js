@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Zoom from '@material-ui/core/Zoom';
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +25,7 @@ function ScrollTop(props) {
 
   const handleClick = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
-
+    console.log(anchor);
     if (anchor) {
       anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
@@ -42,4 +44,15 @@ ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
 };
 
-export {ScrollTop}
+export default function BackToTop(props) {
+  const classes = useStyles();
+  return (
+    <div>
+      <ScrollTop {...props}>
+        <Fab className={classes.circle} size="small" aria-label="scroll back to top" >
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
+    </div>
+  );
+}

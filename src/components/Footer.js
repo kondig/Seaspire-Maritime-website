@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import FontAwesome from 'react-fontawesome';
-// import Sticky from 'react-stickynode';
-// import scrollToComponent from 'react-scroll-to-component';
 import logo from '../images/SeaSpire_logo.png';
 import map from '../images/seaspire-map.jpg';
 
@@ -24,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     width: '200px',
-    padding: '15px',    
+    padding: '15px',
     [theme.breakpoints.down('sm')]: {
       width: '200px',
       overflow: 'hidden',
@@ -32,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   },
   map: {
     width: '300px',
-    padding: '5px',     
+    padding: '5px',
     [theme.breakpoints.down('sm')]: {
       width: '200px',
       overflow: 'hidden',
@@ -54,12 +52,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Footer() {
+function Footer(props) {
   const classes = useStyles();
     return (
       <div>
         <div className={classes.footer}>
-          <img src={logo} alt="footer-logo" className={classes.logo} />            
+          <img src={logo} alt="footer-logo" className={classes.logo} />
           <div>
             <a className={classes.link} href="https://goo.gl/maps/aXGjQqYLnQzScZqD6" target="_blank" rel="noopener noreferrer">
               <div className={classes.cont}>
@@ -67,20 +65,20 @@ function Footer() {
                 <span>194 Syggrou Avenue, Kallithea,<br/> Athens, 17671, Greece </span>
               </div>
             </a>
-            <br/><br/>  
+            <br/><br/>
             <a className={classes.link} href="tel:+302100109200" target="_blank" rel="noopener noreferrer">
               <div className={classes.cont}>
                 <FontAwesome className={classes.icon} name='phone' spin={false} />
                 +30 210 01 09 200
               </div>
-            </a>  
+            </a>
             <br/><br/>
             <a className={classes.link} href="mailto:mail@seaspiremaritime.com" target="_blank" rel="noopener noreferrer">
               <div className={classes.cont}>
-                <FontAwesome className={classes.icon} name='envelope-open' spin={false} /> 
+                <FontAwesome className={classes.icon} name='envelope-open' spin={false} />
                 mail@seaspiremaritime.com
               </div>
-            </a> 
+            </a>
             <br/><br/>
             <a className={classes.link} href='https://www.linkedin.com/company/seaspire-maritime/'  target="_blank" rel="noopener noreferrer">
               <FontAwesome className={classes.icon} name='linkedin-square' size='2x' spin={false} style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/>
@@ -90,7 +88,7 @@ function Footer() {
             <a href="https://goo.gl/maps/aXGjQqYLnQzScZqD6" target="_blank" rel="noopener noreferrer">
               <img src={map} alt="map of seaspire maritime" className={classes.map} />
             </a>
-          </div>           
+          </div>
         </div>
         <div className="disclaimer" id="disclaimer">
            Seaspire Maritime ©2021

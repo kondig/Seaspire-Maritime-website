@@ -17,6 +17,7 @@
     "react-burger-menu": "^2.9.2",
     "react-dom": "^16.14.0",
     "react-fontawesome": "^1.7.1",
+    "react-router-dom": "^6.0.2",
     "react-slick": "^0.20.0",
     "slick-carousel": "^1.8.1"
   },
