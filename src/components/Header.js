@@ -10,7 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Slide from '@material-ui/core/Slide';
+import Fade from '@material-ui/core/Fade';
 import Box from '@material-ui/core/Box';
 
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
@@ -46,11 +46,18 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1em',
   },
   logo: {
-    width: '70px',
-    padding: '10px',
+    width: '45px',
+    padding: '5px',
+    [theme.breakpoints.down('sm')]: {
+        width: '20px',
+        padding: '2px',
+    }
   },
   bar: {
     backgroundColor: '#ffffff',
+    [theme.breakpoints.down('sm')]: {
+      height: '50px',
+    }
   },
   mi: {
     margin: '20px 0 !important',
@@ -76,7 +83,7 @@ function ElevationScroll(props) {
     elevation: trigger ? 4 : 0,
     style: {
         color: trigger ? '#000000' : '#666666',
-        backgroundColor: trigger ? '#ffffff' : 'transparent',
+        backgroundColor: trigger ? '#ffffff' : '#ffffff',
     }
   });
 }
@@ -88,9 +95,9 @@ function ShowOnScroll(props) {
   const { children } = props;
   const trigger = useScrollTrigger({ target: window });
   return (
-    <Slide appear={false} direction="right" in={trigger}>
+    <Fade appear={true} direction="right" in={true}>
       {children}
-    </Slide>
+    </Fade>
   );
 }
 
@@ -145,7 +152,7 @@ function SwipeableTemporaryDrawer() {
         </ListItem>
         <ListItem button key={'Fleet'} className={classes.mi}>
           <ListItemIcon><ContactPhoneIcon /></ListItemIcon>
-          <a className="mobile-link" href='/#Contact' >CONTACT</a>
+          <a className="mobile-link" href='/#contact' >CONTACT</a>
         </ListItem>
       </List>
       <Divider />

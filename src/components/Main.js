@@ -9,7 +9,7 @@ import {News} from './News';
 import BackToTop from './scrollTop';
 
 const Main = (props) => (
-    <div className="main">
+    <div>
         <Routes>
             <Route path="/"         element={<Body />}      />
             <Route path="/fleet"    element={<Fleet />}     />

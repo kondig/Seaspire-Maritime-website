@@ -3,33 +3,40 @@ import { makeStyles } from '@material-ui/core/styles';
 import FontAwesome from 'react-fontawesome';
 import logo from '../images/SeaSpire_logo.png';
 import map from '../images/seaspire-map.jpg';
-
+import PropTypes from 'prop-types';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Fade from '@material-ui/core/Fade';
 import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles(theme => ({
   footer: {
     backgroundColor: '#000000',
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-around',
-    fontSize: '1em',
+    fontSize: '1.3em',
     textAlign: 'left',
     color: '#ffffff',
+    scrollSnapAlign: 'center',
+    height: 'calc(100vh - 100px)',
     [theme.breakpoints.down('sm')]: {
-      flexDirection: 'column'
+      height: 'calc(100vh - 40px)',    
+      flexDirection: 'column',
+      fontSize: '1em',
     },
   },
   logo: {
     width: '200px',
-    padding: '15px',
+    padding: '5px',
     [theme.breakpoints.down('sm')]: {
       width: '200px',
       overflow: 'hidden',
+      padding: '2px',
     },
   },
   map: {
-    width: '300px',
+    width: '260px',
     padding: '5px',
     [theme.breakpoints.down('sm')]: {
       width: '200px',
@@ -45,49 +52,85 @@ const useStyles = makeStyles(theme => ({
     width: '40px',
     color: '#1A6D8F',
     alignSelf: 'center',
+    display: 'flex',
+    justifyContent: 'center'
   },
   cont: {
     display: 'flex',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    [theme.breakpoints.down('sm')]: {
+        margin: '15px 2px',
+    },
+  },
+  row: {
+    display: 'flex',
+    flexDirection:'row',
+    justifyContent:'space-around',
+    width: '100%',
+    [theme.breakpoints.down('sm')]: {
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
   }
 }));
+
+function ShowOnScroll(props) {
+  const { children } = props;
+  const trigger = useScrollTrigger({ target: window });
+  return (
+    <Fade appear={false} direction="up" in={trigger} timeout={3000}>
+      {children}
+    </Fade>
+  );
+}
+
+ShowOnScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+};
 
 function Footer(props) {
   const classes = useStyles();
     return (
-      <div>
+      <div className="">
         <div className={classes.footer} id="contact">
-          <img src={logo} alt="footer-logo" className={classes.logo} />
-          <div>
-            <a className={classes.link} href="https://goo.gl/maps/aXGjQqYLnQzScZqD6" target="_blank" rel="noopener noreferrer">
-              <div className={classes.cont}>
-                <FontAwesome className={classes.icon} name='building' spin={false} />
-                <span>194 Syggrou Avenue, Kallithea,<br/> Athens, 17671, Greece </span>
+            <ShowOnScroll {...props}>
+                <img src={logo} alt="footer-logo" className={classes.logo} />
+            </ShowOnScroll>
+          <div className={classes.row}>
+              <div>
+                <a className={classes.link} href="https://goo.gl/maps/aXGjQqYLnQzScZqD6" target="_blank" rel="noopener noreferrer">
+                  <div className={classes.cont}>
+                    <FontAwesome className={classes.icon} size='1x' name='map-marker' spin={false} />&nbsp;&nbsp;
+                    <span>194 Syggrou Avenue, Kallithea, Athens, 17671, Greece </span>
+                  </div>
+                </a>
+                <br/>
+                <a className={classes.link} href="tel:+302100109200" target="_blank" rel="noopener noreferrer">
+                  <div className={classes.cont}>
+                    <FontAwesome className={classes.icon} size='1x' name='phone' spin={false} />&nbsp;&nbsp;
+                    +30 210 01 09 200
+                  </div>
+                </a>
+                <br/>
+                <a className={classes.link} href="mailto:mail@seaspiremaritime.com" target="_blank" rel="noopener noreferrer">
+                  <div className={classes.cont}>
+                    <FontAwesome className={classes.icon} size='1x' name='envelope' spin={false} />&nbsp;&nbsp;
+                    mail@seaspiremaritime.com
+                  </div>
+                </a>
+
               </div>
-            </a>
-            <br/><br/>
-            <a className={classes.link} href="tel:+302100109200" target="_blank" rel="noopener noreferrer">
               <div className={classes.cont}>
-                <FontAwesome className={classes.icon} name='phone' spin={false} />
-                +30 210 01 09 200
+                {/*<a href="https://goo.gl/maps/aXGjQqYLnQzScZqD6" target="_blank" rel="noopener noreferrer">
+                  <img src={map} alt="map of seaspire maritime" className={classes.map} />
+                  <FontAwesome className={classes.icon} name='map-marker' size='2x' spin={false} style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/>
+                </a>
+                <br/>*/}
+                <a className={classes.link} href='https://www.linkedin.com/company/seaspire-maritime/'  target="_blank" rel="noopener noreferrer">
+                  <FontAwesome className={classes.icon} name='linkedin-square' size='2x' spin={false} style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/>
+                </a>
               </div>
-            </a>
-            <br/><br/>
-            <a className={classes.link} href="mailto:mail@seaspiremaritime.com" target="_blank" rel="noopener noreferrer">
-              <div className={classes.cont}>
-                <FontAwesome className={classes.icon} name='envelope-open' spin={false} />
-                mail@seaspiremaritime.com
-              </div>
-            </a>
-            <br/><br/>
-            <a className={classes.link} href='https://www.linkedin.com/company/seaspire-maritime/'  target="_blank" rel="noopener noreferrer">
-              <FontAwesome className={classes.icon} name='linkedin-square' size='2x' spin={false} style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/>
-            </a>
-          </div>
-          <div id="map">
-            <a href="https://goo.gl/maps/aXGjQqYLnQzScZqD6" target="_blank" rel="noopener noreferrer">
-              <img src={map} alt="map of seaspire maritime" className={classes.map} />
-            </a>
           </div>
         </div>
         <div className="disclaimer" id="disclaimer">
