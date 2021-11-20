@@ -39,9 +39,9 @@ function ServiceCard(props) {
         </Card>
       </Box>
       <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}>
-        {direction == "LR" && 
+        {direction == "LR" &&
           <Card sx={{ display: 'flex', margin: '20px auto', justifyContent: 'space-between', width: '80%'}}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', width: '65%' }} >
+            <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%' }} >
               <CardContent sx={{  }}>
                 <Typography component="div" variant="h5" sx={{ color: '#1A6D8F', margin: '10px 5px'}}>
                   {props.service}
@@ -53,23 +53,23 @@ function ServiceCard(props) {
             </Box>
             <CardMedia
               component="img"
-              sx={{ width: '35%' }}
+              sx={{ width: '45%' }}
               image={props.image}
               alt={props.service}
-              title={props.service}          
+              title={props.service}
             />
           </Card>
         }
-        {direction == "RL" && 
+        {direction == "RL" &&
           <Card sx={{ display: 'flex', margin: '20px auto', justifyContent: 'space-between', width: '80%'}}>
             <CardMedia
               component="img"
-              sx={{ width: '35%' }}
+              sx={{ width: '45%' }}
               image={props.image}
               alt={props.service}
-              title={props.service}          
+              title={props.service}
             />
-            <Box sx={{ display: 'flex', flexDirection: 'column', width: '65%' }} >
+            <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%' }} >
               <CardContent sx={{  }}>
                 <Typography component="div" variant="h5" sx={{ color: '#1A6D8F', margin: '10px 5px'}}>
                   {props.service}
@@ -78,7 +78,7 @@ function ServiceCard(props) {
                   {props.desc}
                 </Typography>
               </CardContent>
-            </Box>            
+            </Box>
           </Card>
         }
       </Box>

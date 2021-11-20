@@ -6,6 +6,7 @@ import {Service} from './card';
 import service1 from '../images/service_commercial.jpg';
 import service2 from '../images/service_operations2.jpg';
 import service3 from '../images/service_technicalmgmt.jpg';
+import {Footer} from './Footer';
 
 const Services = (props) => (
     <div className="scroll-container">
@@ -26,6 +27,7 @@ const Services = (props) => (
         <div className="section bg bg-s1">
             <Service image={service3} direction={`LR`} service={'Technical Management'}  desc={`Seaspire’s management team in close cooperation with Tide Line, have managed to lower the operating expenses of the vessels by focusing on specific technical aspects and well-planned maintenance schedules, while at the same time keeping a high-quality profile.`} />
         </div>
+        <Footer />
     </div>
 )
 

@@ -1,23 +1,23 @@
 import React from 'react';
 // import {SmTimeline} from './timeline';
 import {SmAccordion} from './accordion';
+import {Footer} from './Footer';
 
-// import {ScrollTop} from './scrollTop';
-// import Fab from '@material-ui/core/Fab';
-// import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+// <button onClick={iqRegisterProdAsync}>Default</button>
+
 
 const News = (props) => (
-    <div>
-        <div className="other" id="News">
-          <span className="title" > NEWS </span>
+    <div className="scroll-container">
+        <div className="news section" id="News">
+          <span className="title">NEWS</span>
         </div>
-        <div className="section-text">
-          {/*<SmTimeline />*/}
-          {/*<button onClick={iqRegisterProdAsync}>Default</button>*/}
-        </div>
-        <div className="news-container">
+        {/*<div className="section-text">
+          <SmTimeline />
+        </div>*/}
+        <div className="news-container section">
           <SmAccordion />
         </div>
+        <Footer />
     </div>
 )
 

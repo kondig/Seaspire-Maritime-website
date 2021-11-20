@@ -3,14 +3,18 @@ import FontAwesome from 'react-fontawesome';
 import Slide from '@material-ui/core/Slide';
 import Fade from '@material-ui/core/Fade';
 import logo from '../images/SeaSpire_logo2.png';
+import {Footer} from './Footer';
+import CarouselAboutUs from './carouselAbout.js';
+import CarouselServices from './carouselServices.js';
+import FleetAccordion from './accordionFleet';
 
 
 const Body = (props) => (
 <div className="scroll-container">
   <div className="section" id="logo" >
-    <Slide appear={true} direction="up" in={true} timeout={3000}>
-        <img src={logo} alt="Seaspire Maritime" className="logo" />
-    </Slide>
+      <Slide appear={false} direction="up" in={true} timeout={3000}>
+          <img src={logo} alt="Seaspire Maritime" className="logo" />
+      </Slide>
   </div>
   <div className="section bg bg-a1">
     <div className="about">
@@ -19,30 +23,54 @@ const Body = (props) => (
     </div>
   </div>
   <div className="section bg bg-a2">
-    <div className="section-text color-white">
-      Seaspire is a<br/> private ship management company,<br/>based in Athens, Greece<br/>specialized in operating<br/> dry bulk carriers globally.
-    </div>
+    <CarouselAboutUs />
+  </div>
+  <div className="section bg bg-s1 pt-2">
+    <FleetAccordion  />
   </div>
   <div className="section bg bg-a2">
-    <div className="section-text color-white w-80">
-      <Fade appear={true} direction="up" in={true} timeout={2000}>
-        <h5> Vision </h5>
-      </Fade>
-      Seaspire’s vision is to always be an exemplar maritime management and operating company that provides its customers with the most reliable, safe and efficient services. Committed to its people and shareholders Seaspire always operates at the highest ethical standards.
-    </div>
+    <CarouselServices />
   </div>
-  <div className="section bg bg-a2">
-    <div className="section-text color-white w-80">
-      <Fade appear={true} direction="up" in={true} timeout={2000}>
-        <h5> Mission </h5>
-      </Fade>
-      Seaspire aims to the future by further expanding its fleet and services and by constantly creating value to its shareholders and to its people. Our goal is to achieve our targets in the most responsible and environmentally friendly manner.
-    </div>
-  </div>
+
+  <Footer />
 </div>
 )
 
 export {Body}
+
+// old about us
+// <div className="section bg bg-a2">
+//   <div className="section-text color-white">
+//     Seaspire is a<br/> private ship management company,<br/>based in Athens, Greece<br/>specialized in operating<br/> dry bulk carriers globally.
+//   </div>
+// </div>
+// <div className="section bg bg-a2">
+//   <div className="section-text color-white w-80">
+//     <Fade appear={true} direction="up" in={true} timeout={2000}>
+//       <h5> Vision </h5>
+//     </Fade>
+//     Seaspire’s vision is to always be an exemplar maritime management and operating company that provides its customers with the most reliable, safe and efficient services. Committed to its people and shareholders Seaspire always operates at the highest ethical standards.
+//   </div>
+// </div>
+// <div className="section bg bg-a2">
+//   <div className="section-text color-white w-80">
+//     <Fade appear={true} direction="up" in={true} timeout={2000}>
+//       <h5> Mission </h5>
+//     </Fade>
+//     Seaspire aims to the future by further expanding its fleet and services and by constantly creating value to its shareholders and to its people. Our goal is to achieve our targets in the most responsible and environmentally friendly manner.
+//   </div>
+// </div>
+
+
+
+
+
+
+
+
+
+
+
 // var iqPreviousUrl = document.referrer;
 // var iqviaRegisterProdWs = "https://2-gether.gr/epharmacy/webservice.asmx/GetIQTransaction";
 // var iqviaRegisterVisitWs = "https://2-gether.gr/epharmacy/webservice.asmx/GetIQVisit";

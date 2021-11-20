@@ -14,15 +14,16 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     fontSize: '1.3em',
     textAlign: 'left',
     color: '#ffffff',
     scrollSnapAlign: 'center',
-    height: 'calc(100vh - 100px)',
+    height: 'calc(100vh)',
+    width: '100%',
+    paddingTop: '10vmin',
     [theme.breakpoints.down('sm')]: {
-      height: 'calc(100vh - 40px)',    
-      flexDirection: 'column',
+      // height: 'calc(100vh - 40px)',
       fontSize: '1em',
     },
   },
@@ -92,11 +93,11 @@ ShowOnScroll.propTypes = {
 function Footer(props) {
   const classes = useStyles();
     return (
-      <div className="">
+      <div className="section">
         <div className={classes.footer} id="contact">
-            <ShowOnScroll {...props}>
+            <Fade appear={true} direction="up" in={true} timeout={2000}>
                 <img src={logo} alt="footer-logo" className={classes.logo} />
-            </ShowOnScroll>
+            </Fade>
           <div className={classes.row}>
               <div>
                 <a className={classes.link} href="https://goo.gl/maps/aXGjQqYLnQzScZqD6" target="_blank" rel="noopener noreferrer">
@@ -132,9 +133,9 @@ function Footer(props) {
                 </a>
               </div>
           </div>
-        </div>
-        <div className="disclaimer" id="disclaimer">
-           Seaspire Maritime ©2021
+          <div className="disclaimer" id="disclaimer">
+             Seaspire Maritime ©2021
+          </div>
         </div>
       </div>
     )

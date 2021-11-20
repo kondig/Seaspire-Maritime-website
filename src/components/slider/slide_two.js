@@ -7,9 +7,10 @@ const SlideTwo = (props) => {
     backgroundImage: "url(" + slideImg + ")",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
   }
   let text = {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#1A6D8F',
     padding: '0',
     margin: '0',
   }
@@ -23,23 +24,25 @@ const SlideTwo = (props) => {
   }
   let vesselTable = {
     width: '100%',
-    height: '250px',
+    // height: '250px',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'stretch',
     alignContent: 'stretch',
     justifyContent: 'center',
-    backgroundColor: '#ffffff'
+    backgroundColor: '#1A6D8F',
   }
   let cat ={
-    backgroundColor: '#ffffff',
+    backgroundColor: '#1A6D8F',
+    color: '#ffffff',
     fontWeight: '700',
     fontSize: '20px',
     width: '200px',
     padding: '10px 10px',
   }
   let spec ={
-    backgroundColor: '#ffffff',
+    backgroundColor: '#1A6D8F',
+    color: '#ffffff',
     width: '200px',
     fontSize: '18px',
     textAlign: 'center',
@@ -47,11 +50,9 @@ const SlideTwo = (props) => {
   }
 
   return (
-    <div className="slide">
-      <div  className="vessel1" style={background} >
-      </div>
-      <div className='slideText' style={text} >
-        <p> Saronic Spire </p>
+    <div className="slide bg-sl2">
+    <div className="slide-img" style={background}><p> Saronic Spire </p></div>
+    <div className='slide-table' style={text} >    
         <div className="vesselTable" style={vesselTable}>
           <div className='table_container' style={shipTable}>
             <div className='table_cat' style={cat} > Type </div>

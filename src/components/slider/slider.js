@@ -33,10 +33,9 @@ class Slider extends Component {
     const { slideCounter, translateValue } = this.state;
     console.log(translateValue);
     return (
-      <div className='slider'>
+      <div className='slider section'>
         <div className='sliderContainer'
-          style={{          
-            transition: 'backgroundImage 2s ease-out'}} >
+          style={{transition: 'backgroundImage 2s ease-out'}} >
           {slideCounter === 1 ? <SlideOne /> : null }
           {slideCounter === 2 ? <SlideTwo  /> : null }
           {slideCounter === 3 ? <SlideThree  /> : null }
