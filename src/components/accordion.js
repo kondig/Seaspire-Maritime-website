@@ -15,8 +15,8 @@ function SmAccordion() {
   return (
     <div>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+        <AccordionSummary sx={{width:'100%'}}
+          expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
@@ -31,8 +31,8 @@ function SmAccordion() {
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+        <AccordionSummary sx={{width:'100%'}}
+          expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
@@ -48,8 +48,8 @@ function SmAccordion() {
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+        <AccordionSummary sx={{width:'100%'}}
+          expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
@@ -66,8 +66,8 @@ function SmAccordion() {
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+        <AccordionSummary sx={{width:'100%'}}
+          expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -18,17 +18,18 @@ function ServiceCard(props) {
   return (
     <div>
       <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }}>
-        <Card sx={{ display: 'flex', flexDirection: 'column-reverse', margin: '20px auto', justifyContent: 'center', width: '90%'}}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }} >
-            <CardContent sx={{  }}>
-              <Typography component="div" variant="h5" sx={{ color: '#1A6D8F', margin: '10px 5px'}}>
-                {props.service}
-              </Typography>
-              <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ textAlign: 'left', margin: '10px 5px !important'}}>
-                {props.desc}
-              </Typography>
-            </CardContent>
-          </Box>
+        <Card sx={{ display: 'flex', flexDirection: 'column-reverse', margin: '20px auto', justifyContent: 'center', width: '80%'}}>
+            <Box sx={{ display: 'flex', flexDirection: 'column' }} >
+              <CardContent sx={{  }}>
+                <Typography component="div" variant="h5" sx={{ color: '#1A6D8F', margin: '10px 2px', }}>
+                  {props.service}
+                </Typography>
+                <Typography variant="subtitle1" color="text.secondary" component="div"
+                            sx={{ textAlign: 'left', margin: '5px 5px !important', fontSize: '0.7rem'}}>
+                  {props.desc}
+                </Typography>
+              </CardContent>
+            </Box>
           <CardMedia
             component="img"
             sx={{ height: '200px' }}
@@ -41,16 +42,16 @@ function ServiceCard(props) {
       <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}>
         {direction == "LR" &&
           <Card sx={{ display: 'flex', margin: '20px auto', justifyContent: 'space-between', width: '80%'}}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%' }} >
-              <CardContent sx={{  }}>
-                <Typography component="div" variant="h5" sx={{ color: '#1A6D8F', margin: '10px 5px'}}>
-                  {props.service}
-                </Typography>
-                <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ textAlign: 'left', margin: '10px 5px !important'}}>
-                  {props.desc}
-                </Typography>
-              </CardContent>
-            </Box>
+          <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%' }} >
+            <CardContent sx={{  }}>
+              <Typography component="div" variant="h5" sx={{ color: '#1A6D8F', margin: '10px 5px'}}>
+                {props.service}
+              </Typography>
+              <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ textAlign: 'left', margin: '10px 5px !important'}}>
+                {props.desc}
+              </Typography>
+            </CardContent>
+          </Box>
             <CardMedia
               component="img"
               sx={{ width: '45%' }}

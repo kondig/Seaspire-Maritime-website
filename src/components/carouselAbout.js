@@ -4,7 +4,7 @@ import { Paper, Button } from '@mui/material'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import Fade from '@material-ui/core/Fade';
+import Fade from '@mui/material/Fade';
 
 function CarouselAboutUs(props)
 {
@@ -24,14 +24,15 @@ function CarouselAboutUs(props)
     ]
 
     return (
-        <Carousel NextIcon={<ArrowRightAltIcon sx={{ height: '3em', width: '3em'}} />}
-                  PrevIcon={<KeyboardArrowLeftIcon sx={{ height: '2em', width: '2em'}}/>}
+        <Carousel NextIcon={<ArrowRightAltIcon className='nav-arrow' sx={{ height: {xs:'2em',md:'1.5em',lg:'2em', xl:'3em'}, width: {xs:'2em',md:'1.5em',lg:'2em', xl:'3em'}}} />}
+                  PrevIcon={<KeyboardArrowLeftIcon className='nav-arrow' sx={{ height: '2em', width: '2em'}}/>}
                   navButtonsAlwaysVisible={true}
-                  navButtonsProps={{ style: { backgroundColor: 'transparent', color:'#ffffff', borderRadius:0, height:'2em', width:'2em' } }}
+                  navButtonsProps={{ className:'navBtnContainer', style: { backgroundColor: 'transparent', color:'#ffffff', borderRadius:0, height:'2em', width:'2em' } }}
                   navButtonsWrapperProps={{ style: { bottom: '0', top: 'unset', } }}
                   indicatorIconButtonProps={{ style: { padding: '5px',  color: '#1A6D8F' } }}
-                  activeIndicatorIconButtonProps={{ style: { backgroundColor: '#ffffff' } }}
-                  indicatorContainerProps={{ style: { position:'absolute', bottom:'2%',marginTop: '0px',  textAlign: 'center' } }}
+                  activeIndicatorIconButtonProps={{ style: { backgroundColor: '#ffffff', borderRadius: '25px' } }}
+                  indicatorContainerProps={{ style: { position:'absolute', bottom:'4%',marginTop: '0px',  textAlign: 'center' } }}
+                  autoPlay={false}
         >
             {
                 items.map( (item, i) => <Item key={i} item={item} /> )

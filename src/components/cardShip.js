@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -36,50 +36,38 @@ function ShipCard(props) {
   return (
     <div>
       <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }}>
-        <Card sx={{ display: 'flex', flexDirection: 'column-reverse', margin: '20px auto', justifyContent: 'center', width: '90%'}}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }} >
-            <CardContent sx={{  }}>
-              <Typography component="div" variant="h5" sx={{ color: '#1A6D8F', margin: '10px 5px'}}>
-                {props.ship}
-              </Typography>
-              <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ textAlign: 'left', margin: '10px 5px !important'}}>
-                {props.desc}
-              </Typography>
-
-            </CardContent>
-          </Box>
-          <CardMedia
-            component="img"
-            sx={{ height: '300px' }}
-            image={props.image}
-            alt={props.ship}
-            title={props.ship}
-          />
-        </Card>
-      </Box>
-      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{backgroundColor:'transparent'}}>
-        {direction == "LR" &&
-          <Card sx={{ display: 'flex', margin: '20px auto', justifyContent: 'space-between', width: '80%', backgroundColor: 'red'}}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', width: '65%', backgroundColor:'transparent' }}>
-              <CardContent sx={{  }}>
-                <Typography component="div" variant="h5" sx={{ color: '#1A6D8F', margin: '10px 5px', backgroundColor:'transparent'}}>
-                  {props.ship}
-                </Typography>
-                <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ textAlign: 'left', margin: '10px 5px !important'}}>
-                  {props.desc}
-                </Typography>
-
-              </CardContent>
-            </Box>
+          <Card sx={{ display: 'flex', flexDirection:'column', margin: '0 auto', justifyContent: 'center', width: '90%',
+                      backgroundColor:'transparent', boxShadow:'0px 0px 0px #333', border:'0',}}>
             <CardMedia
               component="img"
-              sx={{ width: '35%' }}
+              sx={{ width: '100%' }}
               image={props.image}
               alt={props.ship}
               title={props.ship}
             />
+            <Box sx={{backgroundColor:'transparent', width: '100%'}}>
+              <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', padding: '0'  }}>
+                <TableContainer component={Paper}>
+                  <Table sx={{ minWidth: 250 }} size="small" aria-label="a dense table">
+                    <TableBody>
+                      {rows.map((row) => (
+                        <TableRow key={row.spec} sx={{'&:last-child td, &:last-child th': {  }  }} >
+                          <TableCell component="th" scope="row" sx={{ backgroundColor: '#1A6D8F', color: '#afbdc5', fontSize:'0.7rem', padding:'5px 5px' }} >
+                            {row.spec}
+                          </TableCell>
+                          <TableCell align="right" sx={{ backgroundColor: '#1A6D8F', color: '#ffffff', fontSize:'0.8rem', padding:'5px 5px' }}>
+                            {row.value}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </CardContent>
+            </Box>
           </Card>
-        }
+      </Box>
+      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{backgroundColor:'transparent'}}>
         {direction == "RL" &&
           <Card sx={{ display: 'flex', margin: '0', justifyContent: 'space-between', width: '100%', backgroundColor:'transparent',
                       boxShadow:'0px 0px 0px #333', border:'0',}}>
@@ -90,7 +78,7 @@ function ShipCard(props) {
               alt={props.ship}
               title={props.ship}
             />
-            <Box sx={{  }} sx={{backgroundColor:'transparent'}}>
+            <Box sx={{backgroundColor:'transparent'}}>
               <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', }}>
                 <TableContainer component={Paper}>
                   <Table sx={{ minWidth: 250 }} size="small" aria-label="a dense table">

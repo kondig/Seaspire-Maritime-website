@@ -1,40 +1,54 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import Slide from '@material-ui/core/Slide';
-import Fade from '@material-ui/core/Fade';
-import logo from '../images/SeaSpire_logo2.png';
+import Slide from '@mui/material/Slide';
+import Fade from '@mui/material/Fade';
+import logo from '../images/SeaSpire_logo.png';
 import {Footer} from './Footer';
 import CarouselAboutUs from './carouselAbout.js';
 import CarouselServices from './carouselServices.js';
 import FleetAccordion from './accordionFleet';
+import {SmAccordion} from './accordion';
+import Toolbar from '@mui/material/Toolbar';
 
 
-const Body = (props) => (
-<div className="scroll-container">
-  <div className="section" id="logo" >
-      <Slide appear={false} direction="up" in={true} timeout={3000}>
-          <img src={logo} alt="Seaspire Maritime" className="logo" />
-      </Slide>
-  </div>
-  <div className="section bg bg-a1">
-    <div className="about">
-      <span className="title" > ABOUT US </span>
-      <p className="about_tag"> Sea-<span className="spire"><b>spire</b></span>:<br/><i>noun [sē - spī(ə)r]</i><br/> a slender tapering shoot/formation, <br/> a summit, a pinnacle. </p>
-    </div>
-  </div>
-  <div className="section bg bg-a2">
-    <CarouselAboutUs />
-  </div>
-  <div className="section bg bg-s1 pt-2">
-    <FleetAccordion  />
-  </div>
-  <div className="section bg bg-a2">
-    <CarouselServices />
-  </div>
-
-  <Footer />
-</div>
-)
+function Body(props) {
+    const containerRef = React.useRef(null);
+    return (
+        <div className="scroll-container">
+          <Toolbar id="back-to-top-anchor" />
+          <div className="section bg bg-a1">
+              <div className="about">
+                {/*<Slide in={true} appear={true} direction="up" timeout={3000} mountOnEnter unmountOnExit container={containerRef.current}>*/}
+                    <div className="logo-container">
+                        <img src={logo} alt="Seaspire Maritime" className="seaspire-logo" />
+                    </div>
+                {/*</Slide>*/}
+                <Fade in={true} appear={true} timeout={2000} style={{ transitionDelay: '4000ms' }}>
+                    <span className="title" > ABOUT US </span>
+                </Fade>
+                <p className="about_tag"> Sea-<span className="spire"><b>spire</b></span>:<br/><i>noun [sē - spī(ə)r]</i><br/> a slender tapering shoot/formation, <br/> a summit, a pinnacle. </p>
+              </div>
+          </div>
+          <div className="section bg bg-a2" id="about">
+            <CarouselAboutUs />
+          </div>
+          <div className="section bg bg-s1" id="fleet">
+            <FleetAccordion  />
+          </div>
+          <div className="section bg bg-a2" id="services">
+            <CarouselServices />
+          </div>
+          <div className="section bg bg-n" id="news">
+              <div className="title-container" >
+                <span className="title">NEWS</span>
+              </div>
+              <div className="news-container">
+                <SmAccordion />
+              </div>
+          </div>
+          <Footer />
+        </div>
+)};
 
 export {Body}
 

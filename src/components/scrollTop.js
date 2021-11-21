@@ -1,25 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Zoom from '@material-ui/core/Zoom';
-import Fab from '@material-ui/core/Fab';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+// import { makeStyles } from '@material-ui/core/styles';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Zoom from '@mui/material/Zoom';
+import Fab from '@mui/material/Fab';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    position: 'fixed',
-    bottom: theme.spacing(2),
-    right: theme.spacing(2),
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     position: 'absolute',
+//     bottom: theme.spacing(2),
+//     right: theme.spacing(2),
+//     zIndex: 1000,
+//   },
+// }));
 
 function ScrollTop(props) {
   const { children } = props;
-  const classes = useStyles();
+  // const classes = useStyles();
   const trigger = useScrollTrigger({
     target: window,
-    disableHysteresis: true,
+    disableHysteresis: false,
     threshold: 100,
   });
 
@@ -32,8 +33,8 @@ function ScrollTop(props) {
   };
 
   return (
-    <Zoom in={trigger}>
-      <div onClick={handleClick} role="presentation" className={classes.root}>
+    <Zoom in={true} style={{ transitionDelay: '4000ms' }}>
+      <div onClick={handleClick} role="presentation" className="scrollTop">
         {children}
       </div>
     </Zoom>
@@ -45,11 +46,11 @@ ScrollTop.propTypes = {
 };
 
 export default function BackToTop(props) {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <div>
       <ScrollTop {...props}>
-        <Fab className={classes.circle} size="small" aria-label="scroll back to top" >
+        <Fab className="scrollTopCircle" size="small" aria-label="scroll back to top" >
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>

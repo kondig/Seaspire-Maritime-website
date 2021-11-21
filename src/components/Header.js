@@ -1,18 +1,18 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
+// import { makeStyles } from '@material-ui/core/styles';
+import Link from '@mui/material/Link';
+import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
 import PropTypes from 'prop-types';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Fade from '@material-ui/core/Fade';
-import Box from '@material-ui/core/Box';
-
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Fade from '@mui/material/Fade';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
@@ -30,47 +30,50 @@ import NewsIcon from '@mui/icons-material/Announcement';
 
 import logo from '../images/SeaSpire_logo1.png';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    width: '100%',
-    [theme.breakpoints.down('sm')]: {
-      flexGrow: 0,
-    }
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-    fontSize: '1em',
-  },
-  logo: {
-    width: '45px',
-    padding: '5px',
-    [theme.breakpoints.down('sm')]: {
-        width: '20px',
-        padding: '2px',
-    }
-  },
-  bar: {
-    backgroundColor: '#ffffff',
-    [theme.breakpoints.down('sm')]: {
-      height: '50px',
-    }
-  },
-  mi: {
-    margin: '20px 0 !important',
-    zIndex:'1000',
-    '&:hover': {
-      backgroundColor: '#000000',
-      color: '#ffffff',
-    }
-  },
-  burger: {
-    color: '#1A6D8F',
-  }
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     flexGrow: 1,
+//     width: '100%',
+//     [theme.breakpoints.down('sm')]: {
+//       flexGrow: 0,
+//     }
+//   },
+//   menuButton: {
+//     marginRight: theme.spacing(2),
+//   },
+//   title: {
+//     flexGrow: 1,
+//     fontSize: '1em',
+//   },
+//   logo: {
+//     width: '45px !important',
+//     height: '77px',
+//     padding: '5px',
+//     marginTop: '0px !important',
+//     [theme.breakpoints.down('sm')]: {
+//         width: '20px !important',
+//         height: '34px',
+//         padding: '2px',
+//     }
+//   },
+//   bar: {
+//     backgroundColor: '#ffffff',
+//     [theme.breakpoints.down('sm')]: {
+//       height: '50px',
+//     }
+//   },
+//   mi: {
+//     margin: '20px 0 !important',
+//     zIndex:'1000',
+//     '&:hover': {
+//       backgroundColor: '#000000',
+//       color: '#ffffff',
+//     }
+//   },
+//   burger: {
+//     color: '#1A6D8F',
+//   }
+// }));
 function ElevationScroll(props) {
   const { children } = props;
   const trigger = useScrollTrigger({
@@ -106,7 +109,7 @@ ShowOnScroll.propTypes = {
 };
 
 function SwipeableTemporaryDrawer() {
-  const classes = useStyles();
+  // const classes = useStyles();
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -134,23 +137,23 @@ function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button key={'About us'} className={classes.mi}>
+        <ListItem button key={'About us'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}} >
           <ListItemIcon><AboutIcon /></ListItemIcon>
-          <a className="mobile-link" href='/' >ABOUT US</a>
+          <a className="mobile-link" href='/#about' >ABOUT US</a>
         </ListItem>
-        <ListItem button key={'Services'} className={classes.mi}>
+        <ListItem button key={'Services'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><ServicesIcon /></ListItemIcon>
-          <a className="mobile-link" href='/services'>SERVICES</a>
+          <a className="mobile-link" href='/#services'>SERVICES</a>
         </ListItem>
-        <ListItem button key={'Fleet'} className={classes.mi}>
+        <ListItem button key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><FleetIcon /></ListItemIcon>
-          <a className="mobile-link" href='/fleet' >FLEET</a>
+          <a className="mobile-link" href='/#fleet' >FLEET</a>
         </ListItem>
-        <ListItem button key={'Fleet'} className={classes.mi}>
+        <ListItem button key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><NewsIcon /></ListItemIcon>
-          <a className="mobile-link" href='/news' >NEWS</a>
+          <a className="mobile-link" href='/#news' >NEWS</a>
         </ListItem>
-        <ListItem button key={'Fleet'} className={classes.mi}>
+        <ListItem button key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><ContactPhoneIcon /></ListItemIcon>
           <a className="mobile-link" href='/#contact' >CONTACT</a>
         </ListItem>
@@ -169,8 +172,7 @@ function SwipeableTemporaryDrawer() {
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={toggleDrawer(anchor, true)}
-            color="#1A6D8F"
-            className={classes.burger}
+            sx={{color: '#1A6D8F'}}
           >
             <MenuIcon />
           </IconButton>
@@ -189,7 +191,7 @@ function SwipeableTemporaryDrawer() {
 }
 
 function MenuAppBar(props) {
-  const classes = useStyles();
+  // const classes = useStyles();
   // const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -207,78 +209,32 @@ function MenuAppBar(props) {
   };
 
   return (
-    <div className={classes.root}>
-      <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }}>
+    <div className="header-root">
+      <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }} sx={{ flexGrow: 1, width: '100%', }}>
         <ElevationScroll {...props}>
-          <AppBar position="fixed" className={classes.bar} >
-            <Toolbar>
-               <ShowOnScroll {...props}>
-                <img src={logo} className={classes.logo} alt="Seaspire Maritime" />
-               </ShowOnScroll>
-               <Typography variant="h6" className={classes.title}>
-
-               </Typography>
+          <AppBar position="fixed" sx={{ backgroundColor: '#ffffff', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'} }} >
+            <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
+                {/*<ShowOnScroll {...props}>*/}
+                 <img src={logo} className="header-logo" alt="Seaspire Maritime" />
+                {/*</ShowOnScroll>*/}
                <SwipeableTemporaryDrawer></SwipeableTemporaryDrawer>
-                {/*<div>
-                  <IconButton
-                    aria-label="account of current user"
-                    aria-controls="menu-appbar"
-                    aria-haspopup="true"
-                    onClick={handleMenu}
-                    color="inherit"
-                  >
-                    <MenuIcon />
-                  </IconButton>
-                  <Menu
-                    id="menu-appbar"
-                    anchorEl={anchorEl}
-                    anchorOrigin={{
-                      vertical: 'top',
-                      horizontal: 'right',
-                    }}
-                    keepMounted
-                    transformOrigin={{
-                      vertical: 'top',
-                      horizontal: 'right',
-                    }}
-                    open={open}
-                    onClose={handleClose}
-                  >
-                    <MenuItem onClick={handleClose} className={classes.mi}>
-                      <a className="mobile-link" href='#About_Us' >ABOUT US</a>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose} className={classes.mi}>
-                      <a className="mobile-link" href='#Fleet'>FLEET</a>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose} className={classes.mi}>
-                      <a className="mobile-link" href='#Services'>SERVICES</a>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose} className={classes.mi}>
-                      <a className="mobile-link" href='#News'>NEWS</a>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose} className={classes.mi}>
-                      <a className="mobile-link" href='#contact'>CONTACT</a>
-                    </MenuItem>
-                  </Menu>
-                </div>*/}
-
             </Toolbar>
           </AppBar>
         </ElevationScroll>
       </Box>
-      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}>
+      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{ flexGrow: 1, width: '100%' }}>
         <ElevationScroll {...props}>
-          <AppBar position="fixed" className={classes.bar} >
+          <AppBar position="fixed" sx={{ backgroundColor: '#ffffff', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'} }} >
             <Toolbar>
                <ShowOnScroll {...props}>
-                <img src={logo} className={classes.logo} alt="Seaspire Maritime" />
+                <img src={logo} className="header-logo" alt="Seaspire Maritime" />
                </ShowOnScroll>
                 <div className="menu">
                   <ul>
-                    <li> <a href='/'>ABOUT US</a> </li>
-                    <li> <a href='/fleet'>FLEET</a> </li>
-                    <li> <a href='/services'>SERVICES</a> </li>
-                    <li> <a href='/news'>NEWS</a> </li>
+                    <li> <a href='/#about'>ABOUT US</a> </li>
+                    <li> <a href='/#fleet'>FLEET</a> </li>
+                    <li> <a href='/#services'>SERVICES</a> </li>
+                    <li> <a href='/#news'>NEWS</a> </li>
                     <li> <a href='/#contact'>CONTACT</a> </li>
                   </ul>
                 </div>
@@ -286,7 +242,6 @@ function MenuAppBar(props) {
           </AppBar>
         </ElevationScroll>
       </Box>
-      <Toolbar id="back-to-top-anchor" />
     </div>
   );
 }
