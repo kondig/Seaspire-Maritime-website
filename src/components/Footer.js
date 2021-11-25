@@ -3,6 +3,7 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import logo from '../images/SeaSpire_logo.png';
 import map from '../images/seaspire-map.jpg';
+import bg from '../images/bg-footer.jpg'
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Fade from '@mui/material/Fade';
@@ -95,32 +96,40 @@ function Footer(props) {
     return (
       <div className="section">
         <div className="App-footer" id="contact">
-            <Fade appear={true} direction="up" in={true} timeout={2000}>
-                <img src={logo} alt="Seaspire Maritime" className="footer-logo" />
-            </Fade>
+          <Fade appear={true} direction="up" in={true} timeout={2000}>
+            <img src={bg} alt="Seaspire Maritime" className="footer-image" />
+          </Fade>
           <div className="footer-row">
-              <div>
+              <Fade appear={true} direction="up" in={true} timeout={2000}>
+                  <img src={logo} alt="Seaspire Maritime" className="footer-logo" />
+              </Fade>
+              <div className="footer-details">
                 <a className="footer-link" href="https://goo.gl/maps/aXGjQqYLnQzScZqD6" target="_blank" rel="noopener noreferrer">
                   <div className="footer-cont">
-                    <FontAwesome className="footer-icon" size='1x' name='map-marker' spin={false} />&nbsp;&nbsp;
-                    <span>194 Syggrou Avenue, Kallithea, Athens, 17671, Greece </span>
+                    <div className="icon-cont">
+                        <FontAwesome className="footer-icon" size='lg' name='map-marker' spin={false} />
+                    </div>
+                    194 Syggrou Avenue, Kallithea, Athens, 17671, Greece
                   </div>
                 </a>
-                <br/>
+                <br className="moboff"/>
                 <a className="footer-link" href="tel:+302100109200" target="_blank" rel="noopener noreferrer">
                   <div className="footer-cont">
-                    <FontAwesome className="footer-icon" size='1x' name='phone' spin={false} />&nbsp;&nbsp;
+                    <div className="icon-cont">
+                        <FontAwesome className="footer-icon" size='lg' name='phone' spin={false} />
+                    </div>
                     +30 210 01 09 200
                   </div>
                 </a>
-                <br/>
+                <br className="moboff"/>
                 <a className="footer-link" href="mailto:mail@seaspiremaritime.com" target="_blank" rel="noopener noreferrer">
                   <div className="footer-cont">
-                    <FontAwesome className="footer-icon" size='1x' name='envelope' spin={false} />&nbsp;&nbsp;
+                    <div className="icon-cont">
+                        <FontAwesome className="footer-icon" size='lg' name='envelope' spin={false} />
+                    </div>
                     mail@seaspiremaritime.com
                   </div>
                 </a>
-
               </div>
               <div className="footer-cont">
                 <a className="footer-link" href='https://www.linkedin.com/company/seaspire-maritime/'  target="_blank" rel="noopener noreferrer">

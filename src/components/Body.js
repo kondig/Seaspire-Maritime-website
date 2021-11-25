@@ -9,6 +9,7 @@ import CarouselServices from './carouselServices.js';
 import FleetAccordion from './accordionFleet';
 import {SmAccordion} from './accordion';
 import Toolbar from '@mui/material/Toolbar';
+import Ktabs from './tabsAbout.js';
 
 
 function Body(props) {
@@ -28,6 +29,9 @@ function Body(props) {
                 </Fade>
                 <p className="about_tag"> Sea-<span className="spire"><b>spire</b></span>:<br/><i>noun [sē - spī(ə)r]</i><br/> a slender tapering shoot/formation, <br/> a summit, a pinnacle. </p>
               </div>
+          </div>
+          <div className="section bg bg-a3" id="about">
+            <Ktabs />
           </div>
           <div className="section bg bg-a2" id="about">
             <CarouselAboutUs />

@@ -31,7 +31,7 @@ html {
   scroll-snap-align: center;
   height: 100vh;
   width:100%;
-  padding-top: 10vmin;
+  padding-top: 9vmin;
 }
 .scroll-container {
     height: 100vh;
@@ -46,20 +46,22 @@ html {
     scroll-snap-type: x mandatory;
     scrollbar-color: #1A6D8F transparent;
     scrollbar-width: thin;
+    /* scroll-padding: 100px 0 0 0; */
 }
 .section {
     scroll-snap-align: center;
+    /* scroll-snap-stop: always; */
+    /* scroll-margin: 40px; */
     height: 100vh;
     display: flex;
     justify-content: center;
     position:relative;
     align-items: center;
     flex-direction: column;
-
 }
 .abs-center {
     position:absolute;
-    top:50%;
+    top:40%;
     left:50%;
     transform:translate(-50%,-50%);
 }
@@ -449,6 +451,7 @@ td, th {
 .footer-logo {
   width: 200px;
   padding: 5px;
+  margin: auto;
 }
 .footer-row {
     display: flex;
@@ -461,15 +464,24 @@ td, th {
     color:#1A6D8F;
 }
 .footer-icon {
-    width: 40px;
     color: #1A6D8F;
-    align-self: center;
+}
+.footer-image {
+    width:100%;
+}
+.icon-cont {
+    width: 40px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .footer-cont {
     display: flex;
     justify-content: flex-start;
+    margin: auto;
+}
+.footer-details {
+    margin: auto;
 }
 .disclaimer {
   width: 100%;
@@ -570,7 +582,8 @@ a.phone {
 .scrollTopCircle {
     /* background-color: red !important; */
 }
-.slide-container { width: 100%; }
+.slide-container { width: 100%; height:100%;  }
+.carousel-container { height: 100% }
 .scrollTop {
     position: absolute;
     bottom: 1%; right: 1%;
@@ -684,10 +697,23 @@ a.phone {
     align-items: flex-start;
     align-content: flex-start; */
 }
+.bg:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-position: 0% 0%;
+  background-color: #ccc;
+}
 .bg-services { background-image: url('./images/bg1.jpg'); overflow: hidden; }
 .bg-s1 { background-image: url('./images/bg1.jpg'); overflow: hidden; }
 .bg-a2 { background-image: url('./images/bg2.JPG'); overflow: hidden; }
 .bg-a1 { background-image: url('./images/seaspire3.jpg'); overflow: hidden; }
+.bg-a3 { background-image: url('./images/bg-a.JPG'); overflow: hidden; }
 .bg-n { background-image: url('./images/aegeanSpire.jpg'); overflow: hidden; }
 .bg-sl1 { background-color: #333 }
 .bg-sl2 { background-color: #1A6D8F }
@@ -720,7 +746,7 @@ a.phone {
   letter-spacing: 0.2em;
 }
 .accordion-container {
-    padding-top: 100px;
+    /* padding-top: 100px; */
     width: 65%;
     min-height: 100vh;
     display:flex;
@@ -835,6 +861,9 @@ a.phone {
   .site-page {
     width: 100%;
   }
+  .App-footer {
+      font-size:1em;
+  }
   .section-text {
     margin: 10px auto;
     font-size: 1.4em;
@@ -856,6 +885,7 @@ a.phone {
   .menu {
     display:none;
   }
+  .moboff { display: none}
   .mainpic {
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -972,7 +1002,7 @@ a.phone {
       flex-grow: 0;
   }
   .nav-arrow { width: 1em !important; height: 1em !important;}
-  .footer-logo { width: 200px; overflow: hidden; margin: 30px 5px }
+  .footer-logo { width: 150px; overflow: hidden; margin: 5px 5px }
   .footer-row { flex-direction: column; justify-content: center; align-items: center}
   .footer-link { }
   .footer-icon { }
