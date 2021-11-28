@@ -10,6 +10,7 @@ import FleetAccordion from './accordionFleet';
 import {SmAccordion} from './accordion';
 import Toolbar from '@mui/material/Toolbar';
 import Ktabs from './tabsAbout.js';
+import STabs from './tabsServices.js';
 
 
 function Body(props) {
@@ -25,7 +26,7 @@ function Body(props) {
                     </div>
                 {/*</Slide>*/}
                 <Fade in={true} appear={true} timeout={2000} style={{ transitionDelay: '4000ms' }}>
-                    <span className="title" > ABOUT US </span>
+                    <span className="title">Seaspire<br/>Maritime</span>
                 </Fade>
                 <p className="about_tag"> Sea-<span className="spire"><b>spire</b></span>:<br/><i>noun [sē - spī(ə)r]</i><br/> a slender tapering shoot/formation, <br/> a summit, a pinnacle. </p>
               </div>
@@ -33,13 +34,16 @@ function Body(props) {
           <div className="section bg bg-a3" id="about">
             <Ktabs />
           </div>
-          <div className="section bg bg-a2" id="about">
+          <div className="section bg bg-a2" >
             <CarouselAboutUs />
           </div>
           <div className="section bg bg-s1" id="fleet">
             <FleetAccordion  />
           </div>
           <div className="section bg bg-a2" id="services">
+            <STabs />
+          </div>
+          <div className="section bg bg-a2">
             <CarouselServices />
           </div>
           <div className="section bg bg-n" id="news">

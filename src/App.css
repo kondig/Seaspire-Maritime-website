@@ -79,7 +79,17 @@ html {
     color:#ffffff;
     text-shadow:1px 2px 2px #000
 }
+.tab-text {
+    background-color: transparent;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    padding: 10px 10px;
+    text-align: right;
+    overflow: hidden;
+}
 .w-80 { width: 80% }
+.w-50 { width: 50% }
 .pt-2 { padding-top: 120px; }
 .site-page {
   position: relative;

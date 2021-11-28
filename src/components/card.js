@@ -39,7 +39,7 @@ function ServiceCard(props) {
           />
         </Card>
       </Box>
-      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}>
+      <Box boxShadow={0} display={{ xs: 'none', md: 'flex', lg: 'flex', xl: 'flex' }} sx={{ display: 'flex', justifyContent: 'center', backgroundColor:'red'}}>
         {direction == "LR" &&
           <Card sx={{ display: 'flex', margin: '20px auto', justifyContent: 'space-between', width: '80%'}}>
           <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%' }} >

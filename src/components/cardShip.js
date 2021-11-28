@@ -69,19 +69,19 @@ function ShipCard(props) {
       </Box>
       <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{backgroundColor:'transparent'}}>
         {direction == "RL" &&
-          <Card sx={{ display: 'flex', margin: '0', justifyContent: 'space-between', width: '100%', backgroundColor:'transparent',
+          <Card sx={{ display: 'flex', margin: '0', justifyContent: 'space-between', width: '100%', height:'100%', backgroundColor:'transparent',
                       boxShadow:'0px 0px 0px #333', border:'0',}}>
             <CardMedia
               component="img"
-              sx={{ width: '45%' }}
+              sx={{ width: '50%', height:'37vh' }}
               image={props.image}
               alt={props.ship}
               title={props.ship}
             />
             <Box sx={{backgroundColor:'transparent'}}>
-              <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', }}>
-                <TableContainer component={Paper}>
-                  <Table sx={{ minWidth: 250 }} size="small" aria-label="a dense table">
+              <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', padding:'0px !important' }}>
+                <TableContainer component={Paper} sx={{ height:'100%' }}>
+                  <Table sx={{ minWidth: 250, height:'100%', }} size="small" aria-label="a dense table">
                     <TableBody>
                       {rows.map((row) => (
                         <TableRow key={row.spec} sx={{'&:last-child td, &:last-child th': {  }  }} >
