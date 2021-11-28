@@ -40,16 +40,16 @@ function Body(props) {
           <div className="section bg bg-s1" id="fleet">
             <FleetAccordion  />
           </div>
-          <div className="section bg bg-a2" id="services">
+          <div className="section bg bg-a2 pt-2" id="services">
             <STabs />
           </div>
           <div className="section bg bg-a2">
             <CarouselServices />
           </div>
-          <div className="section bg bg-n" id="news">
-              <div className="title-container" >
-                <span className="title">NEWS</span>
-              </div>
+          <div className="section bg bg-n pt-2" id="news">
+              <Fade in={true} appear={true} timeout={2000}>
+                <p className="news-title">NEWS</p>
+              </Fade>
               <div className="news-container">
                 <SmAccordion />
               </div>

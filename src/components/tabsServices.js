@@ -175,7 +175,7 @@ export default function STabs(props) {
   const secondary = '#ffffff'
   const styles = { tabsview: { width:'100%'}}
   return (
-    <Box sx={{ width: {xs:'100vw', md:'100vw', lg:'100%', xl:'100vw'}, height:'70vh', cursor:'grab', flexDirection:'row', justifyContent:'center',                 }}
+    <Box sx={{ width: {xs:'100vw', md:'100vw', lg:'100%', xl:'100vw'}, height:'80vh', overflow:'hidden', cursor:'grab', flexDirection:'row', justifyContent:'center',                 }}
          display={{ xs: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }}>
       <Tabs value={value} onChange={handleChange} textColor="primary" indicatorColor={secondary} orientation={'vertical'}
                           scrollButtons="auto" sx={{ borderRight: 1, borderColor: 'divider', textAlign:'left', }}>
