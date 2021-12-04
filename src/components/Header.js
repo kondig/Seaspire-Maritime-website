@@ -28,7 +28,7 @@ import FleetIcon from '@mui/icons-material/DirectionsBoat';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import NewsIcon from '@mui/icons-material/Announcement';
 
-import logo from '../images/SeaSpire_logo1.png';
+import logo from '../images/SeaSpire_logo.png';
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
@@ -86,7 +86,7 @@ function ElevationScroll(props) {
     elevation: trigger ? 4 : 0,
     style: {
         color: trigger ? '#000000' : '#666666',
-        backgroundColor: trigger ? '#ffffff' : '#ffffff',
+        backgroundColor: trigger ? 'red' : 'transparent',
     }
   });
 }
@@ -212,7 +212,7 @@ function MenuAppBar(props) {
     <div className="header-root">
       <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }} sx={{ flexGrow: 1, width: '100%', }}>
         <ElevationScroll {...props}>
-          <AppBar position="fixed" sx={{ backgroundColor: '#ffffff', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'} }} >
+          <AppBar position="fixed" sx={{ backgroundColor: 'transparent', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'} }} >
             <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
                 {/*<ShowOnScroll {...props}>*/}
                  <img src={logo} className="header-logo" alt="Seaspire Maritime" />
@@ -222,9 +222,10 @@ function MenuAppBar(props) {
           </AppBar>
         </ElevationScroll>
       </Box>
-      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{ flexGrow: 1, width: '100%' }}>
+      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}
+           sx={{ flexGrow: 1, width: '100%', backgroundColor: 'transparent !important' }}>
         <ElevationScroll {...props}>
-          <AppBar position="fixed" sx={{ backgroundColor: '#ffffff', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'} }} >
+          <AppBar position="fixed" sx={{ backgroundColor: 'transparent', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'} }} >
             <Toolbar>
                <ShowOnScroll {...props}>
                 <img src={logo} className="header-logo" alt="Seaspire Maritime" />
