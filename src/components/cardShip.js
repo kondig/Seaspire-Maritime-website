@@ -36,8 +36,8 @@ function ShipCard(props) {
   return (
     <div>
       <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }}>
-          <Card sx={{ display: 'flex', flexDirection:'column', margin: '0 auto', justifyContent: 'center', width: '90%',
-                      backgroundColor:'transparent', boxShadow:'0px 0px 0px #333', border:'0',}}>
+          <Card sx={{ display: 'flex', flexDirection:'column', margin: '0 auto', justifyContent: 'center', width: '95%',
+                      backgroundColor:'transparent', boxShadow:'0px 0px 0px #333', border:'0', borderRadius:'0px'}}>
             <CardMedia
               component="img"
               sx={{ width: '100%' }}
@@ -52,10 +52,10 @@ function ShipCard(props) {
                     <TableBody>
                       {rows.map((row) => (
                         <TableRow key={row.spec} sx={{'&:last-child td, &:last-child th': {  }  }} >
-                          <TableCell component="th" scope="row" sx={{ backgroundColor: '#1A6D8F', color: '#afbdc5', fontSize:'0.7rem', padding:'5px 5px' }} >
+                          <TableCell component="th" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
                             {row.spec}
                           </TableCell>
-                          <TableCell align="right" sx={{ backgroundColor: '#1A6D8F', color: '#ffffff', fontSize:'0.8rem', padding:'5px 5px' }}>
+                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1A6D8F', fontWeight:'700', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
                             {row.value}
                           </TableCell>
                         </TableRow>
@@ -67,28 +67,28 @@ function ShipCard(props) {
             </Box>
           </Card>
       </Box>
-      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{backgroundColor:'transparent'}}>
+      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{backgroundColor:'transparent',}}>
         {direction == "RL" &&
           <Card sx={{ display: 'flex', margin: '0', justifyContent: 'space-between', width: '100%', height:'100%', backgroundColor:'transparent',
-                      boxShadow:'0px 0px 0px #333', border:'0',}}>
+                      boxShadow:'0px 0px 0px #333', border:'0', borderRadius:'0px'}}>
             <CardMedia
               component="img"
-              sx={{ width: '50%', height:'37vh' }}
+              sx={{ width: '55%', height:'37vh' }}
               image={props.image}
               alt={props.ship}
               title={props.ship}
             />
-            <Box sx={{backgroundColor:'transparent'}}>
-              <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', padding:'0px !important' }}>
-                <TableContainer component={Paper} sx={{ height:'100%' }}>
-                  <Table sx={{ minWidth: 250, height:'100%', }} size="small" aria-label="a dense table">
+            <Box sx={{backgroundColor:'transparent', width:'45%'}}>
+              <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width:'100%', height:'100%', padding:'0px !important', }}>
+                <TableContainer component={Paper} sx={{ height:'100%', backgroundColor: 'transparent', borderRadius:'0px' }}>
+                  <Table sx={{ minWidth: 250, height:'100%', backgroundColor: 'transparent', }} size="small" aria-label="a dense table">
                     <TableBody>
                       {rows.map((row) => (
-                        <TableRow key={row.spec} sx={{'&:last-child td, &:last-child th': {  }  }} >
-                          <TableCell component="th" scope="row" sx={{ backgroundColor: '#1A6D8F', color: '#afbdc5' }} >
+                        <TableRow key={row.spec} sx={{backgroundColor: 'transparent','&:last-child td, &:last-child th': {  }  }} >
+                          <TableCell component="th" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0' }} >
                             {row.spec}
                           </TableCell>
-                          <TableCell align="right" sx={{ backgroundColor: '#1A6D8F', color: '#ffffff' }}>
+                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1A6D8F', fontWeight:'700', border:'0' }}>
                             {row.value}
                           </TableCell>
                         </TableRow>

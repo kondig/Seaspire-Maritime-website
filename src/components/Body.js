@@ -57,9 +57,9 @@ function Body(props) {
                 <p className="about_tag"> Sea-<span className="spire"><b>spire</b></span>:<br/><i>noun [sē - spī(ə)r]</i><br/> a slender tapering shoot/formation, <br/> a summit, a pinnacle. </p>
               </div>
           </div>
-          <div className="section bg bg-a3" id="about" >
-            <div className={isVisible1 ? "bg-cover" : "bg-cover animate"} ref={ref1}></div>
+          <div className="section bg bg-a3" id="about" >        
             <Ktabs />
+            <div className={isVisible1 ? "bg-cover" : "bg-cover animate"} ref={ref1}></div>
           </div>
           {/*<div className="section bg bg-a2">
             <div className="bg-cover" ></div>

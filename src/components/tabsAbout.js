@@ -21,7 +21,7 @@ function TabPanel(props) {
       {value === index && (
         <Box sx={{ p: 3 }}>
           <Typography sx={{ color: '#ffffff', textShadow:'1px 1px 1px #000',
-                            textAlign:{xs:'center',md:'right', lg:'right', xl:'right'},
+                            textAlign:{xs:'center', md:'center', lg:'center', xl:'center'},
                             fontSize:{xs:'1em',md:'1.1em', lg:'1.2em', xl:'1.2em'},  }}>
             {children}
           </Typography>
@@ -66,8 +66,8 @@ export default function KTabs(props) {
   const handleChangeIndex = (index) => { setValue(index); };
   const secondary = '#ffffff'
   return (
-    <Box sx={{ width: {xs:'95vw', md:'60vw', lg:'60vw', xl:'30vw'}, position:'absolute', right:'4vmin',
-               top: {xs:'15vw', md:'12vw', lg:'15vw', xl:'8vw'}, cursor:'grab'  }}
+    <Box sx={{ width: {xs:'95vw', md:'50vw', lg:'50vw', xl:'40vw'}, position:'absolute', left:'50%', transform:'translateX(-50%)', zIndex:'1000',
+               top: {xs:'15vh', md:'25vh', lg:'25vh', xl:'15vh'}, cursor:'grab'  }}
          display={{ xs: 'block', md: 'block', lg: 'block', xl: 'block' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: 'transparent',  }}>
           <Tabs value={value} onChange={handleChange} textColor="primary" indicatorColor={secondary} variant="fullWidth" >

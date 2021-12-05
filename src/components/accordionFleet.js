@@ -35,10 +35,10 @@ function FleetAccordion() {
                 deadweight={'28.545 dwt'} flag={'Bahamas'} engine={'MITSUI B&W 6S42MC'} managed={'2014'} />
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} disableGutters={true} sx={{ backgroundColor: 'transparent' }}>
-        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#1A6D8F', width:'1.3em', height:'1.3em', padding: '5px'}} />}
+      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} disableGutters={true} sx={{ backgroundColor: '#1A6D8F' }}>
+        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#ffffff', width:'1.3em', height:'1.3em', padding: '5px'}} />}
                           aria-controls="panel2bh-content" id="panel2bh-header" sx={{width: '100%'}} >
-          <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#1A6D8F', fontSize:'1.5em', textShadow:'1px 1px 1px #afbdc5' }}>
+          <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#ffffff', fontSize:'1.5em', textShadow:'1px 1px 1px #afbdc5' }}>
               Saronic Spire
           </Typography>
         </AccordionSummary>
@@ -61,10 +61,10 @@ function FleetAccordion() {
                   deadweight={'32.269 dwt'} flag={'Bahamas'} engine={'KOBE DIESEL CO.LTD. 6UEC52LA'} managed={'2017'}/>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} disableGutters={true} sx={{ backgroundColor: 'transparent' }}>
-        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#1A6D8F', width:'1.3em', height:'1.3em', padding: '5px'}} />}
+      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} disableGutters={true} sx={{ backgroundColor: '#1A6D8F' }}>
+        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#ffffff', width:'1.3em', height:'1.3em', padding: '5px'}} />}
             aria-controls="panel4bh-content" id="panel4bh-header" sx={{width: '100%'}}>
-            <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#1A6D8F', fontSize:'1.5em', textShadow:'1px 1px 1px #afbdc5' }}>
+            <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#ffffff', fontSize:'1.5em', textShadow:'1px 1px 1px #afbdc5' }}>
                 Aegean Spire
             </Typography>
         </AccordionSummary>

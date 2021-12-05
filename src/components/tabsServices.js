@@ -34,12 +34,12 @@ function TabPanel(props) {
                 <Paper sx={{backgroundColor:"transparent", height:'100vh', width:'100%', boxShadow: '0',
                             display:'flex', flexDirection:'column', justifyContent:'flex-start'}}>
                     <Fade appear={true} in={true} timeout={2000}>
-                      <div className="tab-text color-white">
+                      <div className="tab-text color-white asc" >
                           {props.text}
                       </div>
                     </Fade>
-                    <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show}}>
-                      <Card sx={{ display: 'flex', flexDirection:'column', margin: '5px', justifyContent: 'space-between',}}>
+                    <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show, justifyContent:'center', overflow:'hidden'}}>
+                      <Card sx={{ display: 'flex', flexDirection:'column', margin: '5px', justifyContent: 'space-between', backgroundColor:'transparent', boxShadow:'0px 0px'}}>
                         <Fade appear={true} in={true} timeout={2000}>
                             <CardMedia
                               component="img"
@@ -49,12 +49,12 @@ function TabPanel(props) {
                               title={props.service}
                             />
                         </Fade>
-                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }} >
+                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', backgroundColor:'transparent' }} >
                           <CardContent sx={{  }}>
-                            <Typography component="div" variant="h5" sx={{ fontSize:'1em', color: '#1A6D8F', margin: '10px 5px'}}>
+                            <Typography component="div" variant="h5" sx={{ fontSize:'1em', color:'#ffffff', textShadow: '1px 1px 1px #000', fontWeight: '700', margin: '0px 5px'}}>
                               {props.service}
                             </Typography>
-                            <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ fontSize:'0.9em',textAlign: 'left', margin: '5px !important'}}>
+                            <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ color:'#ffffff', textShadow: '1px 1px 1px #000', fontSize:'0.9em',textAlign: 'left', margin: '5px !important'}}>
                               {props.desc}
                             </Typography>
                           </CardContent>
@@ -71,30 +71,8 @@ function TabPanel(props) {
                             {props.text}
                         </div>
                       </Fade>
-                      <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }}>
-                        <Card sx={{ display: 'flex', flexDirection: 'column-reverse', margin: '20px auto', justifyContent: 'center', width: '80%'}}>
-                            <Box sx={{ display: 'flex', flexDirection: 'column' }} >
-                              <CardContent sx={{  }}>
-                                <Typography component="div" variant="h5" sx={{ color: '#1A6D8F', margin: '10px 2px', }}>
-                                  {props.service}
-                                </Typography>
-                                <Typography variant="subtitle1" color="text.secondary" component="div"
-                                            sx={{ textAlign: 'left', margin: '5px 5px !important', fontSize: '0.7rem'}}>
-                                  {props.desc}
-                                </Typography>
-                              </CardContent>
-                            </Box>
-                          <CardMedia
-                            component="img"
-                            sx={{ height: '200px' }}
-                            image={props.image}
-                            alt={props.service}
-                            title={props.service}
-                          />
-                        </Card>
-                      </Box>
-                      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show}}>
-                          <Card sx={{ display: 'flex', margin: '5px', justifyContent: 'space-between',}}>
+                      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show,}}>
+                          <Card sx={{ display: 'flex', margin: '5px', justifyContent: 'space-between', backgroundColor:'transparent', boxShadow:'0px 0px'}}>
                             <Fade appear={true} in={true} timeout={2000}>
                                 <CardMedia
                                   component="img"
@@ -104,12 +82,12 @@ function TabPanel(props) {
                                   title={props.service}
                                 />
                             </Fade>
-                            <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%' }} >
+                            <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%', backgroundColor:'transparent' }} >
                               <CardContent sx={{  }}>
-                                <Typography component="div" variant="h5" sx={{ color: '#1A6D8F', margin: '10px 5px'}}>
+                                <Typography component="div" variant="h5" sx={{ color: '#AFBDC5', textShadow: '1px 1px 1px #000', fontWeight: '700', margin: '10px 5px'}}>
                                   {props.service}
                                 </Typography>
-                                <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ textAlign: 'left', margin: '10px 5px !important'}}>
+                                <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ color:'#ffffff',textShadow: '1px 1px 1px #000', textAlign:'left', margin: '10px 5px !important'}}>
                                   {props.desc}
                                 </Typography>
                               </CardContent>
@@ -178,7 +156,7 @@ export default function STabs(props) {
     <Box sx={{ width: {xs:'100vw', md:'100vw', lg:'100%', xl:'100vw'}, height:'100%', overflow:'hidden', cursor:'grab', flexDirection:'row', justifyContent:'center', alignItems:'center',                }}
          display={{ xs: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }}>
       <Tabs value={value} onChange={handleChange} textColor="primary" indicatorColor={secondary} orientation={'vertical'}
-                          scrollButtons="auto" sx={{ borderRight: 1, borderColor: 'divider', textAlign:'left', }}>
+                          scrollButtons="auto" sx={{ borderRight: 1, borderColor: 'divider', textAlign:'left', paddingTop:'20px', alignSelf: {xs:'flex-start', md:'center', lg:'center', xl:'center'} }}>
         <Tab label={items[0].title} {...a11yProps(0)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[1].title} {...a11yProps(1)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[2].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
@@ -191,7 +169,7 @@ export default function STabs(props) {
             enableMouseEvents
             style={styles.tabsview}
         >
-        <TabPanel value={value} index={0} dir={theme.direction} text={items[0].text} service={items[0].service} image={items[0].image} show={items[0].show}></TabPanel>
+        <TabPanel value={value} index={0} dir={theme.direction} text={items[0].text} service={items[0].service} image={items[0].image} show={items[0].show} sx={{}}></TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction} desc={items[1].desc} service={items[1].service} image={items[1].image} ></TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction} desc={items[2].desc} service={items[2].service} image={items[2].image} ></TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction} desc={items[3].desc} service={items[3].service} image={items[3].image} ></TabPanel>
