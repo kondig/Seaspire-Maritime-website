@@ -55,7 +55,7 @@ function ShipCard(props) {
                           <TableCell component="th" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
                             {row.spec}
                           </TableCell>
-                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1A6D8F', fontWeight:'700', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
+                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontWeight:'700', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
                             {row.value}
                           </TableCell>
                         </TableRow>
@@ -88,7 +88,7 @@ function ShipCard(props) {
                           <TableCell component="th" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0' }} >
                             {row.spec}
                           </TableCell>
-                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1A6D8F', fontWeight:'700', border:'0' }}>
+                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontWeight:'700', border:'0' }}>
                             {row.value}
                           </TableCell>
                         </TableRow>

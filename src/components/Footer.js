@@ -1,7 +1,7 @@
 import React from 'react';
 // import { makeStyles } from '@material-ui/core/styles';
 import FontAwesome from 'react-fontawesome';
-import logo from '../images/SeaSpire_logo.png';
+import logo from '../images/SeaSpire-logo.png';
 import map from '../images/seaspire-map.jpg';
 import bg from '../images/bg-footer.jpg'
 import PropTypes from 'prop-types';
@@ -48,11 +48,11 @@ import Fade from '@mui/material/Fade';
 //   },
 //   link: {
 //     textDecoration: 'none',
-//     color: '#1A6D8F',
+//     color: '#1864ac',
 //   },
 //   icon: {
 //     width: '40px',
-//     color: '#1A6D8F',
+//     color: '#1864ac',
 //     alignSelf: 'center',
 //     display: 'flex',
 //     justifyContent: 'center'

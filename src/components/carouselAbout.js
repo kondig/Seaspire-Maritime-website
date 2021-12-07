@@ -28,7 +28,7 @@ function CarouselAboutUs(props)
                   PrevIcon={<KeyboardArrowLeftIcon className='nav-arrow' sx={{ height: '2em', width: '2em'}}/>}
                   navButtonsAlwaysVisible={true}
                   navButtonsProps={{ className:'navBtnContainer', style: { backgroundColor: 'transparent', color:'#ffffff', borderRadius:0, height:'2em', width:'2em' } }}
-                  indicatorIconButtonProps={{ style: { padding: '5px',  color: '#1A6D8F' } }}
+                  indicatorIconButtonProps={{ style: { padding: '5px',  color: '#1864ac' } }}
                   activeIndicatorIconButtonProps={{ style: { backgroundColor: '#ffffff', borderRadius: '25px' } }}
                   indicatorContainerProps={{ style: { position:'absolute', bottom:'12%',marginTop: '0px',  textAlign: 'center' } }}
                   autoPlay={false}

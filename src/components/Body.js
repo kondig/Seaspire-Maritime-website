@@ -57,27 +57,27 @@ function Body(props) {
                 <p className="about_tag"> Sea-<span className="spire"><b>spire</b></span>:<br/><i>noun [sē - spī(ə)r]</i><br/> a slender tapering shoot/formation, <br/> a summit, a pinnacle. </p>
               </div>
           </div>
-          <div className="section bg bg-a3" id="about" >        
+          <div className="section bg bg-a3" id="about" >
             <Ktabs />
-            <div className={isVisible1 ? "bg-cover" : "bg-cover animate"} ref={ref1}></div>
+            <div className={!isVisible1 ? "bg-cover cover1" : "bg-cover cover1 animate"} ref={ref1}></div>
           </div>
           {/*<div className="section bg bg-a2">
             <div className="bg-cover" ></div>
             <CarouselAboutUs />
           </div>*/}
           <div className="section bg bg-s1" id="fleet">
-            <div className={isVisible2 ? "bg-cover" : "bg-cover animate"} ref={ref2}></div>
+            <div className={!isVisible2 ? "bg-cover cover2" : "bg-cover cover2 animate"} ref={ref2}></div>
             <FleetAccordion  />
           </div>
           <div className="section bg bg-a2 pt-2" id="services">
-            <div className={isVisible3 ? "bg-cover" : "bg-cover animate"} ref={ref3}></div>
+            <div className={!isVisible3 ? "bg-cover cover3" : "bg-cover cover3 animate"} ref={ref3}></div>
             <STabs />
           </div>
           {/*<div className="section bg bg-a2">
             <CarouselServices />
           </div>*/}
           <div className="section bg bg-n pt-2" id="news">
-              <div className={isVisible4 ? "bg-cover" : "bg-cover animate"} ref={ref4}></div>
+              <div className={!isVisible4 ? "bg-cover cover4" : "bg-cover cover4 animate"} ref={ref4}></div>
               <Fade in={true} appear={true} timeout={2000}>
                 <p className="news-title">NEWS</p>
               </Fade>

@@ -28,7 +28,7 @@ import FleetIcon from '@mui/icons-material/DirectionsBoat';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import NewsIcon from '@mui/icons-material/Announcement';
 
-import logo from '../images/SeaSpire_logo.png';
+import logo from '../images/SeaSpire-logo.png';
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
@@ -71,7 +71,7 @@ import logo from '../images/SeaSpire_logo.png';
 //     }
 //   },
 //   burger: {
-//     color: '#1A6D8F',
+//     color: '#1864ac',
 //   }
 // }));
 function ElevationScroll(props) {
@@ -172,7 +172,7 @@ function SwipeableTemporaryDrawer() {
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={toggleDrawer(anchor, true)}
-            sx={{color: '#1A6D8F'}}
+            sx={{color: '#1864ac'}}
           >
             <MenuIcon />
           </IconButton>
