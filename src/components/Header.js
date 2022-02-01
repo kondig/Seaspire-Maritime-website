@@ -139,23 +139,23 @@ function SwipeableTemporaryDrawer() {
       <List>
         <ListItem button key={'About us'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}} >
           <ListItemIcon><AboutIcon /></ListItemIcon>
-          <a className="mobile-link" href='/#about' >ABOUT US</a>
+          <a className="mobile-link" href='#about' >ABOUT US</a>
         </ListItem>
         <ListItem button key={'Services'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><ServicesIcon /></ListItemIcon>
-          <a className="mobile-link" href='/#services'>SERVICES</a>
+          <a className="mobile-link" href='#services'>SERVICES</a>
         </ListItem>
         <ListItem button key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><FleetIcon /></ListItemIcon>
-          <a className="mobile-link" href='/#fleet' >FLEET</a>
+          <a className="mobile-link" href='#fleet' >FLEET</a>
         </ListItem>
         <ListItem button key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><NewsIcon /></ListItemIcon>
-          <a className="mobile-link" href='/#news' >NEWS</a>
+          <a className="mobile-link" href='#news' >NEWS</a>
         </ListItem>
         <ListItem button key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><ContactPhoneIcon /></ListItemIcon>
-          <a className="mobile-link" href='/#contact' >CONTACT</a>
+          <a className="mobile-link" href='#contact' >CONTACT</a>
         </ListItem>
       </List>
       <Divider />
@@ -232,11 +232,11 @@ function MenuAppBar(props) {
                </ShowOnScroll>
                 <div className="menu">
                   <ul>
-                    <li> <a href='/#about'>ABOUT US</a> </li>
-                    <li> <a href='/#fleet'>FLEET</a> </li>
-                    <li> <a href='/#services'>SERVICES</a> </li>
-                    <li> <a href='/#news'>NEWS</a> </li>
-                    <li> <a href='/#contact'>CONTACT</a> </li>
+                    <li> <a href='#about'>ABOUT US</a> </li>
+                    <li> <a href='#fleet'>FLEET</a> </li>
+                    <li> <a href='#services'>SERVICES</a> </li>
+                    <li> <a href='#news'>NEWS</a> </li>
+                    <li> <a href='#contact'>CONTACT</a> </li>
                   </ul>
                 </div>
             </Toolbar>

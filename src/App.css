@@ -8,12 +8,14 @@ html {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   position: relative;
+
 }
 .App-header {
   display: inline;
   width: 100%;
   height: 100px;
   margin: 0px 0px 0px 0px;
+  scroll-behavior: smooth;
 }
 .App-footer {
   background-color: #000000;
@@ -29,6 +31,15 @@ html {
   width:100%;
   /* padding-top: 9vmin; */
 }
+.App-footer-bar {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .scroll-container {
     height: 100vh;
     overflow-y: scroll;
@@ -36,6 +47,8 @@ html {
     scrollbar-color: #1864ac transparent;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+        /* scroll-behavior must be on the container */
 }
 .scroll-container-x {
     height: 100vh;
@@ -44,7 +57,7 @@ html {
     scrollbar-color: #1864ac transparent;
     scrollbar-width: thin;
     /* scroll-padding: 100px 0 0 0; */
-}
+ }
 .section {
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -54,7 +67,9 @@ html {
     justify-content: center;
     position:relative;
     align-items: center;
+    overflow: hidden;
     flex-direction: column;
+
 }
 .abs-center {
     position:absolute;
@@ -157,6 +172,9 @@ html {
   animation-name: slideInUp;
   animation-duration: 5s;
   animation-iteration-count: 1;
+}
+.tester {
+    height:800px;
 }
 .menu {
   width: 100%;
@@ -442,19 +460,22 @@ td, th {
   color: #AFBDC5;
 }
 .footer-logo {
-  width: 150px;
-  padding: 5px;
-  margin: auto;
+  width: 220px;
+  margin: 10px auto;
 }
 .footer-row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
+    width: 50%;
+    overflow: hidden;
 }
 .footer-link {
     text-decoration: none;
-    color:#1864ac;
+    /* color:#1864ac; */
+    color: #ffffff;
+    font-size: 1.2em;
+    /* text-shadow: 1px 1px 1px #ccc; */
 }
 .footer-icon {
     color: #1864ac;
@@ -464,6 +485,12 @@ td, th {
 }
 .icon-cont {
     width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-cont-fw {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -627,8 +654,7 @@ a.phone {
     width: 100%;
 }
 .header-logo {
-    width: 40px;
-    /* height: 80px; */
+    width: 50px;
     padding: 3px;
     margin-top: 0px;
 }
@@ -691,11 +717,6 @@ a.phone {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start; */
 }
 /* .bg:before {
   content: ' ';
@@ -717,16 +738,17 @@ a.phone {
 .bg-n { background-image: url('./images/aegeanSpire.jpg'); overflow: hidden; }
 .bg-sl1 { background-color: #333 }
 .bg-sl2 { background-color: #1864ac }
+.bg-desktop { background-image: url('./images/bg-footer.jpg'); overflow: hidden; }
 .bg-cover {
     position:absolute;
     overflow: hidden;
-    top: 10%;
-    width:100%;
-    height:100%;
-    /* background-color: #1864ac; */
-    opacity: 0.9;
-    /* transform: translateY(0%); */
-    transform: translate(0px) rotateZ(-65deg);
+    top: 25%;
+    width:170%;
+    height:60%;
+    background-color: #1864ac;
+    opacity: 0.6;
+    /* transform: translateX(-20%); */
+    transform: translate(0px) rotateZ(-20deg);
     transform-origin: 50% 50%;
     transition-property: all;
     transition-duration: 1.3s;
@@ -741,13 +763,13 @@ a.phone {
     background-size: contain;
     /* background-image: url('./images/SeaSpire_logo.png'); */
 }
-.cover1 { background-image: url('./images/logo-p1.png'); }
-.cover2 { background-image: url('./images/logo-p3.png'); }
-.cover3 { background-image: url('./images/logo-p3.png'); }
-.cover4 { background-image: url('./images/logo-p1.png'); }
+/* .cover1 { background-image: url('./images/logo-p1.png'); }
+.cover2 { background-image: url('./images/logo-p2.png'); }
+.cover3 { background-image: url('./images/logo-p2.png'); }
+.cover4 { background-image: url('./images/logo-p1.png'); } */
 .animate {
-    top: 5%;
-    opacity:0.3;
+    top: 20%;
+    opacity:0.2;
     /* background-color: #AFBDC5; */
     /* transform: translateY(-10%); */
 }
@@ -819,6 +841,18 @@ a.phone {
   color: #ffffff;
 }
 #back-to-top-anchor { height: 1px; min-height:1px; }
+.sm-official {
+    width: 20vw;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.2em;
+    text-shadow: 2px 2px 1px #666666;
+}
 .seaspire-logo {
     opacity: 0;
     z-index: 1050;
@@ -1011,8 +1045,8 @@ a.phone {
       animation-name: fadeOutNleave;
   }
   .header-logo {
-      width: 15px;
-      height: 34px;
+      width: 25px;
+      /* height: 34px; */
       padding: 2px;
   }
   .header-root {
@@ -1031,6 +1065,18 @@ a.phone {
   .animate {
       height:560px;
       top: 7%;
+  }
+  .bg-cover {
+     /* transform: translateX(-10%); */
+  }
+  .sm-official {
+      width: 40vw;
+      top: 20%;
+      left: 75%;
+  }
+  .footer-row { width: 100% }
+  .footer-link {
+      font-size: 1em;
   }
 }
 

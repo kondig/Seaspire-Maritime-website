@@ -2,7 +2,8 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import Slide from '@mui/material/Slide';
 import Fade from '@mui/material/Fade';
-import logo from '../images/SeaSpire_logo.png';
+import logo from '../images/SeaSpire-logo.png';
+import sm from '../images/SeaSpire-Maritime.png';
 import {Footer} from './Footer';
 import CarouselAboutUs from './carouselAbout.js';
 import CarouselServices from './carouselServices.js';
@@ -25,6 +26,9 @@ function Body(props) {
     const isVisible2 = useOnScreen(ref2,"-100px");
     const isVisible3 = useOnScreen(ref3,"-100px");
     const isVisible4 = useOnScreen(ref4,"-100px");
+
+    // const scrollRef = React.useRef();
+    // const executeScroll = () => scrollRef.current.scrollIntoView({ behavior: 'smooth' });
     // React.useEffect(() => {
     //     if(isVisible1) { const knode = ref1.current; knode.style.opacity = "0.2"; knode.style.top = '28%'; }
     //     if(isVisible2) { const knode = ref2.current; knode.style.opacity = "0.2"; knode.style.top = '28%'; }
@@ -52,11 +56,13 @@ function Body(props) {
                     </div>
                 {/*</Slide>*/}
                 <Fade in={true} appear={true} timeout={2000} style={{ transitionDelay: '4000ms' }}>
-                    <span className="title">Seaspire<br/>Maritime</span>
+                    {/*<span className="title">Seaspire<br/>Maritime</span>*/}
+                    <img src={sm} alt="Seaspire Maritime" className="sm-official" />
                 </Fade>
                 <p className="about_tag"> Sea-<span className="spire"><b>spire</b></span>:<br/><i>noun [sē - spī(ə)r]</i><br/> a slender tapering shoot/formation, <br/> a summit, a pinnacle. </p>
               </div>
           </div>
+
           <div className="section bg bg-a3" id="about" >
             <Ktabs />
             <div className={!isVisible1 ? "bg-cover cover1" : "bg-cover cover1 animate"} ref={ref1}></div>
