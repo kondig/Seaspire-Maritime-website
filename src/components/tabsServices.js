@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
 import { Paper, Button } from '@mui/material';
+import Slide from '@mui/material/Slide';
 import Fade from '@mui/material/Fade';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -19,7 +20,7 @@ import service3 from '../images/service_technicalmgmt.jpg';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
+  const containerRef = React.useRef(null);
   return (
     <div
       role="tabpanel"
@@ -71,9 +72,9 @@ function TabPanel(props) {
                             {props.text}
                         </div>
                       </Fade>
-                      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show,}}>
+                      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show,}} ref={containerRef}>
                           <Card sx={{ display: 'flex', margin: '5px', justifyContent: 'space-between', backgroundColor:'transparent', boxShadow:'0px 0px'}}>
-                            <Fade appear={true} in={true} timeout={2000}>
+                            <Slide direction="right" container={containerRef.current} appear={true} in={true} timeout={2000}>
                                 <CardMedia
                                   component="img"
                                   sx={{ width: '45%' }}
@@ -81,7 +82,7 @@ function TabPanel(props) {
                                   alt={props.service}
                                   title={props.service}
                                 />
-                            </Fade>
+                            </Slide>
                             <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%', backgroundColor:'transparent' }} >
                               <CardContent sx={{  }}>
                                 <Typography component="div" variant="h5" sx={{ color: '#AFBDC5', textShadow: '1px 1px 1px #000', fontWeight: '700', margin: '10px 5px'}}>
@@ -168,6 +169,8 @@ export default function STabs(props) {
             onChangeIndex={handleChangeIndex}
             enableMouseEvents
             style={styles.tabsview}
+            containerStyle={{transitionDuration: '1s'}}
+            springConfig={{duration: '1s', easeFunction: 'cubic-bezier(0.15, 0.3, 0.25, 1)', delay: '0s'}}
         >
         <TabPanel value={value} index={0} dir={theme.direction} text={items[0].text} service={items[0].service} image={items[0].image} show={items[0].show} sx={{}}></TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction} desc={items[1].desc} service={items[1].service} image={items[1].image} ></TabPanel>

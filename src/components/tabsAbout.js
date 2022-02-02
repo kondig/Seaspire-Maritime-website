@@ -70,7 +70,7 @@ export default function KTabs(props) {
                top: {xs:'15vh', md:'25vh', lg:'25vh', xl:'15vh'}, cursor:'grab'  }}
          display={{ xs: 'block', md: 'block', lg: 'block', xl: 'block' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: 'transparent',  }}>
-          <Tabs value={value} onChange={handleChange} textColor="primary" indicatorColor={secondary} variant="fullWidth" >
+          <Tabs value={value} onChange={handleChange} textColor="primary" indicatorColor={secondary} variant="fullWidth">
             <Tab label={items[0].name} {...a11yProps(0)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000','&:selected': { color: 'red', backgroundColor: 'white' }, }} />
             <Tab label={items[1].name} {...a11yProps(1)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000','&:selected': { color: 'red', backgroundColor: 'white' }, }} />
             <Tab label={items[2].name} {...a11yProps(2)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000','&:selected': { color: 'red', backgroundColor: 'white' }, }} />
@@ -81,6 +81,8 @@ export default function KTabs(props) {
             index={value}
             onChangeIndex={handleChangeIndex}
             enableMouseEvents
+            containerStyle={{transitionDuration: '1s'}}
+            springConfig={{duration: '1s', easeFunction: 'cubic-bezier(0.15, 0.3, 0.25, 1)', delay: '0s'}}
         >
             <TabPanel value={value} index={0} dir={theme.direction}>
               {items[0].text}

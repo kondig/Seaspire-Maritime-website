@@ -192,9 +192,7 @@ function Footer(props) {
                         </div>
                     </a>
                   </div>
-
               </div>
-
               <div className="disclaimer" id="disclaimer">
                  Seaspire Maritime © {getYear()}
               </div>

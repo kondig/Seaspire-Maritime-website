@@ -26,7 +26,7 @@ html {
   font-size: 1.3em;
   text-align: left;
   color:#ffffff;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
   height: 100vh;
   width:100%;
   /* padding-top: 9vmin; */
@@ -44,11 +44,12 @@ html {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    /* scroll-padding-top: 15vh; */
     scrollbar-color: #1864ac transparent;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-        /* scroll-behavior must be on the container */
+    /* scroll-behavior must be on the container */
 }
 .scroll-container-x {
     height: 100vh;
@@ -59,7 +60,7 @@ html {
     /* scroll-padding: 100px 0 0 0; */
  }
 .section {
-    scroll-snap-align: start;
+    scroll-snap-align: end;
     scroll-snap-stop: always;
     /* scroll-margin: 40px; */
     height: 100vh;
@@ -742,11 +743,11 @@ a.phone {
 .bg-cover {
     position:absolute;
     overflow: hidden;
-    top: 25%;
+    top: 22%;
     width:170%;
     height:60%;
     background-color: #1864ac;
-    opacity: 0.6;
+    opacity: 0.5;
     /* transform: translateX(-20%); */
     transform: translate(0px) rotateZ(-20deg);
     transform-origin: 50% 50%;
