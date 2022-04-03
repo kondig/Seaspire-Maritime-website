@@ -3,7 +3,7 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import logo from '../images/SeaSpire-logo.png';
 import map from '../images/seaspire-map.jpg';
-import bg from '../images/bg-footer.jpg'
+import bg from '../images/bg-footer.jpeg'
 import PropTypes from 'prop-types';
 import Fade from '@mui/material/Fade';
 import Box from '@mui/material/Box';

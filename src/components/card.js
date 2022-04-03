@@ -42,23 +42,23 @@ function ServiceCard(props) {
       <Box boxShadow={0} display={{ xs: 'none', md: 'flex', lg: 'flex', xl: 'flex' }} sx={{ display: 'flex', justifyContent: 'center', backgroundColor:'red'}}>
         {direction == "LR" &&
           <Card sx={{ display: 'flex', margin: '20px auto', justifyContent: 'space-between', width: '80%'}}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%' }} >
-            <CardContent sx={{  }}>
-              <Typography component="div" variant="h5" sx={{ color: '#1864ac', margin: '10px 5px'}}>
-                {props.service}
-              </Typography>
-              <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ textAlign: 'left', margin: '10px 5px !important'}}>
-                {props.desc}
-              </Typography>
-            </CardContent>
-          </Box>
-            <CardMedia
-              component="img"
-              sx={{ width: '45%' }}
-              image={props.image}
-              alt={props.service}
-              title={props.service}
-            />
+              <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%' }} >
+                <CardContent sx={{  }}>
+                  <Typography component="div" variant="h5" sx={{ color: '#1864ac', margin: '10px 5px'}}>
+                    {props.service}
+                  </Typography>
+                  <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ textAlign: 'left', margin: '10px 5px !important'}}>
+                    {props.desc}
+                  </Typography>
+                </CardContent>
+              </Box>
+              <CardMedia
+                  component="img"
+                  sx={{ width: '45%' }}
+                  image={props.image}
+                  alt={props.service}
+                  title={props.service}
+               />
           </Card>
         }
         {direction == "RL" &&

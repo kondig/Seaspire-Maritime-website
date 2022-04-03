@@ -45,7 +45,7 @@ function FleetAccordion() {
             Ionian Spire
           </Typography>
         </AccordionSummary>
-        <AccordionDetails sx={{ backgroundColor: 'transparent', padding:0 }}>
+        <AccordionDetails sx={{ backgroundColor: '#ffffff', padding:0 }}>
             <Ship image={ship3} direction={`RL`} ship={'Ionian Spire'}
                   type={'Open Hatch/Box type bulk carrier'} buildBy={'Kanda Yard, Japan / 2008'}
                   deadweight={'32.269 dwt on 10.02m ssw'} flag={'Bahamas'} engine={'KOBE DIESEL CO.LTD. 6UEC52LA'} managed={'2017'}/>

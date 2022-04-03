@@ -14,9 +14,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import {Service} from './card';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import service1 from '../images/service_commercial.jpg';
-import service2 from '../images/service_operations2.jpg';
-import service3 from '../images/service_technicalmgmt.jpg';
+import service1 from '../images/service-chartering.jpg';
+import service2 from '../images/service-operations.jpeg';
+import service3 from '../images/service_commercial.jpg';
+import service4 from '../images/service-crew.jpeg';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -32,8 +33,8 @@ function TabPanel(props) {
       {value === index && (
         <div>
             <Box boxShadow={0} display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }} sx={{minWidth:150}}>
-                <Paper sx={{backgroundColor:"transparent", height:'100vh', width:'100%', boxShadow: '0',
-                            display:'flex', flexDirection:'column', justifyContent:'flex-start'}}>
+                <Paper sx={{backgroundColor:"transparent", height:'100%', width:'100%', boxShadow: '0', paddinTop:'15vh',
+                             alignSelf:'flex-start'}}>
                     <Fade appear={true} in={true} timeout={2000}>
                       <div className="tab-text color-white asc" >
                           {props.text}
@@ -51,11 +52,11 @@ function TabPanel(props) {
                             />
                         </Fade>
                         <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', backgroundColor:'transparent' }} >
-                          <CardContent sx={{  }}>
+                          <CardContent sx={{ padding: '5px', paddingBottom: '5px !important' }}>
                             <Typography component="div" variant="h5" sx={{ fontSize:'1em', color:'#ffffff', textShadow: '1px 1px 1px #000', fontWeight: '700', margin: '0px 5px'}}>
                               {props.service}
                             </Typography>
-                            <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ color:'#ffffff', textShadow: '1px 1px 1px #000', fontSize:'0.9em',textAlign: 'left', margin: '5px !important'}}>
+                            <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ color:'#ffffff', fontSize: '0.8rem', textShadow: '1px 1px 1px #000', textAlign: 'left', margin: '5px !important'}}>
                               {props.desc}
                             </Typography>
                           </CardContent>
@@ -68,31 +69,31 @@ function TabPanel(props) {
                 <Paper sx={{backgroundColor:"transparent", width:"90%", margin: '0 auto', boxShadow: '0',
                             display:'flex', flexDirection:'row', justifyContent:'flex-end'}}>
                       <Fade appear={true} in={true} timeout={2000}>
-                        <div className="tab-text color-white w-50">
+                        <div className="tab-text color-white w-40">
                             {props.text}
                         </div>
                       </Fade>
                       <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show,}} ref={containerRef}>
-                          <Card sx={{ display: 'flex', margin: '5px', justifyContent: 'space-between', backgroundColor:'transparent', boxShadow:'0px 0px'}}>
-                            <Slide direction="right" container={containerRef.current} appear={true} in={true} timeout={2000}>
+                          <Card sx={{ display: 'flex', flexDirection:'column', margin: '5px', justifyContent: 'space-between', alignItems: 'flex-end', backgroundColor:'transparent', boxShadow:'0px 0px'}}>
+                            <Box sx={{ display: 'flex', flexDirection: 'column', width: '45%', backgroundColor:'transparent' }} >
+                              <CardContent sx={{ padding: '5px', paddingBottom: '5px !important' }}>
+                                <Typography component="div" variant="h5" sx={{ color: '#AFBDC5', textShadow: '1px 1px 1px #000', fontWeight: '700', margin: '10px 5px'}}>
+                                  {props.service}
+                                </Typography>
+                                <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ color:'#ffffff', fontSize: '1.1rem', textShadow: '1px 1px 1px #000', textAlign:'center', margin: '10px 5px !important'}}>
+                                  {props.desc}
+                                </Typography>
+                              </CardContent>
+                            </Box>
+                            <Slide direction="left" container={containerRef.current} appear={true} in={true} timeout={1000}>
                                 <CardMedia
                                   component="img"
-                                  sx={{ width: '45%' }}
+                                  sx={{ width: '45%', borderRadius: '10px' }}
                                   image={props.image}
                                   alt={props.service}
                                   title={props.service}
                                 />
                             </Slide>
-                            <Box sx={{ display: 'flex', flexDirection: 'column', width: '55%', backgroundColor:'transparent' }} >
-                              <CardContent sx={{  }}>
-                                <Typography component="div" variant="h5" sx={{ color: '#AFBDC5', textShadow: '1px 1px 1px #000', fontWeight: '700', margin: '10px 5px'}}>
-                                  {props.service}
-                                </Typography>
-                                <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ color:'#ffffff',textShadow: '1px 1px 1px #000', textAlign:'left', margin: '10px 5px !important'}}>
-                                  {props.desc}
-                                </Typography>
-                              </CardContent>
-                            </Box>
                           </Card>
                       </Box>
                 </Paper>
@@ -123,26 +124,35 @@ const items = [
         show: "none",
     },
     {
-        title: "Commercial Management",
-        service: "Commercial Management",
+        title: "Chartering",
+        service: "Chartering",
         image: service1,
         direction: 'LR',
-        desc: "All our vessels are fully capable to offer worldwide ship transportation through all trade routes and of a wide range of cargo types. Seaspire is fixing directly with first class Charterers such as ADMI, Dreyfus, Cofco, SIMS. It is also fixing repeatedly with operators such as Clipper & Itiro. Since 2014, our vessels have carried over 1,000,000 metric tons of all dry bulk cargo types.",
+        desc: "Our chartering department uses its extensive global network that provides unique access to first class and reputable charterers. A very dynamic and experienced team is continuously monitoring all market developments implementing a flexible decision-making strategy. Its approach focuses not only on each vessel’s characteristics and position, but also on the fleet as a whole.",
         display: "block",
     },
     {
         title: "Operations",
         service: "Operations",
         image: service2,
-        direction: 'RL',
-        desc: "All our vessels are fully capable to offer worldwide ship transportation through all trade routes and of a wide range of cargo types. Seaspire is fixing directly with first class Charterers such as ADMI, Dreyfus, Cofco, SIMS. It is also fixing repeatedly with operators such as Clipper & Itiro. Since 2014, our vessels have carried over 1,000,000 metric tons of all dry bulk cargo types."
+        direction: 'LR',
+        desc: "Our very experienced team is responsible for coordinating all vessels’ operations from navigation and bunkering to various port and cargo operations also dealing with all the commercial issues that arise. It also makes sure that the best practices are followed for the safe, reliable, and punctual transportation of all goods up to their final destination."
     },
     {
-        title: "Technical Management",
-        service: "Technical Management",
+        title: "Technical",
+        service: "Technical",
         image: service3,
         direction: 'LR',
-        desc: "All our vessels are fully capable to offer worldwide ship transportation through all trade routes and of a wide range of cargo types. Seaspire is fixing directly with first class Charterers such as ADMI, Dreyfus, Cofco, SIMS. It is also fixing repeatedly with operators such as Clipper & Itiro. Since 2014, our vessels have carried over 1,000,000 metric tons of all dry bulk cargo types."
+        display: "block",
+        desc: "Our technical team consists of highly skilled engineers with seagoing experience and naval architects. We constantly monitor our vessels for optimal performance and maintenance to ensure that our fleet is kept at the highest standards. Our goal is that vessels can trade globally even in the most demanding parts of the world, always in a cost-efficient manner. Budgets are strictly monitored and compliance with all international and local port regulations is ensured."
+    },
+    {
+        title: "Crew",
+        service: "Crew",
+        image: service4,
+        direction: 'LR',
+        display: "block",
+        desc: "In Seaspire, we aim to maintain a pool of highly trained and competent seafarers that share our vision and culture. Our crew department implements our very strict recruitment and on-board policies in order to attract quality seafarers and achieve a high level of retention. It always remains in close cooperation with the other departments for all crew-related matters. ",
     }
 ];
 
@@ -151,17 +161,18 @@ export default function STabs(props) {
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => { setValue(newValue); };
   const handleChangeIndex = (index) => { setValue(index); };
-  const secondary = '#ffffff'
-  const styles = { tabsview: { width:'100%'}}
+  const styles = { tabsview: { width:'100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', }}
   return (
-    <Box sx={{ width: {xs:'100vw', md:'100vw', lg:'100%', xl:'100vw'}, height:'100%', overflow:'hidden', cursor:'grab', flexDirection:'row', justifyContent:'center', alignItems:'center',                }}
+    <Box sx={{ width: {xs:'100vw', md:'100vw', lg:'100vw', xl:'100vw'}, height:'100%', overflow:'hidden', cursor:'grab', flexDirection:'row', justifyContent:'center', alignItems:'center',                }}
          display={{ xs: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }}>
-      <Tabs value={value} onChange={handleChange} textColor="primary" indicatorColor={secondary} orientation={'vertical'}
-                          scrollButtons="auto" sx={{ borderRight: 1, borderColor: 'divider', textAlign:'left', paddingTop:'20px', alignSelf: {xs:'flex-start', md:'center', lg:'center', xl:'center'} }}>
+      <Tabs value={value} onChange={handleChange} textColor="primary" orientation={'vertical'}
+                          scrollButtons="auto" sx={{ width:{xs:'35vw', md:'25vw', lg:'20vw', xl:'15vw'}, borderRight: 1, borderColor: 'divider', textAlign:'left',
+                                                     marginTop:{xs:'20vw', md:0, lg:0, xl:0}, alignSelf: {xs:'flex-start', md:'flex-start', lg:'center', xl:'center'} }}>
         <Tab label={items[0].title} {...a11yProps(0)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[1].title} {...a11yProps(1)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[2].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[3].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
+        <Tab label={items[4].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
       </Tabs>
       <SwipeableViews
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -171,11 +182,13 @@ export default function STabs(props) {
             style={styles.tabsview}
             containerStyle={{transitionDuration: '1s'}}
             springConfig={{duration: '1s', easeFunction: 'cubic-bezier(0.15, 0.3, 0.25, 1)', delay: '0s'}}
+            className="tabs-services"
         >
         <TabPanel value={value} index={0} dir={theme.direction} text={items[0].text} service={items[0].service} image={items[0].image} show={items[0].show} sx={{}}></TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction} desc={items[1].desc} service={items[1].service} image={items[1].image} ></TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction} desc={items[2].desc} service={items[2].service} image={items[2].image} ></TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction} desc={items[3].desc} service={items[3].service} image={items[3].image} ></TabPanel>
+        <TabPanel value={value} index={4} dir={theme.direction} desc={items[4].desc} service={items[4].service} image={items[4].image} ></TabPanel>
       </SwipeableViews>
     </Box>
   );

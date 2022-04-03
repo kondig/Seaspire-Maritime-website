@@ -17,11 +17,10 @@ function SmAccordion() {
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary sx={{width:'100%'}}
           expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
+          aria-controls="panel1bh-content" id="panel1bh-header"
         >
-          <Typography sx={{ width: '45%', flexShrink: 0 }}>2021 Oct. 12</Typography>
-          <Typography sx={{ color: 'text.secondary' }}>New site</Typography>
+          <Typography sx={{ width: '30%', flexShrink: 0, fontSize: '0.8rem', textAlign: 'left' }}>2022 Apr</Typography>
+          <Typography sx={{ color: 'text.secondary', fontSize: '1.1rem' }}>Aegean Spire delivery</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -33,11 +32,10 @@ function SmAccordion() {
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary sx={{width:'100%'}}
           expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
-          aria-controls="panel2bh-content"
-          id="panel2bh-header"
+          aria-controls="panel2bh-content" id="panel2bh-header"
         >
-          <Typography sx={{ width: '45%', flexShrink: 0 }}>2021 Feb. 12</Typography>
-          <Typography sx={{ color: 'text.secondary' }}>Announcement</Typography>
+          <Typography sx={{ width: '30%', flexShrink: 0, fontSize: '0.8rem', textAlign: 'left' }}>2021 Sep</Typography>
+          <Typography sx={{ color: 'text.secondary', fontSize: '1.1rem' }}>Trade Winds Articles (3)</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -50,13 +48,10 @@ function SmAccordion() {
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary sx={{width:'100%'}}
           expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
-          aria-controls="panel3bh-content"
-          id="panel3bh-header"
+          aria-controls="panel3bh-content" id="panel3bh-header"
         >
-          <Typography sx={{ width: '45%', flexShrink: 0 }}> 2020 Mar. 09 </Typography>
-          <Typography sx={{ color: 'text.secondary' }}>
-            New office
-          </Typography>
+          <Typography sx={{ width: '30%', flexShrink: 0, fontSize: '0.8rem', textAlign: 'left' }}>2021 Feb</Typography>
+          <Typography sx={{ color: 'text.secondary', fontSize: '1.1rem' }}>Naftika Chronika 2021</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ textAlign: 'left' }}>
@@ -68,10 +63,10 @@ function SmAccordion() {
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <AccordionSummary sx={{width:'100%'}}
           expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
-          aria-controls="panel4bh-content"
-          id="panel4bh-header"
+          aria-controls="panel4bh-content" id="panel4bh-header"
         >
-          <Typography sx={{ width: '45%', flexShrink: 0 }}>2020 Dec. 09</Typography>
+          <Typography sx={{ width: '30%', flexShrink: 0, fontSize: '0.8rem', textAlign: 'left' }}>2022 Dec</Typography>
+          <Typography sx={{ color: 'text.secondary', fontSize: '1.1rem' }}>Marine Money 2019</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ textAlign: 'left' }}>

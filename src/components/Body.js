@@ -73,11 +73,11 @@ function Body(props) {
             <div className={!isVisible2 ? "bg-cover cover2" : "bg-cover cover2 animate"} ref={ref2}></div>
             <FleetAccordion  />
           </div>
-          <div className="section bg bg-a2 pt-2" id="services">
+          <div className="section bg bg-a2" id="services">
             <div className={!isVisible3 ? "bg-cover cover3" : "bg-cover cover3 animate"} ref={ref3}></div>
             <STabs />
           </div>
-          <div className="section bg bg-n pt-2" id="news">
+          <div className="section bg bg-n" id="news">
               <div className={!isVisible4 ? "bg-cover cover4" : "bg-cover cover4 animate"} ref={ref4}></div>
               <Fade in={true} appear={true} timeout={2000}>
                 <p className="news-title">NEWS</p>

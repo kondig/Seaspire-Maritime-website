@@ -8,9 +8,9 @@ import Fade from '@mui/material/Fade';
 import {Service} from './card';
 import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import service1 from '../images/service_commercial.jpg';
-import service2 from '../images/service_operations2.jpg';
-import service3 from '../images/service_technicalmgmt.jpg';
+// import service1 from '../images/service_commercial.jpg';
+// import service2 from '../images/service_operations2.jpg';
+// import service3 from '../images/service_technicalmgmt.jpg';
 
 function CarouselServices(props)
 {

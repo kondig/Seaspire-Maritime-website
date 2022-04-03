@@ -20,7 +20,8 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography sx={{ color: '#ffffff', textShadow:'1px 1px 1px #000',
+          <Typography style={{color:"#ffffff" }}
+                      sx={{ textShadow:'1px 1px 1px #000',
                             textAlign:{xs:'center', md:'center', lg:'center', xl:'center'},
                             fontSize:{xs:'1em',md:'1.1em', lg:'1.2em', xl:'1.2em'},  }}>
             {children}
@@ -69,8 +70,8 @@ export default function KTabs(props) {
     <Box sx={{ width: {xs:'95vw', md:'50vw', lg:'50vw', xl:'40vw'}, position:'absolute', left:'50%', transform:'translateX(-50%)', zIndex:'1000',
                top: {xs:'15vh', md:'25vh', lg:'25vh', xl:'15vh'}, cursor:'grab'  }}
          display={{ xs: 'block', md: 'block', lg: 'block', xl: 'block' }}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: 'transparent',  }}>
-          <Tabs value={value} onChange={handleChange} textColor="primary" indicatorColor={secondary} variant="fullWidth">
+        <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: 'transparent', }}>
+          <Tabs value={value} onChange={handleChange} textColor="primary" variant="fullWidth">
             <Tab label={items[0].name} {...a11yProps(0)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000','&:selected': { color: 'red', backgroundColor: 'white' }, }} />
             <Tab label={items[1].name} {...a11yProps(1)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000','&:selected': { color: 'red', backgroundColor: 'white' }, }} />
             <Tab label={items[2].name} {...a11yProps(2)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000','&:selected': { color: 'red', backgroundColor: 'white' }, }} />

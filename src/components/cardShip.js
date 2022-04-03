@@ -47,7 +47,7 @@ function ShipCard(props) {
             />
             <Box sx={{backgroundColor:'transparent', width: '100%'}}>
               <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', padding: '0'  }}>
-                <TableContainer component={Paper}>
+                <TableContainer component={Paper} sx={{ boxShadow: 0 }}>
                   <Table sx={{ minWidth: 250 }} size="small" aria-label="a dense table">
                     <TableBody>
                       {rows.map((row) => (
@@ -85,10 +85,10 @@ function ShipCard(props) {
                     <TableBody>
                       {rows.map((row) => (
                         <TableRow key={row.spec} sx={{backgroundColor: 'transparent','&:last-child td, &:last-child th': {  }  }} >
-                          <TableCell component="th" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontSize:'0.5rem', fontWeight:'700', border:'0' }} >
+                          <TableCell component="th" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontSize:'0.8rem', fontWeight:'700', border:'0' }} >
                             {row.spec}
                           </TableCell>
-                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontSize:'0.6rem', fontWeight:'700', border:'0' }}>
+                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontSize:'0.9rem', fontWeight:'700', border:'0' }}>
                             {row.value}
                           </TableCell>
                         </TableRow>
@@ -150,33 +150,35 @@ function PrevShipCard(props) {
               <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', padding: '10px'  }}>
                 <TableContainer component={Paper} sx={{ boxShadow: 0 }}>
                     <Table sx={{ minWidth: 250, height:'100%', backgroundColor: 'transparent', }} size="small" aria-label="a dense table">
-                        <TableHead sx={{'&:last-child td, &:last-child th': {  }  }} >
-                            <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.6rem', padding:'5px 5px' }} >
+                      <TableHead sx={{'&:last-child td, &:last-child th': {  }  }} >
+                        <TableRow>
+                            <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >
                                 Vessel
                             </TableCell>
-                            <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.6rem', padding:'5px 5px' }} >
+                            <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >
                                 Build by
                             </TableCell>
-                            <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.6rem', padding:'5px 5px' }} >
+                            <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >
                                 Year
                             </TableCell>
-                            <TableCell align="center" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.6rem', padding:'5px 5px' }} >
+                            <TableCell align="center" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >
                                 Deadweight
                             </TableCell>
-                        </TableHead>
+                        </TableRow>
+                      </TableHead>
                       <TableBody>
                         {rows.map((row) => (
                             <TableRow key={row.ship} sx={{'&:last-child td, &:last-child th': {  }  }} >
                                 <TableCell align="center" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontWeight:'700', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
                                     {row.ship}
                                 </TableCell>
-                                <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:{xs:'0.5em',md:'0.6em', lg:'0.7em', xl:'0.7em'}, padding:'5px 5px' }} >
+                                <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:{xs:'0.6em'}, padding:'5px 5px' }} >
                                     {row.buildBy}
                                 </TableCell>
-                                <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:{xs:'0.5em',md:'0.6em', lg:'0.7em', xl:'0.7em'}, padding:'5px 5px' }} >
+                                <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:{xs:'0.6em'}, padding:'5px 5px' }} >
                                     {row.year}
                                 </TableCell>
-                                <TableCell align="center" scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:{xs:'0.5em',md:'0.6em', lg:'0.7em', xl:'0.7em'}, padding:'5px 5px' }} >
+                                <TableCell align="center" scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:{xs:'0.6em'}, padding:'5px 5px' }} >
                                     {row.deadweight}
                                 </TableCell>
                             </TableRow>
@@ -195,32 +197,34 @@ function PrevShipCard(props) {
                 <TableContainer component={Paper} sx={{ height:'100%', backgroundColor: 'transparent', borderRadius:'0px' }}>
                   <Table sx={{ minWidth: 250, height:'100%', backgroundColor: 'transparent', }} size="small" aria-label="a dense table">
                       <TableHead sx={{'&:last-child td, &:last-child th': {  }  }} >
+                        <TableRow>
                           <TableCell align="center" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
                               Vessel
                           </TableCell>
-                          <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
+                          <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >
                               Build by
                           </TableCell>
-                          <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
+                          <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >
                               Year
                           </TableCell>
-                          <TableCell align="center" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
+                          <TableCell align="center" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >
                               Deadweight
                           </TableCell>
+                         </TableRow>
                       </TableHead>
                     <TableBody>
                       {rows.map((row) => (
                           <TableRow key={row.ship} sx={{'&:last-child td, &:last-child th': {  }  }} >
-                              <TableCell align="center" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontWeight:'700', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
+                              <TableCell align="center" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontWeight:'700', border:'0', fontSize:'1rem', padding:'5px 5px' }}>
                                   {row.ship}
                               </TableCell>
-                              <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
+                              <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >
                                   {row.buildBy}
                               </TableCell>
-                              <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
+                              <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >
                                   {row.year}
                               </TableCell>
-                              <TableCell align="center" scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
+                              <TableCell align="center" scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >
                                   {row.deadweight}
                               </TableCell>
                           </TableRow>

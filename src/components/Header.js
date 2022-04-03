@@ -215,7 +215,9 @@ function MenuAppBar(props) {
           <AppBar position="fixed" sx={{ backgroundColor: 'transparent', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'} }} >
             <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
                 {/*<ShowOnScroll {...props}>*/}
-                 <img src={logo} className="header-logo" alt="Seaspire Maritime" />
+                 <a href='#about'>
+                    <img src={logo} className="header-logo" alt="Seaspire Maritime" />
+                 </a>
                 {/*</ShowOnScroll>*/}
                <SwipeableTemporaryDrawer></SwipeableTemporaryDrawer>
             </Toolbar>

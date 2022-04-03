@@ -5,7 +5,7 @@ import {Service} from './card';
 // import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import service1 from '../images/service_commercial.jpg';
 import service2 from '../images/service_operations2.jpg';
-import service3 from '../images/service_technicalmgmt.jpg';
+// import service3 from '../images/service_technicalmgmt.jpg';
 import {Footer} from './Footer';
 
 const Services = (props) => (
