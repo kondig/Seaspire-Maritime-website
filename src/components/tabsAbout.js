@@ -51,11 +51,11 @@ const items = [
     },
     {
         name: "Vision",
-        text: "Seaspire’s vision is to always be an exemplar maritime management and operating company that provides its customers with the most reliable, safe and efficient services. Committed to its people and shareholders Seaspire always operates at the highest ethical standards."
+        text: "Seaspire’s vision is to always be an exemplary maritime management and operating company that provides its customers with the most reliable, safe and beneficially efficient (or beneficial and efficient) services. Committed to the holistic interests of its people and shareholders, Seaspire always operates at the highest ethical standards. Our goal is to always be a step ahead at the forefront of the industry incorporating and further developing innovative techniques and policies, while ensuring growth and environmental sustainability."
     },
     {
         name: "Mission",
-        text: "Seaspire aims to the future by further expanding its fleet and services and by constantly creating value to its shareholders and to its people. Our goal is to achieve our targets in the most responsible and environmentally friendly manner."
+        text: "Seaspire aims for the future by further expanding its fleet and services and by constantly creating increasing value to its business partners. Our goal is to achieve our high-standard demanding targets in the most responsible and environmentally friendly manner. We focus on offering excellent ship-management services, while ensuring a pro-active policy regarding the increasingly complex challenges of the maritime industry."
     }
 ];
 

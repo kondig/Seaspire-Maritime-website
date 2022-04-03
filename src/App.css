@@ -182,7 +182,7 @@ html {
   /* height: 150px; */
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .main {
     margin-top: 40px;
@@ -198,7 +198,7 @@ html {
   color: #1864ac;
   text-transform: uppercase;
   display: block;
-  position: absolute;
+  /* position: absolute; */
   padding: 0;
   margin: 0;
   padding: 0px 0px;
@@ -207,10 +207,10 @@ html {
 }
 .menu li {
   color: #1864ac;
-  padding: 15px 40px;
+  padding: 2vh 4vw;
   font-weight: 700;
   display: inline-block;
-  font-size: 24px;
+  font-size: 1.2em;
   position: relative;
   transition: all 750ms ease-out;
 }
@@ -635,27 +635,28 @@ a.phone {
 }
 .about_tag {
   position: absolute;
-  top: 55%;
-  right: 8%;
+  top: 50%;
+  left: 0%;
+  padding: 0px 2vw;
   color: #000000;
-  font-size:1.2em;
-  letter-spacing: 0.1em;
-  text-shadow: 1px 1px #cccccc;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-shadow: 1px 0.5px #ffffff;
   animation-duration: 4s;
   animation-timing-function: ease-in;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-name: slideIn;
 }
-.spire {
-  color: #e08121;
-}
+.sea { color: #1864ac; text-shadow: 1px 1px #000000; }
+.spire { color: #e08121; text-shadow: 1px 1px #000000; }
 .header-root {
     flex-grow: 1;
     width: 100%;
 }
 .header-logo {
-    width: 50px;
+    width: 4vw;
     padding: 3px;
     margin-top: 0px;
 }
@@ -732,9 +733,9 @@ a.phone {
   background-color: #ccc;
 } */
 .bg-services { background-image: url('./images/bg1.jpg'); overflow: hidden; }
-.bg-s1 { background-image: url('./images/bg1.jpg'); overflow: hidden; }
-.bg-a2 { background-image: url('./images/bg2.JPG'); overflow: hidden; }
-.bg-a1 { background-image: url('./images/seaspire3.jpg'); overflow: hidden; }
+.bg-s1 { background-image: url('./images/bg-fleet.jpeg'); overflow: hidden; }
+.bg-a2 { background-image: url('./images/bg-services.jpeg'); overflow: hidden; }
+.bg-a1 { background-image: url('./images/bg-header.jpeg'); overflow: hidden; }
 .bg-a3 { background-image: url('./images/bg-a.JPG'); overflow: hidden; }
 .bg-n { background-image: url('./images/aegeanSpire.jpg'); overflow: hidden; }
 .bg-sl1 { background-color: #333 }
@@ -790,12 +791,13 @@ a.phone {
     transition-delay: 0s;
 } */
 .accordion-container {
-    /* padding-top: 100px; */
     width: 65%;
-    min-height: 100vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
+    position:absolute;
+    top:15vh;
+    overflow:hidden;
 }
 .carousel-div {
   width:100%;
@@ -843,11 +845,11 @@ a.phone {
 }
 #back-to-top-anchor { height: 1px; min-height:1px; }
 .sm-official {
-    width: 20vw;
+    width: 22vw;
     position: absolute;
     top: 40%;
-    left: 70%;
-    transform: translate(-50%, -50%);
+    left: 60%;
+    /* transform: translate(-50%, -50%); */
     font-size: 2.5em;
     font-weight: 700;
     color: #ffffff;
@@ -1071,9 +1073,10 @@ a.phone {
      /* transform: translateX(-10%); */
   }
   .sm-official {
-      width: 40vw;
-      top: 20%;
-      left: 75%;
+      width: 60vw;
+      top: 90%;
+      left: 0%;
+      /* transform: translateX(-50%); */
   }
   .footer-row { width: 100% }
   .footer-link {
@@ -1125,8 +1128,8 @@ a.phone {
     width:100%;
   }
   .menu {
-    height:50px;
-    padding: 15px 0px;
+    /* height:50px;
+    padding: 15px 0px; */
   }
   .header { height:100px; }
   .about_text p { text-align: justify; }

@@ -1,5 +1,5 @@
 import React from 'react';
-import slideImg from './aegeanspire.jpg';
+// import slideImg from './aegeanspire.jpg';
 
 // let slidePic = require('./aegeanspire.jpg');
 

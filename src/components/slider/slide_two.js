@@ -1,5 +1,5 @@
 import React from 'react';
-import slideImg from './saronicspire2.jpg';
+// import slideImg from './saronicspire2.jpg';
 // let slideImg = require('./saronicspire2.jpg');
 
 const SlideTwo = (props) => {
@@ -52,7 +52,7 @@ const SlideTwo = (props) => {
   return (
     <div className="slide bg-sl2">
     <div className="slide-img" style={background}><p> Saronic Spire </p></div>
-    <div className='slide-table' style={text} >    
+    <div className='slide-table' style={text} >
         <div className="vesselTable" style={vesselTable}>
           <div className='table_container' style={shipTable}>
             <div className='table_cat' style={cat} > Type </div>

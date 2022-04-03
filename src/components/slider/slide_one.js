@@ -1,5 +1,5 @@
 import React from 'react';
-import slideImg from './balticspire.jpg';
+// import slideImg from './balticspire.jpg';
 // let slidePic = require('./balticspire.jpg');
 
 const SlideOne = (props) => {

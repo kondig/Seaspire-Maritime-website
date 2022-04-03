@@ -225,8 +225,8 @@ function MenuAppBar(props) {
       <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}
            sx={{ flexGrow: 1, width: '100%', backgroundColor: 'transparent !important' }}>
         <ElevationScroll {...props}>
-          <AppBar position="fixed" sx={{ backgroundColor: 'transparent', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'} }} >
-            <Toolbar>
+          <AppBar position="fixed" sx={{ backgroundColor: 'transparent' }} >
+            <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
                <ShowOnScroll {...props}>
                 <img src={logo} className="header-logo" alt="Seaspire Maritime" />
                </ShowOnScroll>
