@@ -7,9 +7,26 @@ import {Main} from './components/Main.js';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#1864ac',
+      },
+      secondary: {
+        main: '#BAC4CC',
+      },
+    },
     typography: {
         fontFamily: '"Open Sans", sans-serif'
-    }
+    },
+    components: {
+        MuiFab: {
+            styleOverrides: {
+              circular: { backgroundColor: '#1864ac', color:'#ffffff',
+                          ':hover': { backgroundColor: '#BAC4CC', color:'#1864ac'}
+                        },
+            },
+        },
+    },
 
 });
 

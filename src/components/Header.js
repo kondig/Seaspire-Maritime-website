@@ -30,50 +30,6 @@ import NewsIcon from '@mui/icons-material/Announcement';
 
 import logo from '../images/SeaSpire-logo.png';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1,
-//     width: '100%',
-//     [theme.breakpoints.down('sm')]: {
-//       flexGrow: 0,
-//     }
-//   },
-//   menuButton: {
-//     marginRight: theme.spacing(2),
-//   },
-//   title: {
-//     flexGrow: 1,
-//     fontSize: '1em',
-//   },
-//   logo: {
-//     width: '45px !important',
-//     height: '77px',
-//     padding: '5px',
-//     marginTop: '0px !important',
-//     [theme.breakpoints.down('sm')]: {
-//         width: '20px !important',
-//         height: '34px',
-//         padding: '2px',
-//     }
-//   },
-//   bar: {
-//     backgroundColor: '#ffffff',
-//     [theme.breakpoints.down('sm')]: {
-//       height: '50px',
-//     }
-//   },
-//   mi: {
-//     margin: '20px 0 !important',
-//     zIndex:'1000',
-//     '&:hover': {
-//       backgroundColor: '#000000',
-//       color: '#ffffff',
-//     }
-//   },
-//   burger: {
-//     color: '#1864ac',
-//   }
-// }));
 function ElevationScroll(props) {
   const { children } = props;
   const trigger = useScrollTrigger({
@@ -190,15 +146,10 @@ function SwipeableTemporaryDrawer() {
   );
 }
 
-function MenuAppBar(props) {
+function Header(props) {
   // const classes = useStyles();
-  // const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
-  // const handleChange = (event) => {
-  //   setAuth(event.target.checked);
-  // };
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -215,7 +166,7 @@ function MenuAppBar(props) {
           <AppBar position="fixed" sx={{ backgroundColor: 'transparent', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'} }} >
             <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
                 {/*<ShowOnScroll {...props}>*/}
-                 <a href='#about'>
+                 <a href='/'>
                     <img src={logo} className="header-logo" alt="Seaspire Maritime" />
                  </a>
                 {/*</ShowOnScroll>*/}
@@ -230,7 +181,9 @@ function MenuAppBar(props) {
           <AppBar position="fixed" sx={{ backgroundColor: 'transparent' }} >
             <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
                <ShowOnScroll {...props}>
+               <a href='/'>
                 <img src={logo} className="header-logo" alt="Seaspire Maritime" />
+               </a>
                </ShowOnScroll>
                 <div className="menu">
                   <ul>
@@ -247,15 +200,6 @@ function MenuAppBar(props) {
       </Box>
     </div>
   );
-}
-
-const Header = () => {
-  // const classes = useStyles();
-  return (
-    <div>
-      <MenuAppBar />
-    </div>
-  )
 }
 
 
