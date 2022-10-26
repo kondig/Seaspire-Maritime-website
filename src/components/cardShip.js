@@ -73,22 +73,24 @@ function ShipCard(props) {
                       boxShadow:'0px 0px 0px #333', border:'0', borderRadius:'0px'}}>
             <CardMedia
               component="img"
-              sx={{ width: '55%', height:'37vh' }}
+              sx={{ flexBasis:'45%', backgroundRepeat:'no-repeat' }}
               image={props.image}
               alt={props.ship}
               title={props.ship}
             />
-            <Box sx={{backgroundColor:'transparent', width:'45%'}}>
+            <Box sx={{backgroundColor:'transparent', flexBasis:'55%'}}>
               <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width:'100%', height:'100%', padding:'0px !important', }}>
                 <TableContainer component={Paper} sx={{ height:'100%', backgroundColor: 'transparent', borderRadius:'0px' }}>
                   <Table sx={{ minWidth: 250, height:'100%', backgroundColor: 'transparent', }} size="small" aria-label="a dense table">
                     <TableBody>
                       {rows.map((row) => (
                         <TableRow key={row.spec} sx={{backgroundColor: 'transparent','&:last-child td, &:last-child th': {  }  }} >
-                          <TableCell component="th" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontSize:'0.8rem', fontWeight:'700', border:'0' }} >
+                          <TableCell component="th" scope="row"
+                                     sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontSize:{md:'0.7rem',lg:'0.8rem'}, fontWeight:'700', border:'0' }} >
                             {row.spec}
                           </TableCell>
-                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontSize:'0.9rem', fontWeight:'700', border:'0' }}>
+                          <TableCell align="right"
+                                     sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontSize:{md:'0.8rem',lg:'0.9rem'}, fontWeight:'700', border:'0' }}>
                             {row.value}
                           </TableCell>
                         </TableRow>
@@ -139,7 +141,8 @@ function createRowData(ship, buildBy, year, deadweight) {
 function PrevShipCard(props) {
   const theme = useTheme();
   const rows = [
-    createRowData(props.ship, props.buildBy, props.year, props.deadweight),
+    createRowData(props.ships[0], props.buildBy[0], props.year[0], props.deadweight[0]),
+    createRowData(props.ships[1], props.buildBy[1], props.year[1], props.deadweight[1]),
   ];
   return (
     <div>
@@ -238,12 +241,12 @@ function PrevShipCard(props) {
     </div>
   );
 }
-function PrevShip(props) {
-    const { ship, buildBy, deadweight, year } = props;
+function PrevShips(props) {
+    const { ships, buildBy, deadweight, year } = props;
     return (
       <div>
         <PrevShipCard
-          ship = { ship }
+          ships = { ships }
           year = { year }
           buildBy = { buildBy }
           deadweight = { deadweight }
@@ -252,5 +255,5 @@ function PrevShip(props) {
     );
 }
 
-export { PrevShip };
+export { PrevShips };
 export default Ship;

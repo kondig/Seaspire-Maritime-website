@@ -26,6 +26,12 @@ const theme = createTheme({
                         },
             },
         },
+        MuiAccordionSummary: {
+            styleOverrides: {
+                root: { minHeight: '35px' },
+                content: { margin: '10px 0'},
+            }
+        }
     },
 
 });

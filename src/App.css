@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+:root {
+  --primary: #1864ac;
+  --secondary: #BAC4CC;
+}
 
 html {
     scrollbar-color: #1864ac #e0e0e0;
@@ -478,6 +482,10 @@ td, th {
     color: #ffffff;
     font-size: 1.2em;
 }
+.news-link {
+    color: var(--primary);
+    font-size: 1em;
+}
 .footer-icon {
     color: #1864ac;
 }
@@ -604,6 +612,7 @@ a.phone {
   font-weight: 700;
   color: white;
   letter-spacing: 0.2em;
+  margin: 2vh 2vw;
   text-shadow: 2px 2px #666666;
 }
 .navBtnContainer {
@@ -624,7 +633,7 @@ a.phone {
   margin: 20px auto;
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 60%;
 }
 .about_title {
   position: absolute;
@@ -810,7 +819,7 @@ a.phone {
     transition-delay: 0s;
 } */
 .accordion-container {
-    width: 60%;
+    width: 75%;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -897,6 +906,12 @@ a.phone {
     animation-delay: 0s;
     animation-iteration-count: 1;
     animation-name: fadeOut; */
+}
+.css-1gdwtqt-MuiAccordionSummary-content.Mui-expanded {
+    margin: 10px 0 !important;
+}
+.css-5xtk5g-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+    min-height: 40px !important;
 }
 
 @keyframes fadeOutNleave {
@@ -1042,7 +1057,7 @@ a.phone {
   .nextArrow { top:10% !important; }
   .text p { width: 90%; }
   .news-container {
-    width: 90% !important;
+    width: 94% !important; margin: 10px auto;
   }
   /* .about { background-attachment: scroll !important; } */
   .services,
