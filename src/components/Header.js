@@ -17,7 +17,7 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
@@ -42,7 +42,7 @@ function ElevationScroll(props) {
     elevation: trigger ? 4 : 0,
     style: {
         color: trigger ? '#000000' : '#666666',
-        backgroundColor: trigger ? 'red' : 'transparent',
+        backgroundColor: trigger ? '#ffffff' : 'transparent',
     }
   });
 }
@@ -93,26 +93,32 @@ function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button key={'About us'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}} >
+        <ListItemButton key={'About'} sx={{margin: '20px 0 !important', zIndex:'1000',
+                                                '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}} >
           <ListItemIcon><AboutIcon /></ListItemIcon>
-          <a className="mobile-link" href='#about' >ABOUT US</a>
-        </ListItem>
-        <ListItem button key={'Services'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
+          <Link className="mobile-link" href='/#about' underline="none">ABOUT US</Link>
+        </ListItemButton>
+        <ListItemButton key={'Services'} sx={{margin: '20px 0 !important', zIndex:'1000',
+                                                '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><ServicesIcon /></ListItemIcon>
-          <a className="mobile-link" href='#services'>SERVICES</a>
-        </ListItem>
-        <ListItem button key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
+          {/*<a className="mobile-link" href='/#services'>SERVICES</a>*/}
+          <Link className="mobile-link" href='/#services' underline="none">SERVICES</Link>
+        </ListItemButton>
+        <ListItemButton key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000',
+                                                '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><FleetIcon /></ListItemIcon>
-          <a className="mobile-link" href='#fleet' >FLEET</a>
-        </ListItem>
-        <ListItem button key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
+          <a className="mobile-link" href='/#fleet' >FLEET</a>
+        </ListItemButton>
+        <ListItemButton key={'News'} sx={{margin: '20px 0 !important', zIndex:'1000',
+                                                '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><NewsIcon /></ListItemIcon>
-          <a className="mobile-link" href='#news' >NEWS</a>
-        </ListItem>
-        <ListItem button key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000', '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
+          <a className="mobile-link" href='/#news' >NEWS</a>
+        </ListItemButton>
+        <ListItemButton key={'Contact'} sx={{margin: '20px 0 !important', zIndex:'1000',
+                                                '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><ContactPhoneIcon /></ListItemIcon>
-          <a className="mobile-link" href='#contact' >CONTACT</a>
-        </ListItem>
+          <a className="mobile-link" href='/#contact' >CONTACT</a>
+        </ListItemButton>
       </List>
       <Divider />
     </Box>
@@ -187,11 +193,11 @@ function Header(props) {
                </ShowOnScroll>
                 <div className="menu">
                   <ul>
-                    <li> <a href='#about'>ABOUT US</a> </li>
-                    <li> <a href='#fleet'>FLEET</a> </li>
-                    <li> <a href='#services'>SERVICES</a> </li>
-                    <li> <a href='#news'>NEWS</a> </li>
-                    <li> <a href='#contact'>CONTACT</a> </li>
+                    <li> <a href='/#about'>ABOUT US</a> </li>
+                    <li> <a href='/#fleet'>FLEET</a> </li>
+                    <li> <a href='/#services'>SERVICES</a> </li>
+                    <li> <a href='/#news'>NEWS</a> </li>
+                    <li> <a href='/#contact'>CONTACT</a> </li>
                   </ul>
                 </div>
             </Toolbar>
@@ -201,30 +207,5 @@ function Header(props) {
     </div>
   );
 }
-
-
-const HeaderOld = () => (
-  <div>
-    <Menu>
-      <a id="home" className="menu-item" href="/">Home</a>
-      <a id="about" className="menu-item" href="#About_Us">About</a>
-      <a className="menu-item" href="#Fleet"><FontAwesome name='ship'/> &nbsp; Fleet</a>
-      <a className="menu-item" href="#contact">Contact</a>
-    </Menu>
-    <header className="App-header">
-      <div className="header">
-        <div className="menu">
-          <ul>
-            <li> <a href='#About_Us'>ABOUT US</a> </li>
-            <li> <a href='#Fleet'>FLEET</a> </li>
-            <li> <a href='#Services'>SERVICES</a> </li>
-            <li> <a href='#History'>NEWS</a> </li>
-            <li> <a href='#contact'>CONTACT</a> </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-  </div>
-)
 
 export {Header}

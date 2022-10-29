@@ -36,7 +36,7 @@ function ShipCard(props) {
   return (
     <div>
       <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }}>
-          <Card sx={{ display: 'flex', flexDirection:'column', margin: '0 auto', justifyContent: 'center', width: '95%',
+          <Card sx={{ display: 'flex', flexDirection:'column', margin: '0 auto', justifyContent: 'center', width: '100%',
                       backgroundColor:'transparent', boxShadow:'0px 0px 0px #333', border:'0', borderRadius:'0px'}}>
             <CardMedia
               component="img"
@@ -55,7 +55,7 @@ function ShipCard(props) {
                           <TableCell component="th" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
                             {row.spec}
                           </TableCell>
-                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontWeight:'700', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
+                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontWeight:'400', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
                             {row.value}
                           </TableCell>
                         </TableRow>
