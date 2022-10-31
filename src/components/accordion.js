@@ -14,7 +14,7 @@ function SmAccordion() {
   };
 
   return (
-    <Box sx={{overflow:'scroll'}}>
+    <Box sx={{ }}>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel1bh-content" id="panel1bh-header"
@@ -22,7 +22,7 @@ function SmAccordion() {
           <Typography color='primary' sx={{ width: '25%', flexShrink: 0, fontSize: '0.8rem', textAlign: 'left' }}>2022 Jul</Typography>
           <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>TradeWinds article</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
           <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
             Load Line makes bulker asset play amid choppier S&P markets.
             <br/><a href="https://www.tradewindsnews.com/bulkers/load-line-makes-bulker-asset-play-amid-choppier-s-p-markets/2-1-1262316"
@@ -39,7 +39,7 @@ function SmAccordion() {
           <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2021 Sep</Typography>
           <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>Naftika Chronika No.242</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
           <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
             Newcomers in the Shipping Industry: Challenges and Opportunities, Issue no. 242,  page 52.
             <br/><a href="https://s3.eu-central-1.amazonaws.com/naftikachronika-issues/242.pdf"
@@ -56,7 +56,7 @@ function SmAccordion() {
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2021 Mar</Typography>
             <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Messinian Spire Delivery</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
               MV Messinian Spire (Ex-Darya Mahesh) was delivered to her new managers, Seaspire Maritime Inc., on March 24th, 2021.
               MV Messinian Spire is a 56,056-dwt dry cargo vessel with 4x30T Cranes and 4x13.5cbm Grabs built in 2008 in Mitsui Tamano, Japan
@@ -70,7 +70,7 @@ function SmAccordion() {
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2019 Nov</Typography>
             <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Corinthian Spire Delivery</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
               MV Corinthian Spire (Ex-Crane Island) was delivered to her new managers, Seaspire Maritime Inc., on November 05th, 2019.
               MV Corinthian Spire is a 32,154-dwt open-box type dry cargo vessel with 4x30T Cranes built in 2009 in Kanda, Japan
@@ -84,7 +84,7 @@ function SmAccordion() {
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2019 Oct</Typography>
             <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>Marine Money Athens</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
               2019 Greek Ship Finance Forum
               <br/><a href="https://www.marinemoney.com/events-2-0-2/2019-greek-ship-finance-forum"
@@ -101,7 +101,7 @@ function SmAccordion() {
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2019 Jul</Typography>
             <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>TradeWinds article</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
               Greek handysize bulker buying picks up steam in July
               <br/><a href="https://www.tradewindsnews.com/bulkers/greek-handysize-bulker-buying-picks-up-steam-in-july/2-1-646098"
@@ -118,7 +118,7 @@ function SmAccordion() {
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2018 Feb</Typography>
             <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>TradeWinds article</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
               Seaspire confirms handy bulker buys
               <br/><a href="https://www.tradewindsnews.com/seaspire-confirms-handy-bulker-buys/2-1-281861"
@@ -135,7 +135,7 @@ function SmAccordion() {
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2018 Jan</Typography>
             <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Aegean Spire Delivery</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
               MV Aegean Spire (Ex-Atlantic Treasure) was delivered to her new managers, Seaspire Maritime Inc., on January 25th, 2018.
               MV Aegean Spire is a 33,401-dwt open-box type dry cargo vessel with 4x30T Cranes built in 2008 in Shin Kochiyuko Co. Ltd, Japan
@@ -149,7 +149,7 @@ function SmAccordion() {
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2017 Jun</Typography>
             <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Ionian Spire Delivery</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
               MV Ionian Spire (Ex-C.S. Ocean)was delivered to her new managers, Seaspire Maritime Inc., on June 21st, 2017.
               MV Ionian Spire is a 32,269-dwt open-box type dry cargo vessel with 4x30T Cranes built in 2008 in Kanda, Japan
@@ -163,7 +163,7 @@ function SmAccordion() {
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2016 Oct</Typography>
             <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Saronic Spire Delivery</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
               MV Saronic Spire (Ex-CS Salina) was delivered to her new managers, Seaspire Maritime Inc., on October 2nd, 2016.
               MV Saronic Spire is a 32,355-dwt open-box type dry cargo vessel with 4x30T Cranes built in 2004 in Kanda, Japan
@@ -177,7 +177,7 @@ function SmAccordion() {
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2014 Oct</Typography>
             <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Baltic Spire Delivery</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
               MV Baltic Spire (Ex-Baltic ID) was delivered to her new managers, Seaspire Maritime Inc., on October 22nd, 2014.
               MV Baltic Spire is a 28,545-dwt log-fitted dry cargo vessel with 4x30T Cranes built in 1997 in Imabari Shipbuilding Co. Ltd, Japan

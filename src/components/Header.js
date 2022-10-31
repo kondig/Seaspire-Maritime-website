@@ -27,6 +27,7 @@ import AboutIcon from '@mui/icons-material/Info';
 import FleetIcon from '@mui/icons-material/DirectionsBoat';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import NewsIcon from '@mui/icons-material/Announcement';
+import { HashLink } from 'react-router-hash-link';
 
 import logo from '../images/SeaSpire-logo.png';
 
@@ -96,28 +97,33 @@ function SwipeableTemporaryDrawer() {
         <ListItemButton key={'About'} sx={{margin: '20px 0 !important', zIndex:'1000',
                                                 '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}} >
           <ListItemIcon><AboutIcon /></ListItemIcon>
-          <Link className="mobile-link" href='/#about' underline="none">ABOUT US</Link>
+          {/*<Link className="mobile-link" href='/#about' underline="none">ABOUT US</Link>*/}
+          <HashLink smooth to="/#about" className="mobile-link">ABOUT US</HashLink>
         </ListItemButton>
         <ListItemButton key={'Services'} sx={{margin: '20px 0 !important', zIndex:'1000',
                                                 '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><ServicesIcon /></ListItemIcon>
           {/*<a className="mobile-link" href='/#services'>SERVICES</a>*/}
-          <Link className="mobile-link" href='/#services' underline="none">SERVICES</Link>
+          {/*<Link className="mobile-link" href='/#services' underline="none">SERVICES</Link>*/}
+          <HashLink smooth to="/#services" className="mobile-link">SERVICES</HashLink>
         </ListItemButton>
         <ListItemButton key={'Fleet'} sx={{margin: '20px 0 !important', zIndex:'1000',
                                                 '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><FleetIcon /></ListItemIcon>
-          <a className="mobile-link" href='/#fleet' >FLEET</a>
+          {/*<a className="mobile-link" href='/#fleet' >FLEET</a>*/}
+          <HashLink smooth to="/#fleet" className="mobile-link">FLEET</HashLink>
         </ListItemButton>
         <ListItemButton key={'News'} sx={{margin: '20px 0 !important', zIndex:'1000',
                                                 '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><NewsIcon /></ListItemIcon>
-          <a className="mobile-link" href='/#news' >NEWS</a>
+          {/*<a className="mobile-link" href='/#news' >NEWS</a>*/}
+          <HashLink smooth to="/#news" className="mobile-link">NEWS</HashLink>
         </ListItemButton>
         <ListItemButton key={'Contact'} sx={{margin: '20px 0 !important', zIndex:'1000',
                                                 '&:hover': { backgroundColor: '#000000', color: '#ffffff', }}}>
           <ListItemIcon><ContactPhoneIcon /></ListItemIcon>
-          <a className="mobile-link" href='/#contact' >CONTACT</a>
+          {/*<a className="mobile-link" href='/#contact' >CONTACT</a>*/}
+          <HashLink smooth to="/#contact" className="mobile-link">CONTACT</HashLink>
         </ListItemButton>
       </List>
       <Divider />
@@ -167,9 +173,9 @@ function Header(props) {
 
   return (
     <div className="header-root">
-      <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }} sx={{ flexGrow: 1, width: '100%', }}>
-        <ElevationScroll {...props}>
-          <AppBar position="fixed" sx={{ backgroundColor: 'transparent', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'} }} >
+      <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }} sx={{ width: '100%', }}>
+        {/*<ElevationScroll {...props}>*/}
+          <AppBar position="fixed" sx={{ backgroundColor: 'transparent', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'}, boxShadow:'0px 0px 0px #000' }} >
             <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
                 {/*<ShowOnScroll {...props}>*/}
                  <a href='/'>
@@ -179,12 +185,12 @@ function Header(props) {
                <SwipeableTemporaryDrawer></SwipeableTemporaryDrawer>
             </Toolbar>
           </AppBar>
-        </ElevationScroll>
+        {/*</ElevationScroll>*/}
       </Box>
       <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}
-           sx={{ flexGrow: 1, width: '100%', backgroundColor: 'transparent !important' }}>
-        <ElevationScroll {...props}>
-          <AppBar position="fixed" sx={{ backgroundColor: 'transparent' }} >
+           sx={{ width: '100%', backgroundColor: 'transparent !important' }}>
+        {/*<ElevationScroll {...props}>*/}
+          <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow:'0px 0px 0px #000' }} >
             <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
                <ShowOnScroll {...props}>
                <a href='/'>
@@ -202,7 +208,7 @@ function Header(props) {
                 </div>
             </Toolbar>
           </AppBar>
-        </ElevationScroll>
+        {/*</ElevationScroll>*/}
       </Box>
     </div>
   );

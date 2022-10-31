@@ -21,6 +21,7 @@ function FleetAccordion() {
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
+    window.scrollTo(0, isExpanded.offsetTop-100);
   };
 
   return (

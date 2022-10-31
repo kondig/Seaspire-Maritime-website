@@ -51,7 +51,7 @@ function ShipCard(props) {
                   <Table sx={{ minWidth: 250 }} size="small" aria-label="a dense table">
                     <TableBody>
                       {rows.map((row) => (
-                        <TableRow key={row.spec} sx={{'&:last-child td, &:last-child th': {  }  }} >
+                        <TableRow key={row.spec}>
                           <TableCell component="th" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
                             {row.spec}
                           </TableCell>

@@ -16,7 +16,7 @@ import {Service} from './card';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import service1 from '../images/service-chartering.jpg';
 import service2 from '../images/service-operations.jpeg';
-import service3 from '../images/service_commercial.jpg';
+import service3 from '../images/service-technical.jpeg';
 import service4 from '../images/service-crew.jpeg';
 
 function TabPanel(props) {
@@ -36,7 +36,7 @@ function TabPanel(props) {
                 <Paper sx={{backgroundColor:"transparent", height:'100%', width:'100%', boxShadow: '0', paddinTop:'15vh',
                              alignSelf:'flex-start'}}>
                     <Fade appear={true} in={true} timeout={2000}>
-                      <div className="tab-text color-white asc" >
+                      <div className="tab-text color-white asc" style={{display:props.disText}}>
                           {props.text}
                       </div>
                     </Fade>
@@ -120,7 +120,7 @@ function a11yProps(index) {
 const items = [
     {
         title: "Services",
-        text: "Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society.",
+        text: "Seaspire Maritime is committed in providing the full spectrum of the highest quality ship management services",
         show: "none",
     },
     {
@@ -130,13 +130,15 @@ const items = [
         direction: 'LR',
         desc: "Our chartering department uses its extensive global network that provides unique access to first class and reputable charterers. A very dynamic and experienced team is continuously monitoring all market developments implementing a flexible decision-making strategy. Its approach focuses not only on each vessel’s characteristics and position, but also on the fleet as a whole.",
         display: "block",
+        disText: 'none',
     },
     {
         title: "Operations",
         service: "Operations",
         image: service2,
         direction: 'LR',
-        desc: "Our very experienced team is responsible for coordinating all vessels’ operations from navigation and bunkering to various port and cargo operations also dealing with all the commercial issues that arise. It also makes sure that the best practices are followed for the safe, reliable, and punctual transportation of all goods up to their final destination."
+        desc: "Our very experienced team is responsible for coordinating all vessels’ operations from navigation and bunkering to various port and cargo operations also dealing with all the commercial issues that arise. It also makes sure that the best practices are followed for the safe, reliable, and punctual transportation of all goods up to their final destination.",
+        disText: 'none',
     },
     {
         title: "Technical",
@@ -144,7 +146,8 @@ const items = [
         image: service3,
         direction: 'LR',
         display: "block",
-        desc: "Our technical team consists of highly skilled engineers with seagoing experience and naval architects. We constantly monitor our vessels for optimal performance and maintenance to ensure that our fleet is kept at the highest standards. Our goal is that vessels can trade globally even in the most demanding parts of the world, always in a cost-efficient manner. Budgets are strictly monitored and compliance with all international and local port regulations is ensured."
+        desc: "Our technical team consists of highly skilled engineers with seagoing experience and naval architects. We constantly monitor our vessels for optimal performance and maintenance to ensure that our fleet is kept at the highest standards. Our goal is that vessels can trade globally even in the most demanding parts of the world, always in a cost-efficient manner. Budgets are strictly monitored and compliance with all international and local port regulations is ensured.",
+        disText: 'none',
     },
     {
         title: "Crew",
@@ -152,7 +155,8 @@ const items = [
         image: service4,
         direction: 'LR',
         display: "block",
-        desc: "In Seaspire, we aim to maintain a pool of highly trained and competent seafarers that share our vision and culture. Our crew department implements our very strict recruitment and on-board policies in order to attract quality seafarers and achieve a high level of retention. It always remains in close cooperation with the other departments for all crew-related matters. ",
+        desc: "In Seaspire, we aim to maintain a pool of highly trained and competent seafarers that share our vision and culture. Our crew department implements our very strict recruitment and on-board policies in order to attract quality seafarers and achieve a high level of retention. It always remains in close cooperation with the other departments for all crew-related matters.",
+        disText: 'none',
     }
 ];
 
@@ -167,7 +171,7 @@ export default function STabs(props) {
          display={{ xs: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }}>
       <Tabs value={value} onChange={handleChange} textColor="primary" orientation={'vertical'}
                           scrollButtons="auto" sx={{ width:{xs:'35vw', md:'25vw', lg:'20vw', xl:'15vw'}, borderRight: 1, borderColor: 'divider', textAlign:'left',
-                                                     marginTop:{xs:'20vw', md:0, lg:0, xl:0}, alignSelf: {xs:'flex-start', md:'flex-start', lg:'center', xl:'center'} }}>
+                                                     marginTop:{xs:'15vw', md:0, lg:0, xl:0}, alignSelf: {xs:'flex-start', md:'flex-start', lg:'center', xl:'center'} }}>
         <Tab label={items[0].title} {...a11yProps(0)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[1].title} {...a11yProps(1)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[2].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
@@ -185,10 +189,10 @@ export default function STabs(props) {
             className="tabs-services"
         >
         <TabPanel value={value} index={0} dir={theme.direction} text={items[0].text} service={items[0].service} image={items[0].image} show={items[0].show} sx={{}}></TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction} desc={items[1].desc} service={items[1].service} image={items[1].image} ></TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction} desc={items[2].desc} service={items[2].service} image={items[2].image} ></TabPanel>
-        <TabPanel value={value} index={3} dir={theme.direction} desc={items[3].desc} service={items[3].service} image={items[3].image} ></TabPanel>
-        <TabPanel value={value} index={4} dir={theme.direction} desc={items[4].desc} service={items[4].service} image={items[4].image} ></TabPanel>
+        <TabPanel value={value} index={1} dir={theme.direction} desc={items[1].desc} service={items[1].service} image={items[1].image} distext={'none'} ></TabPanel>
+        <TabPanel value={value} index={2} dir={theme.direction} desc={items[2].desc} service={items[2].service} image={items[2].image} distext={'none'} ></TabPanel>
+        <TabPanel value={value} index={3} dir={theme.direction} desc={items[3].desc} service={items[3].service} image={items[3].image} distext={'none'} ></TabPanel>
+        <TabPanel value={value} index={4} dir={theme.direction} desc={items[4].desc} service={items[4].service} image={items[4].image} distext={'none'} ></TabPanel>
       </SwipeableViews>
     </Box>
   );
