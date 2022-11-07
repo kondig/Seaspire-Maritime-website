@@ -27,9 +27,9 @@ function FleetAccordion() {
   return (
     <div className="accordion-container">
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} disableGutters={true} sx={{ backgroundColor: 'transparent' }}>
-        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#1864ac', width:'1.3em', height:'1.3em', padding: '5px'}} />}
+        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#3d5ba6', width:'1.3em', height:'1.3em', padding: '5px'}} />}
                           aria-controls="panel1bh-content" id="panel1bh-header" sx={{width: '100%', backgroundColor: '#ffffff !important'}} >
-            <Typography className="ship-tag" sx={{ width: '100%', color:'#1864ac', textAlign: 'center', fontSize:'1.5em', }}>
+            <Typography className="ship-tag" sx={{ width: '100%', color:'#3d5ba6', textAlign: 'center', fontSize:'1.5em', }}>
                 Saronic Spire
             </Typography>
           </AccordionSummary>
@@ -40,9 +40,9 @@ function FleetAccordion() {
         </AccordionDetails>
       </Accordion>
       {/*<Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} disableGutters={true} sx={{ backgroundColor: 'transparent' }} >
-        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#1864ac', width:'1.3em', height:'1.3em', padding: '5px'}} />}
+        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#3d5ba6', width:'1.3em', height:'1.3em', padding: '5px'}} />}
                           aria-controls="panel2bh-content" id="panel2bh-header" sx={{ width: '100%', backgroundColor: '#ffffff !important'}} >
-          <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#1864ac', fontSize:'1.4em', textShadow:'1px 1px 1px #afbdc5' }}>
+          <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#3d5ba6', fontSize:'1.4em', textShadow:'1px 1px 1px #afbdc5' }}>
             Ionian Spire
           </Typography>
         </AccordionSummary>
@@ -54,7 +54,7 @@ function FleetAccordion() {
       </Accordion>*/}
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} disableGutters={true} sx={{ backgroundColor: 'transparent' }}>
         <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#ffffff', width:'1.3em', height:'1.3em', padding: '5px'}} />}
-                          aria-controls="panel2bh-content" id="panel2bh-header" sx={{width: '100%', backgroundColor: '#1864ac'}} >
+                          aria-controls="panel2bh-content" id="panel2bh-header" sx={{width: '100%', backgroundColor: '#3d5ba6'}} >
           <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#ffffff', fontSize:'1.5em', }}>
               Aegean Spire
           </Typography>
@@ -66,9 +66,9 @@ function FleetAccordion() {
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} disableGutters={true} sx={{ backgroundColor: 'transparent' }}>
-        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#1864ac', width:'1.3em', height:'1.3em', padding: '5px'}} />}
+        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#3d5ba6', width:'1.3em', height:'1.3em', padding: '5px'}} />}
                           aria-controls="panel3bh-content" id="panel3bh-header" sx={{ width: '100%', backgroundColor: '#ffffff !important'}} >
-            <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#1864ac', fontSize:'1.5em', }}>
+            <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#3d5ba6', fontSize:'1.5em', }}>
                 Corinthian Spire
             </Typography>
         </AccordionSummary>
@@ -80,7 +80,7 @@ function FleetAccordion() {
       </Accordion>
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} disableGutters={true} sx={{ backgroundColor: 'transparent' }}>
         <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#ffffff', width:'1.3em', height:'1.3em', padding: '5px'}} />}
-            aria-controls="panel4bh-content" id="panel4bh-header" sx={{width: '100%', backgroundColor: '#1864ac'}}>
+            aria-controls="panel4bh-content" id="panel4bh-header" sx={{width: '100%', backgroundColor: '#3d5ba6'}}>
             <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#ffffff', fontSize:'1.5em', }}>
                 Messinian Spire
             </Typography>
@@ -92,9 +92,9 @@ function FleetAccordion() {
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')} disableGutters={true} sx={{ backgroundColor: 'transparent' }}>
-        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#1864ac', width:'1.3em', height:'1.3em', padding: '5px'}} />}
+        <AccordionSummary expandIcon={<KeyboardArrowDownIcon sx={{color:'#3d5ba6', width:'1.3em', height:'1.3em', padding: '5px'}} />}
                           aria-controls="panel5bh-content" id="panel5bh-header" sx={{ width: '100%', backgroundColor: '#ffffff !important'}} >
-            <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#1864ac', fontSize:'1em', }}>
+            <Typography className="ship-tag" sx={{ width: '100%', flexShrink: 0, textAlign: 'center', color:'#3d5ba6', fontSize:'1em', }}>
                 Previously under management
             </Typography>
         </AccordionSummary>

@@ -35,6 +35,7 @@ function Footer(props) {
 
     return (
       <div className="section bg bg-desktop" id="contact">
+        <div className="bg-cover"></div>
         {/*<div className={!isVisible ? "bg-cover" : "bg-cover animate"} ref={ref}></div>*/}
         <Box className="App-footer" display={{ xs: 'block', sm:'block', md: 'none', lg: 'none', xl: 'none' }}
                     sx={{ width: '100%', height:'100%', }}>

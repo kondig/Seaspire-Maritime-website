@@ -18,9 +18,10 @@ import { useInView } from 'react-intersection-observer';
 
 
 function Body(props) {
-    const [ref0, inView0] = useInView({ threshold: 0.6 });
-    const [ref1, inView1] = useInView({ threshold: 0.6 });
-    const [ref2, inView2] = useInView({ threshold: 0.6 });
+
+    const [ref0, inView0] = useInView({ threshold: 0.3 });
+    const [ref1, inView1] = useInView({ threshold: 0.3 });
+    const [ref2, inView2] = useInView({ threshold: 0.3 });
     // const ref0 = React.useRef();
     // const ref1 = React.useRef();
     // const ref2 = React.useRef();
@@ -35,7 +36,9 @@ function Body(props) {
           <div className="section bg bg-a1" >
               <div className="about" ref={ref0}>
                 <div className="logo-container">
-                    <img src={logo} alt="Seaspire Maritime" className="seaspire-logo" />
+                    <div className="logo-bg">
+                        <img src={logo} alt="Seaspire Maritime" className="seaspire-logo" />
+                    </div>
                 </div>
                 <Fade in={inView0} timeout={2000} style={{ transitionDelay: '1000ms' }}>
                     <img src={sm} alt="Seaspire Maritime" className="sm-official" />
@@ -49,18 +52,22 @@ function Body(props) {
                         <br/>a summit, a pinnacle
                     </p>
                 </Fade>
+                <div className="bg-cover"></div>
               </div>
           </div>
           <div className="section bg bg-a3" id="about" >
-            <Ktabs />
-            <div className={!inView1 ? "bg-cover cover1" : "bg-cover cover1 animate"} ref={ref1}></div>
+                <Ktabs />
+            <div className="bg-cover"></div>
+            {/*<div className={!inView1 ? "bg-cover cover1" : "bg-cover cover1 animate"} ref={ref1}></div>*/}
           </div>
           <div className="section bg bg-s1" id="fleet">
             <FleetAccordion  />
+            <div className="bg-cover"></div>
           </div>
           <div className="section bg bg-a2" id="services">
-            <div className={!inView2 ? "bg-cover cover3" : "bg-cover cover3 animate"} ref={ref2}></div>
+            {/*<div className={!inView2 ? "bg-cover cover3" : "bg-cover cover3 animate"} ref={ref2}></div>*/}
             <STabs />
+            <div className="bg-cover"></div>
           </div>
           <div className="section bg bg-n" id="news">
               <Fade in={true} appear={true} timeout={2000}>
@@ -69,6 +76,7 @@ function Body(props) {
               <div className="news-container">
                 <SmAccordion />
               </div>
+              <div className="bg-cover"></div>
           </div>
           <Footer />
         </div>

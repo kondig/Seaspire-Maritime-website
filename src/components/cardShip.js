@@ -55,7 +55,7 @@ function ShipCard(props) {
                           <TableCell component="th" scope="row" sx={{ backgroundColor: '#ffffff', color: '#afbdc5', fontWeight:'700', border:'0', fontSize:'0.7rem', padding:'5px 5px' }} >
                             {row.spec}
                           </TableCell>
-                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontWeight:'400', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
+                          <TableCell align="right" sx={{ backgroundColor: '#ffffff', color: '#3d5ba6', fontWeight:'400', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
                             {row.value}
                           </TableCell>
                         </TableRow>
@@ -73,12 +73,12 @@ function ShipCard(props) {
                       boxShadow:'0px 0px 0px #333', border:'0', borderRadius:'0px'}}>
             <CardMedia
               component="img"
-              sx={{ flexBasis:'45%', backgroundRepeat:'no-repeat' }}
+              sx={{ flexBasis:{md:'50%',lg:'50%',xl:'45%'}, backgroundRepeat:'no-repeat' }}
               image={props.image}
               alt={props.ship}
               title={props.ship}
             />
-            <Box sx={{backgroundColor:'transparent', flexBasis:'55%'}}>
+            <Box sx={{backgroundColor:'transparent', flexBasis:{md:'50%',lg:'50%',xl:'55%'}}}>
               <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width:'100%', height:'100%', padding:'0px !important', }}>
                 <TableContainer component={Paper} sx={{ height:'100%', backgroundColor: 'transparent', borderRadius:'0px' }}>
                   <Table sx={{ minWidth: 250, height:'100%', backgroundColor: 'transparent', }} size="small" aria-label="a dense table">
@@ -90,7 +90,7 @@ function ShipCard(props) {
                             {row.spec}
                           </TableCell>
                           <TableCell align="right"
-                                     sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontSize:{md:'0.8rem',lg:'0.9rem'}, fontWeight:'700', border:'0' }}>
+                                     sx={{ backgroundColor: '#ffffff', color: '#3d5ba6', fontSize:{md:'0.8rem',lg:'0.8rem',xl:'0.9rem'}, fontWeight:'700', border:'0' }}>
                             {row.value}
                           </TableCell>
                         </TableRow>
@@ -172,7 +172,7 @@ function PrevShipCard(props) {
                       <TableBody>
                         {rows.map((row) => (
                             <TableRow key={row.ship} sx={{'&:last-child td, &:last-child th': {  }  }} >
-                                <TableCell align="center" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontWeight:'700', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
+                                <TableCell align="center" sx={{ backgroundColor: '#ffffff', color: '#3d5ba6', fontWeight:'700', border:'0', fontSize:'0.8rem', padding:'5px 5px' }}>
                                     {row.ship}
                                 </TableCell>
                                 <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:{xs:'0.6em'}, padding:'5px 5px' }} >
@@ -218,7 +218,7 @@ function PrevShipCard(props) {
                     <TableBody>
                       {rows.map((row) => (
                           <TableRow key={row.ship} sx={{'&:last-child td, &:last-child th': {  }  }} >
-                              <TableCell align="center" sx={{ backgroundColor: '#ffffff', color: '#1864ac', fontWeight:'700', border:'0', fontSize:'1rem', padding:'5px 5px' }}>
+                              <TableCell align="center" sx={{ backgroundColor: '#ffffff', color: '#3d5ba6', fontWeight:'700', border:'0', fontSize:'1rem', padding:'5px 5px' }}>
                                   {row.ship}
                               </TableCell>
                               <TableCell align="center"scope="row" sx={{ backgroundColor: '#ffffff', color: '#000000', fontWeight:'700', border:'0', fontSize:'0.9rem', padding:'5px 5px' }} >

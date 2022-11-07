@@ -140,7 +140,7 @@ function SwipeableTemporaryDrawer() {
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={toggleDrawer(anchor, true)}
-            sx={{color: '#1864ac'}}
+            sx={{color: '#3d5ba6'}}
           >
             <MenuIcon />
           </IconButton>

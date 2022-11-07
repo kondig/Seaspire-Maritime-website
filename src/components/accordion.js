@@ -14,7 +14,7 @@ function SmAccordion() {
   };
 
   return (
-    <Box sx={{ }}>
+    <Box sx={{ zIndex:'1000', }}>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel1bh-content" id="panel1bh-header"
@@ -86,7 +86,7 @@ function SmAccordion() {
           </AccordionSummary>
           <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
-              2019 Greek Ship Finance Forum
+              2019 Greek Ship Finance Forum - Greek Shipping Staying Ahead
               <br/><a href="https://www.marinemoney.com/events-2-0-2/2019-greek-ship-finance-forum"
                       target="_blank" rel="noopener noreferrer" className="news-link">
                   Read more

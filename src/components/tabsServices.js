@@ -1,11 +1,11 @@
 import * as React from 'react';
+import { useTheme } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import SwipeableViews from 'react-swipeable-views';
-import { useTheme } from '@mui/material/styles';
 import { Paper, Button } from '@mui/material';
 import Slide from '@mui/material/Slide';
 import Fade from '@mui/material/Fade';
@@ -20,6 +20,7 @@ import service3 from '../images/service-technical.jpeg';
 import service4 from '../images/service-crew.jpeg';
 
 function TabPanel(props) {
+  const theme = useTheme();
   const { children, value, index, ...other } = props;
   const containerRef = React.useRef(null);
   return (
@@ -32,16 +33,27 @@ function TabPanel(props) {
     >
       {value === index && (
         <div>
-            <Box boxShadow={0} display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }} sx={{minWidth:150}}>
+            <Box boxShadow={0} display={{ xs: 'block', sm:'none', md: 'none', lg: 'none', xl: 'none' }} sx={{minWidth:150}}>
                 <Paper sx={{backgroundColor:"transparent", height:'100%', width:'100%', boxShadow: '0', paddinTop:'15vh',
                              alignSelf:'flex-start'}}>
                     <Fade appear={true} in={true} timeout={2000}>
-                      <div className="tab-text color-white asc" style={{display:props.disText}}>
+                      <div className="tab-text color-white asc" style={{display:props.distext}}>
                           {props.text}
                       </div>
                     </Fade>
                     <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show, justifyContent:'center', overflow:'hidden'}}>
                       <Card sx={{ display: 'flex', flexDirection:'column', margin: '5px', justifyContent: 'space-between', backgroundColor:'transparent', boxShadow:'0px 0px'}}>
+                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', backgroundColor:'transparent' }} >
+                          <CardContent sx={{ padding: '5px', paddingBottom: '5px !important' }}>
+                            <Typography component="div" variant="h5" sx={{ fontSize:'1em', color:theme.palette.primary.main, fontWeight: '700', margin: '0px 5px'}}>
+                              {props.service}
+                            </Typography>
+                            <Typography variant="subtitle1" color="text.secondary" component="div"
+                                        sx={{ color:'#ffffff', fontSize: '0.8rem', textShadow: '1px 1px 1px #000', textAlign: 'left', margin: '5px !important'}}>
+                              {props.desc}
+                            </Typography>
+                          </CardContent>
+                        </Box>
                         <Fade appear={true} in={true} timeout={2000}>
                             <CardMedia
                               component="img"
@@ -51,36 +63,29 @@ function TabPanel(props) {
                               title={props.service}
                             />
                         </Fade>
-                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', backgroundColor:'transparent' }} >
-                          <CardContent sx={{ padding: '5px', paddingBottom: '5px !important' }}>
-                            <Typography component="div" variant="h5" sx={{ fontSize:'1em', color:'#ffffff', textShadow: '1px 1px 1px #000', fontWeight: '700', margin: '0px 5px'}}>
-                              {props.service}
-                            </Typography>
-                            <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ color:'#ffffff', fontSize: '0.8rem', textShadow: '1px 1px 1px #000', textAlign: 'left', margin: '5px !important'}}>
-                              {props.desc}
-                            </Typography>
-                          </CardContent>
-                        </Box>
                       </Card>
                     </Box>
                 </Paper>
             </Box>
-            <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{width:'100%'}}>
+            <Box boxShadow={0} display={{ xs: 'none', sm:'block', md: 'block', lg: 'block', xl: 'block' }} sx={{width:'100%'}}>
                 <Paper sx={{backgroundColor:"transparent", width:"90%", margin: '0 auto', boxShadow: '0',
                             display:'flex', flexDirection:'row', justifyContent:'flex-end'}}>
                       <Fade appear={true} in={true} timeout={2000}>
-                        <div className="tab-text color-white w-40">
+                        <Box className="tab-text color-white w-40" sx={{display:props.distext}}>
                             {props.text}
-                        </div>
+                        </Box>
                       </Fade>
-                      <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show,}} ref={containerRef}>
-                          <Card sx={{ display: 'flex', flexDirection:'column', margin: '5px', justifyContent: 'space-between', alignItems: 'flex-end', backgroundColor:'transparent', boxShadow:'0px 0px'}}>
-                            <Box sx={{ display: 'flex', flexDirection: 'column', width: '45%', backgroundColor:'transparent' }} >
+                      <Box boxShadow={0} display={{ xs: 'none', sm:'block', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show,}} ref={containerRef}>
+                          <Card sx={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', alignItems: 'flex-end', backgroundColor:'transparent', boxShadow:'0px 0px'}}>
+                            <Box sx={{ display: 'flex', flexDirection: 'column', width: {xs:'90%',sm:'80%',md:'75%',lg:'50%',xl:'40%'}, backgroundColor:'transparent' }} >
                               <CardContent sx={{ padding: '5px', paddingBottom: '5px !important' }}>
-                                <Typography component="div" variant="h5" sx={{ color: '#AFBDC5', textShadow: '1px 1px 1px #000', fontWeight: '700', margin: '10px 5px'}}>
+                                <Typography component="div" variant="h5" sx={{ color:theme.palette.primary.main, textShadow: '1px 1px 1px #000',
+                                                                               fontWeight: '700', margin: '10px 5px'}}>
                                   {props.service}
                                 </Typography>
-                                <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ color:'#ffffff', fontSize: '1.1rem', textShadow: '1px 1px 1px #000', textAlign:'center', margin: '10px 5px !important'}}>
+                                <Typography variant="subtitle1" color="text.secondary" component="div"
+                                            sx={{ color:'#ffffff', fontSize: {xs:'0.8em', sm:'0.9em', md:'1em',lg:'1.1em',xl:'1.2em'},
+                                                  textShadow: '1px 1px 1px #000', textAlign:'center', margin: '10px 5px !important'}}>
                                   {props.desc}
                                 </Typography>
                               </CardContent>
@@ -88,7 +93,7 @@ function TabPanel(props) {
                             <Slide direction="left" container={containerRef.current} appear={true} in={true} timeout={1000}>
                                 <CardMedia
                                   component="img"
-                                  sx={{ width: '45%', borderRadius: '10px' }}
+                                  sx={{ width: {xs:'90%',sm:'80%',md:'75%',lg:'50%',xl:'40%'}, borderRadius: '10px', }}
                                   image={props.image}
                                   alt={props.service}
                                   title={props.service}
@@ -167,16 +172,16 @@ export default function STabs(props) {
   const handleChangeIndex = (index) => { setValue(index); };
   const styles = { tabsview: { width:'100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', }}
   return (
-    <Box sx={{ width: {xs:'100vw', md:'100vw', lg:'100vw', xl:'100vw'}, height:'100%', overflow:'hidden', cursor:'grab', flexDirection:'row', justifyContent:'center', alignItems:'center',                }}
+    <Box sx={{ width: {xs:'100vw', md:'100vw', lg:'100vw', xl:'100vw'}, height:'100%', overflow:'hidden', cursor:'grab', flexDirection:'row', justifyContent:'center', alignItems:'center', zIndex:'1000' }}
          display={{ xs: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }}>
       <Tabs value={value} onChange={handleChange} textColor="primary" orientation={'vertical'}
-                          scrollButtons="auto" sx={{ width:{xs:'35vw', md:'25vw', lg:'20vw', xl:'15vw'}, borderRight: 1, borderColor: 'divider', textAlign:'left',
-                                                     marginTop:{xs:'15vw', md:0, lg:0, xl:0}, alignSelf: {xs:'flex-start', md:'flex-start', lg:'center', xl:'center'} }}>
-        <Tab label={items[0].title} {...a11yProps(0)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
-        <Tab label={items[1].title} {...a11yProps(1)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
-        <Tab label={items[2].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
-        <Tab label={items[3].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
-        <Tab label={items[4].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
+                          scrollButtons="auto" sx={{ width:{xs:'35vw',sm:'30vw', md:'25vw', lg:'20vw', xl:'15vw'}, borderRight: 1, borderColor: 'divider', textAlign:'left',
+                                                     marginTop:{xs:'15vw', md:0, lg:0, xl:0}, alignSelf: {xs:'flex-start', md:'center', lg:'center', xl:'center'} }}>
+        <Tab label={items[0].title} {...a11yProps(0)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
+        <Tab label={items[1].title} {...a11yProps(1)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
+        <Tab label={items[2].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
+        <Tab label={items[3].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
+        <Tab label={items[4].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
       </Tabs>
       <SwipeableViews
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}

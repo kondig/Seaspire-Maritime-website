@@ -8,7 +8,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 const theme = createTheme({
     palette: {
       primary: {
-        main: '#1864ac',
+        main: '#3d5ba6',
       },
       secondary: {
         main: '#BAC4CC',
@@ -20,8 +20,8 @@ const theme = createTheme({
     components: {
         MuiFab: {
             styleOverrides: {
-              circular: { backgroundColor: '#1864ac', color:'#ffffff',
-                          ':hover': { backgroundColor: '#BAC4CC', color:'#1864ac'}
+              circular: { backgroundColor: '#3d5ba6', color:'#ffffff',
+                          ':hover': { backgroundColor: '#BAC4CC', color:'#3d5ba6'}
                         },
             },
         },
