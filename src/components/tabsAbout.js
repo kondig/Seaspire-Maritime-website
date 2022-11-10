@@ -48,11 +48,11 @@ function a11yProps(index) {
 const items = [
     {
         name: "About",
-        text: "Seaspire is a private ship management company, based in Athens, Greece specialized in operating dry bulk carriers globally."
+        text: "Seaspire is a private ship management company, based in Athens, Greece specialized in providing high quality services, operating dry bulk carriers globally."
     },
     {
         name: "Vision",
-        text: "Seaspire’s vision is to always be an exemplary maritime management and operating company that provides its customers with the most reliable, safe and beneficially efficient (or beneficial and efficient) services. Committed to the holistic interests of its people and shareholders, Seaspire always operates at the highest ethical standards. Our goal is to always be a step ahead at the forefront of the industry incorporating and further developing innovative techniques and policies, while ensuring growth and environmental sustainability."
+        text: "Seaspire’s vision is to always be an exemplary maritime management and operating company that provides its customers with the most reliable, safe, beneficial and efficient services. Committed to the holistic interests of its people and shareholders, Seaspire always operates at the highest ethical standards. Our goal is to always be a step ahead at the forefront of the industry incorporating and further developing innovative techniques and policies, while ensuring growth and environmental sustainability."
     },
     {
         name: "Mission",

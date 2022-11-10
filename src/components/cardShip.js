@@ -73,7 +73,7 @@ function ShipCard(props) {
                       boxShadow:'0px 0px 0px #333', border:'0', borderRadius:'0px'}}>
             <CardMedia
               component="img"
-              sx={{ flexBasis:{md:'50%',lg:'50%',xl:'45%'}, backgroundRepeat:'no-repeat' }}
+              sx={{ flexBasis:{md:'50%',lg:'50%',xl:'45%'}, width:{md:'50%',xl:'45%'},backgroundRepeat:'no-repeat' }}
               image={props.image}
               alt={props.ship}
               title={props.ship}

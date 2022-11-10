@@ -20,7 +20,7 @@ function SmAccordion() {
           aria-controls="panel1bh-content" id="panel1bh-header"
         >
           <Typography color='primary' sx={{ width: '25%', flexShrink: 0, fontSize: '0.8rem', textAlign: 'left' }}>2022 Jul</Typography>
-          <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>TradeWinds article</Typography>
+          <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>TradeWinds article</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
           <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
@@ -37,7 +37,7 @@ function SmAccordion() {
           aria-controls="panel2bh-content" id="panel2bh-header"
         >
           <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2021 Sep</Typography>
-          <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>Naftika Chronika No.242</Typography>
+          <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>Naftika Chronika No.242</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
           <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
@@ -54,7 +54,7 @@ function SmAccordion() {
           aria-controls="panel3bh-content" id="panel3bh-header"
         >
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2021 Mar</Typography>
-            <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Messinian Spire Delivery</Typography>
+            <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>MV Messinian Spire Delivery</Typography>
           </AccordionSummary>
           <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
@@ -68,7 +68,7 @@ function SmAccordion() {
           aria-controls="panel4bh-content" id="panel4bh-header"
         >
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2019 Nov</Typography>
-            <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Corinthian Spire Delivery</Typography>
+            <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>MV Corinthian Spire Delivery</Typography>
           </AccordionSummary>
           <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
@@ -82,7 +82,7 @@ function SmAccordion() {
           aria-controls="panel5bh-content" id="panel5bh-header"
         >
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2019 Oct</Typography>
-            <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>Marine Money Athens</Typography>
+            <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>Marine Money Athens</Typography>
           </AccordionSummary>
           <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
@@ -99,7 +99,7 @@ function SmAccordion() {
           aria-controls="panel6bh-content" id="panel6bh-header"
         >
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2019 Jul</Typography>
-            <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>TradeWinds article</Typography>
+            <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>TradeWinds article</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
@@ -116,7 +116,7 @@ function SmAccordion() {
           aria-controls="panel7bh-content" id="panel7bh-header"
         >
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2018 Feb</Typography>
-            <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>TradeWinds article</Typography>
+            <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>TradeWinds article</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
@@ -133,7 +133,7 @@ function SmAccordion() {
           aria-controls="panel8bh-content" id="panel8bh-header"
         >
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2018 Jan</Typography>
-            <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Aegean Spire Delivery</Typography>
+            <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>MV Aegean Spire Delivery</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
@@ -147,7 +147,7 @@ function SmAccordion() {
           aria-controls="panel9bh-content" id="panel9bh-header"
         >
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2017 Jun</Typography>
-            <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Ionian Spire Delivery</Typography>
+            <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>MV Ionian Spire Delivery</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
@@ -161,7 +161,7 @@ function SmAccordion() {
           aria-controls="panel10bh-content" id="panel10bh-header"
         >
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2016 Oct</Typography>
-            <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Saronic Spire Delivery</Typography>
+            <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>MV Saronic Spire Delivery</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
@@ -175,7 +175,7 @@ function SmAccordion() {
           aria-controls="panel11bh-content" id="panel11bh-header"
         >
             <Typography color='primary' sx={{ width: '25%', fontSize: '0.8rem', textAlign: 'left' }}>2014 Oct</Typography>
-            <Typography sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>MV Baltic Spire Delivery</Typography>
+            <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>MV Baltic Spire Delivery</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
             <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>

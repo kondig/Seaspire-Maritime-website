@@ -40,10 +40,10 @@ function Body(props) {
                         <img src={logo} alt="Seaspire Maritime" className="seaspire-logo" />
                     </div>
                 </div>
-                <Fade in={inView0} timeout={2000} style={{ transitionDelay: '1000ms' }}>
+                <Fade in={inView0} timeout={2000} style={{ transitionDelay: '2000ms' }}>
                     <img src={sm} alt="Seaspire Maritime" className="sm-official" />
                 </Fade>
-                <Fade in={inView0} timeout={2000} style={{ transitionDelay: '2000ms' }}>
+                <Fade in={inView0} timeout={2000} style={{ transitionDelay: '3000ms' }}>
                     <p className="about_tag" >
                         <span className="sea">Sea</span>-<span className="spire">spire</span>:
                         <br/><i>noun [sē - spī(ə)r]</i>

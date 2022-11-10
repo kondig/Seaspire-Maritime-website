@@ -176,7 +176,7 @@ export default function STabs(props) {
          display={{ xs: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }}>
       <Tabs value={value} onChange={handleChange} textColor="primary" orientation={'vertical'}
                           scrollButtons="auto" sx={{ width:{xs:'35vw',sm:'30vw', md:'25vw', lg:'20vw', xl:'15vw'}, borderRight: 1, borderColor: 'divider', textAlign:'left',
-                                                     marginTop:{xs:'15vw', md:0, lg:0, xl:0}, alignSelf: {xs:'flex-start', md:'center', lg:'center', xl:'center'} }}>
+                                                     marginTop:{xs:'15vw', sm:0, md:0, lg:0, xl:0}, alignSelf: {xs:'flex-start', sm:'center',md:'center', lg:'center', xl:'center'} }}>
         <Tab label={items[0].title} {...a11yProps(0)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[1].title} {...a11yProps(1)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[2].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
