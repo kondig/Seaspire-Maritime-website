@@ -65,8 +65,8 @@ ShowOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
 };
 
-function SwipeableTemporaryDrawer() {
-  // const classes = useStyles();
+function BurgerMenu() {
+
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -142,7 +142,7 @@ function SwipeableTemporaryDrawer() {
             onClick={toggleDrawer(anchor, true)}
             sx={{color: '#3d5ba6'}}
           >
-            <MenuIcon />
+            <MenuIcon sx={{width:'1.5em',height:'1.5em'}} />
           </IconButton>
           <SwipeableDrawer
             anchor={anchor}
@@ -159,33 +159,22 @@ function SwipeableTemporaryDrawer() {
 }
 
 function Header(props) {
-  // const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const handleMenu = (event) => { setAnchorEl(event.currentTarget); };
+  const handleClose = () => { setAnchorEl(null); };
 
   return (
     <div className="header-root">
       <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }} sx={{ width: '100%', }}>
-        {/*<ElevationScroll {...props}>*/}
-          <AppBar position="fixed" sx={{ backgroundColor: 'transparent', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'}, boxShadow:'0px 0px 0px #000' }} >
+          <AppBar position="fixed" sx={{ backgroundColor: 'transparent', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'}, boxShadow:'0px 0px 0px #000', }} >
             <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
-                {/*<ShowOnScroll {...props}>*/}
-                 <a href='/'>
+                 <a href='/' className="contain-img">
                     <img src={logo} className="header-logo" alt="Seaspire Maritime" />
                  </a>
-                {/*</ShowOnScroll>*/}
-               <SwipeableTemporaryDrawer></SwipeableTemporaryDrawer>
+               <BurgerMenu></BurgerMenu>
             </Toolbar>
           </AppBar>
-        {/*</ElevationScroll>*/}
       </Box>
       <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}
            sx={{ width: '100%', backgroundColor: 'transparent !important' }}>
