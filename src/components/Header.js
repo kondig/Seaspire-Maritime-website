@@ -168,7 +168,7 @@ function Header(props) {
     <div className="header-root">
       <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }} sx={{ width: '100%', }}>
           <AppBar position="fixed" sx={{ backgroundColor: 'transparent', height: {xs:'50px', md:'90px', lg:'90px', xl:'90px'}, boxShadow:'0px 0px 0px #000', }} >
-            <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
+            <Toolbar sx={{display:'flex',justifyContent:'space-between',alignItems:'flex-start'}}>
                  <a href='/' className="contain-img">
                     <img src={logo} className="header-logo" alt="Seaspire Maritime" />
                  </a>

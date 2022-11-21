@@ -19,9 +19,10 @@ import { useInView } from 'react-intersection-observer';
 
 function Body(props) {
 
-    const [ref0, inView0] = useInView({ threshold: 0.3 });
-    const [ref1, inView1] = useInView({ threshold: 0.3 });
-    const [ref2, inView2] = useInView({ threshold: 0.3 });
+    const [ref0, inView0] = useInView({ threshold: 0.4 });
+    const [ref1, inView1] = useInView({ threshold: 0.4 });
+    const [ref2, inView2] = useInView({ threshold: 0.4 });
+    const [ref3, inView3] = useInView({ threshold: 0.4 });
     // const ref0 = React.useRef();
     // const ref1 = React.useRef();
     // const ref2 = React.useRef();
@@ -32,7 +33,7 @@ function Body(props) {
 
     return (
         <div className="scroll-container">
-          <Toolbar id="back-to-top-anchor" />
+          <Toolbar id="back-to-top-anchor" sx={{height:'1px',backgroundColor:'transparent'}} />
           <div className="section bg bg-a1" >
               <div className="about" ref={ref0}>
                 <div className="logo-container">
@@ -56,7 +57,7 @@ function Body(props) {
               </div>
           </div>
           <div className="section bg bg-a3" id="about" >
-                <Ktabs />
+            <Ktabs />
             <div className="bg-cover"></div>
             {/*<div className={!inView1 ? "bg-cover cover1" : "bg-cover cover1 animate"} ref={ref1}></div>*/}
           </div>
@@ -65,9 +66,8 @@ function Body(props) {
             <div className="bg-cover"></div>
           </div>
           <div className="section bg bg-a2" id="services">
-            {/*<div className={!inView2 ? "bg-cover cover3" : "bg-cover cover3 animate"} ref={ref2}></div>*/}
-            <STabs />
-            <div className="bg-cover"></div>
+            <STabs reset={!inView3 ? 0 : 4 }/>
+            <div className="bg-cover" ref={ref3}></div>
           </div>
           <div className="section bg bg-n" id="news">
               <Fade in={true} appear={true} timeout={2000}>

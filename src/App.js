@@ -15,7 +15,7 @@ const theme = createTheme({
       },
     },
     typography: {
-        fontFamily: '"Raleway", sans-serif'
+        fontFamily: '"TT-Norms-Pro", sans-serif'
     },
     components: {
         MuiFab: {

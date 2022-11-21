@@ -1,5 +1,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@font-face {
+  font-family: 'TT-Norms-Pro';
+  src: local('TT-Norms-Pro-Regular'), url(./fonts/TT-Norms-Pro-Regular.ttf) format('truetype');
+}
+
 :root {
   --primary: #3d5ba6;
   --secondary: #BAC4CC;
@@ -11,7 +16,7 @@ html {
 }
 .App {
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'TT-Norms-Pro', sans-serif;
   position: relative;
 
 }
@@ -95,9 +100,13 @@ html {
 .bg-s1 { background-image: url('./images/bg-fleet.jpeg'); overflow: hidden; }
 .bg-a2 { background-image: url('./images/bg-services.jpeg'); overflow: hidden; }
 .bg-a3 { background-image: url('./images/bg-a.JPG'); overflow: hidden; }
-.bg-n { background-image: url('./images/aegeanSpire.jpg'); overflow: hidden; }
+.bg-n { 
+/*    background-image: url('./images/aegeanSpire.jpg');*/
+    background-image: linear-gradient(rgba(255,255,255,0.6), 20%, transparent), url('./images/aegeanSpire.jpg'); 
+    overflow: hidden; 
+}
 .bg-a1 {
-    background-image: linear-gradient(rgba(102,102,102,0.6), 10%, transparent), url('./images/bg-header.jpeg');
+    background-image: linear-gradient(rgba(255,255,255,0.6), 15%, transparent), url('./images/bg-header.jpeg');
     overflow: hidden;
 }
 .bg-sl1 { background-color: #333 }
@@ -532,7 +541,7 @@ td, th {
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    padding: 1vh 2vw;
+    padding: 1vh 5vw;
     /* width:100%; */
 }
 .footer-link {
@@ -746,8 +755,6 @@ a.phone {
 .header-logo {
     height: 100%;
     width: 4vw;
-    padding: 3px;
-    margin-top: 10px;
 }
 
 .fleet_text {
@@ -887,10 +894,11 @@ a.phone {
     width: 100%;
     height: 100%;
     opacity: 0;
-    bottom: -100%;
+    bottom: 0%;
+    visibility: hidden;
     animation-duration: 4s;
     animation-timing-function: ease-out;
-    animation-delay: 2s;
+    animation-delay: 0s;
     animation-iteration-count: 1;
     animation-name: fadeOutNleave;
 }
@@ -908,11 +916,11 @@ a.phone {
 }
 
 @keyframes fadeOutNleave {
-  0%   { opacity : 1; }
-  50%  { opacity: 1; }
+  0%   { opacity : 1;  visibility: visible; }
+  50%  { opacity: 1; bottom: 0%; }
   75%  { opacity: 0.9;  }
   90%  { opacity: 0.8;  }
-  100% { opacity: 0; bottom: 100%;  }
+  100% { opacity: 0; bottom: 100%; }
 }
 @keyframes fadeOutNleaveMob {
   0%   { transform: translateY(100%)  }
@@ -961,6 +969,9 @@ a.phone {
   }
   .bg {
       background-attachment: scroll;
+  }
+  .bg-a1 {
+    background-image: linear-gradient(rgba(0,0,0,0.6), 15%, transparent), url('./images/bg-header.jpeg');
   }
   .section {
      /* height: calc(100vh - calc(100vh - 100%)); */
@@ -1111,7 +1122,6 @@ a.phone {
   .header-logo {
       width: 10vw;
       padding: 3px;
-      margin-top: 15px;
   }
   .header-root {
       flex-grow: 0;
@@ -1150,6 +1160,7 @@ a.phone {
 }
 @media only screen and (min-width: 600px){
     .menu li { font-size: 1em; }
+    .bg { background-attachment: scroll; }
     .about_tag {
       top: 35%;
       left: 3%;
@@ -1168,15 +1179,14 @@ a.phone {
     .header-logo {
         width: 60px;
         padding: 1px;
-        margin-top: 60px;
     }
 }
 @media only screen and (min-width:900px) {
-    .footer-logo { width:20vh; transform:translateY(-10vh); }
+    .bg { background-attachment: fixed; }
+    .footer-logo { width:20vh; transform:translateY(-8vh); }
     .header-logo {
         width: 60px;
         padding: 2px;
-        margin-top: 0px;
     }
     .news-title {
       top: 10vh;

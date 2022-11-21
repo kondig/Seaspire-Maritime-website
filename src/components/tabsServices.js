@@ -41,7 +41,7 @@ function TabPanel(props) {
                           {props.text}
                       </div>
                     </Fade>
-                    <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show, justifyContent:'center', overflow:'hidden'}}>
+                    <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.discard, justifyContent:'center', overflow:'hidden'}}>
                       <Card sx={{ display: 'flex', flexDirection:'column', margin: '5px', justifyContent: 'space-between', backgroundColor:'transparent', boxShadow:'0px 0px'}}>
                         <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', backgroundColor:'transparent' }} >
                           <CardContent sx={{ padding: '5px', paddingBottom: '5px !important' }}>
@@ -71,13 +71,14 @@ function TabPanel(props) {
                 <Paper sx={{backgroundColor:"transparent", width:"90%", margin: '0 auto', boxShadow: '0',
                             display:'flex', flexDirection:'row', justifyContent:'flex-end'}}>
                       <Fade appear={true} in={true} timeout={2000}>
-                        <Box className="tab-text color-white w-40" sx={{display:props.distext}}>
+                        <Box className="tab-text color-white" sx={{display:props.distext, display: 'flex', justifyContent: 'flex-end', flexBasis:{sm:'40%',md:'35%',lg:'30%'}}}>
                             {props.text}
                         </Box>
                       </Fade>
-                      <Box boxShadow={0} display={{ xs: 'none', sm:'block', md: 'block', lg: 'block', xl: 'block' }} sx={{display:props.show,}} ref={containerRef}>
-                          <Card sx={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', alignItems: 'flex-end', backgroundColor:'transparent', boxShadow:'0px 0px'}}>
-                            <Box sx={{ display: 'flex', flexDirection: 'column', width: {xs:'90%',sm:'80%',md:'75%',lg:'50%',xl:'40%'}, backgroundColor:'transparent' }} >
+                      <Box boxShadow={0} display={{ xs: 'none', sm:props.discard, md:props.discard, lg:props.discard, xl:props.discard }} sx={{ justifyContent: 'flex-end' }} ref={containerRef}>
+                          <Card sx={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', alignItems: 'center', width: {xs:'90%',sm:'80%',md:'70%',lg:'60%',xl:'50%'},
+                                      backgroundColor:'transparent', boxShadow:'0px 0px', }}>
+                            <Box sx={{ display: 'flex', flexDirection: 'column', backgroundColor:'transparent' }} >
                               <CardContent sx={{ padding: '5px', paddingBottom: '5px !important' }}>
                                 <Typography component="div" variant="h5" sx={{ color:theme.palette.primary.main, textShadow: '1px 1px 1px #000',
                                                                                fontWeight: '700', margin: '10px 5px'}}>
@@ -93,7 +94,7 @@ function TabPanel(props) {
                             <Slide direction="left" container={containerRef.current} appear={true} in={true} timeout={1000}>
                                 <CardMedia
                                   component="img"
-                                  sx={{ width: {xs:'90%',sm:'80%',md:'75%',lg:'50%',xl:'40%'}, borderRadius: '10px', }}
+                                  sx={{ width: {xs:'90%',sm:'80%',md:'450px',lg:'450px',xl:'450px'}, borderRadius: '10px', }}
                                   image={props.image}
                                   alt={props.service}
                                   title={props.service}
@@ -126,7 +127,7 @@ const items = [
     {
         title: "Services",
         text: "Seaspire Maritime is committed in providing the full spectrum of the highest quality ship management services",
-        show: "none",
+        discard: 'none',
     },
     {
         title: "Chartering",
@@ -135,6 +136,7 @@ const items = [
         direction: 'LR',
         desc: "Our chartering department uses its extensive global network that provides unique access to first class and reputable charterers. A very dynamic and experienced team is continuously monitoring all market developments implementing a flexible decision-making strategy. Its approach focuses not only on each vessel’s characteristics and position, but also on the fleet as a whole.",
         display: "block",
+        discard: 'flex',
         disText: 'none',
     },
     {
@@ -143,6 +145,7 @@ const items = [
         image: service2,
         direction: 'LR',
         desc: "Our very experienced team is responsible for coordinating all vessels’ operations from navigation and bunkering to various port and cargo operations also dealing with all the commercial issues that arise. It also makes sure that the best practices are followed for the safe, reliable, and punctual transportation of all goods up to their final destination.",
+        discard: 'flex',
         disText: 'none',
     },
     {
@@ -152,6 +155,7 @@ const items = [
         direction: 'LR',
         display: "block",
         desc: "Our technical team consists of highly skilled engineers with seagoing experience and naval architects. We constantly monitor our vessels for optimal performance and maintenance to ensure that our fleet is kept at the highest standards. Our goal is that vessels can trade globally even in the most demanding parts of the world, always in a cost-efficient manner. Budgets are strictly monitored and compliance with all international and local port regulations is ensured.",
+        discard: 'flex',
         disText: 'none',
     },
     {
@@ -161,6 +165,7 @@ const items = [
         direction: 'LR',
         display: "block",
         desc: "In Seaspire, we aim to maintain a pool of highly trained and competent seafarers that share our vision and culture. Our crew department implements our very strict recruitment and on-board policies in order to attract quality seafarers and achieve a high level of retention. It always remains in close cooperation with the other departments for all crew-related matters.",
+        discard: 'flex',
         disText: 'none',
     }
 ];
@@ -193,11 +198,11 @@ export default function STabs(props) {
             springConfig={{duration: '1s', easeFunction: 'cubic-bezier(0.15, 0.3, 0.25, 1)', delay: '0s'}}
             className="tabs-services"
         >
-        <TabPanel value={value} index={0} dir={theme.direction} text={items[0].text} service={items[0].service} image={items[0].image} show={items[0].show} sx={{}}></TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction} desc={items[1].desc} service={items[1].service} image={items[1].image} distext={'none'} ></TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction} desc={items[2].desc} service={items[2].service} image={items[2].image} distext={'none'} ></TabPanel>
-        <TabPanel value={value} index={3} dir={theme.direction} desc={items[3].desc} service={items[3].service} image={items[3].image} distext={'none'} ></TabPanel>
-        <TabPanel value={value} index={4} dir={theme.direction} desc={items[4].desc} service={items[4].service} image={items[4].image} distext={'none'} ></TabPanel>
+        <TabPanel value={value} index={0} dir={theme.direction} text={items[0].text} service={items[0].service} image={items[0].image} discard={items[0].discard} sx={{}}></TabPanel>
+        <TabPanel value={value} index={1} dir={theme.direction} desc={items[1].desc} service={items[1].service} image={items[1].image} discard={items[1].discard} distext={'none'} ></TabPanel>
+        <TabPanel value={value} index={2} dir={theme.direction} desc={items[2].desc} service={items[2].service} image={items[2].image} discard={items[2].discard} distext={'none'} ></TabPanel>
+        <TabPanel value={value} index={3} dir={theme.direction} desc={items[3].desc} service={items[3].service} image={items[3].image} discard={items[3].discard} distext={'none'} ></TabPanel>
+        <TabPanel value={value} index={4} dir={theme.direction} desc={items[4].desc} service={items[4].service} image={items[4].image} discard={items[4].discard} distext={'none'} ></TabPanel>
       </SwipeableViews>
     </Box>
   );
