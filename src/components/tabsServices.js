@@ -71,12 +71,12 @@ function TabPanel(props) {
                 <Paper sx={{backgroundColor:"transparent", width:"90%", margin: '0 auto', boxShadow: '0',
                             display:'flex', flexDirection:'row', justifyContent:'flex-end'}}>
                       <Fade appear={true} in={true} timeout={2000}>
-                        <Box className="tab-text color-white" sx={{display:props.distext, display: 'flex', justifyContent: 'flex-end', flexBasis:{sm:'40%',md:'35%',lg:'30%'}}}>
+                        <Box className="tab-text color-white" sx={{display:props.distext, justifyContent: 'flex-end', flexBasis:{sm:'40%',md:'35%',lg:'30%'}}}>
                             {props.text}
                         </Box>
                       </Fade>
                       <Box boxShadow={0} display={{ xs: 'none', sm:props.discard, md:props.discard, lg:props.discard, xl:props.discard }} sx={{ justifyContent: 'flex-end' }} ref={containerRef}>
-                          <Card sx={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', alignItems: 'center', width: {xs:'90%',sm:'80%',md:'70%',lg:'60%',xl:'50%'},
+                          <Card sx={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', alignItems: 'center', width: {xs:'90%',sm:'80%',md:'70%',lg:'65%',xl:'60%'},
                                       backgroundColor:'transparent', boxShadow:'0px 0px', }}>
                             <Box sx={{ display: 'flex', flexDirection: 'column', backgroundColor:'transparent' }} >
                               <CardContent sx={{ padding: '5px', paddingBottom: '5px !important' }}>
@@ -94,7 +94,7 @@ function TabPanel(props) {
                             <Slide direction="left" container={containerRef.current} appear={true} in={true} timeout={1000}>
                                 <CardMedia
                                   component="img"
-                                  sx={{ width: {xs:'90%',sm:'80%',md:'450px',lg:'450px',xl:'450px'}, borderRadius: '10px', }}
+                                  sx={{ width: {xs:'90%',sm:'80%',md:'450px',lg:'500px',xl:'550px'}, borderRadius: '10px', }}
                                   image={props.image}
                                   alt={props.service}
                                   title={props.service}
@@ -181,7 +181,7 @@ export default function STabs(props) {
          display={{ xs: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }}>
       <Tabs value={value} onChange={handleChange} textColor="primary" orientation={'vertical'}
                           scrollButtons="auto" sx={{ width:{xs:'35vw',sm:'30vw', md:'25vw', lg:'20vw', xl:'15vw'}, borderRight: 1, borderColor: 'divider', textAlign:'left',
-                                                     marginTop:{xs:'15vw', sm:0, md:0, lg:0, xl:0}, alignSelf: {xs:'flex-start', sm:'center',md:'center', lg:'center', xl:'center'} }}>
+                                                     marginTop:{xs:'15vh', sm:0, md:0, lg:0, xl:0}, alignSelf: {xs:'flex-start', sm:'center',md:'center', lg:'center', xl:'center'} }}>
         <Tab label={items[0].title} {...a11yProps(0)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[1].title} {...a11yProps(1)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
         <Tab label={items[2].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
@@ -198,7 +198,7 @@ export default function STabs(props) {
             springConfig={{duration: '1s', easeFunction: 'cubic-bezier(0.15, 0.3, 0.25, 1)', delay: '0s'}}
             className="tabs-services"
         >
-        <TabPanel value={value} index={0} dir={theme.direction} text={items[0].text} service={items[0].service} image={items[0].image} discard={items[0].discard} sx={{}}></TabPanel>
+        <TabPanel value={value} index={0} dir={theme.direction} text={items[0].text} service={items[0].service} image={items[0].image} discard={items[0].discard} distext={'flex'} ></TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction} desc={items[1].desc} service={items[1].service} image={items[1].image} discard={items[1].discard} distext={'none'} ></TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction} desc={items[2].desc} service={items[2].service} image={items[2].image} discard={items[2].discard} distext={'none'} ></TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction} desc={items[3].desc} service={items[3].service} image={items[3].image} discard={items[3].discard} distext={'none'} ></TabPanel>

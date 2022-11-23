@@ -72,9 +72,9 @@ export default function KTabs(props) {
          display={{ xs: 'block', md: 'block', lg: 'block', xl: 'block' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: 'transparent', }}>
           <Tabs value={value} onChange={handleChange} textColor="primary" variant="fullWidth">
-            <Tab label={items[0].name} {...a11yProps(0)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000','&:selected': { color: 'red', backgroundColor: 'white' }, }} />
-            <Tab label={items[1].name} {...a11yProps(1)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000','&:selected': { color: 'red', backgroundColor: 'white' }, }} />
-            <Tab label={items[2].name} {...a11yProps(2)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000','&:selected': { color: 'red', backgroundColor: 'white' }, }} />
+            <Tab label={items[0].name} {...a11yProps(0)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'},'&:selected': { color: 'red', backgroundColor: 'white' }, }} />
+            <Tab label={items[1].name} {...a11yProps(1)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'},'&:selected': { color: 'red', backgroundColor: 'white' }, }} />
+            <Tab label={items[2].name} {...a11yProps(2)} sx={{ color: '#ffffff', fontSize:{xs:'1em',md:'1.2em', lg:'1.4em', xl:'1.6em'},'&:selected': { color: 'red', backgroundColor: 'white' }, }} />
           </Tabs>
         </Box>
         <SwipeableViews

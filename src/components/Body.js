@@ -19,10 +19,10 @@ import { useInView } from 'react-intersection-observer';
 
 function Body(props) {
 
-    const [ref0, inView0] = useInView({ threshold: 0.4 });
-    const [ref1, inView1] = useInView({ threshold: 0.4 });
-    const [ref2, inView2] = useInView({ threshold: 0.4 });
-    const [ref3, inView3] = useInView({ threshold: 0.4 });
+    const [ref0, inView0] = useInView({ threshold: 0.3 });
+    const [ref1, inView1] = useInView({ threshold: 0.3 });
+    const [ref2, inView2] = useInView({ threshold: 0.3 });
+    const [ref3, inView3] = useInView({ threshold: 0.3 });
     // const ref0 = React.useRef();
     // const ref1 = React.useRef();
     // const ref2 = React.useRef();
@@ -41,10 +41,10 @@ function Body(props) {
                         <img src={logo} alt="Seaspire Maritime" className="seaspire-logo" />
                     </div>
                 </div>
-                <Fade in={inView0} timeout={2000} style={{ transitionDelay: '2000ms' }}>
+                <Fade in={inView0} timeout={2000} style={{ transitionDelay: '1000ms' }}>
                     <img src={sm} alt="Seaspire Maritime" className="sm-official" />
                 </Fade>
-                <Fade in={inView0} timeout={2000} style={{ transitionDelay: '3000ms' }}>
+                <Fade in={inView0} timeout={2000} style={{ transitionDelay: '2000ms' }}>
                     <p className="about_tag" >
                         <span className="sea">Sea</span>-<span className="spire">spire</span>:
                         <br/><i>noun [sē - spī(ə)r]</i>

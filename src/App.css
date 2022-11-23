@@ -170,7 +170,7 @@ html {
     font-size: 1.6em;
     line-height: 1.4em;
     padding: 10px 10px;
-    text-align: right;
+    text-align: center;
     overflow: hidden;
 }
 .asc { }
@@ -289,10 +289,27 @@ html {
 }
 .menu a {
   display: inline-block;
-  color: #3d5ba6;
+  color: var(--primary);
   text-decoration: none;
 }
-.menu li::before,
+.menu li::after {
+  content: "";
+  display: block;
+  margin: auto;
+  position:relative;
+  height: 2px;
+  width: 0;
+  top: 5px;
+  left: 0;
+  background: transparent;
+  transition: all 0.3s;
+}
+.menu li:hover::after {
+  width: 100%;
+  background: var(--primary);
+}
+/*old CSS onHover transition*/
+/*.menu li::before,
 .menu li::after {
   content: '';
   position: absolute;
@@ -320,7 +337,7 @@ html {
 .menu li:hover::after {
   opacity: 1;
   transform: translateY(-50px);
-}
+}*/
 
 .mainpic {
   /* background-image: url('./images/saronic.jpg'); */
@@ -538,6 +555,8 @@ td, th {
   margin: 10px auto;
 }
 .footer-row {
+    position: relative;
+    z-index: 1200;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -585,16 +604,15 @@ td, th {
   background-color: #AFBDC5;
   color: #3d5ba6;
   font-size: 0.9em;
-  margin:0;
+  margin: 0;
   padding: 0;
-  height: 35px;
+  height: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   position: absolute;
   bottom:0%;
-
 }
 h3 {
   font-size: 26px;
@@ -870,15 +888,18 @@ a.phone {
     z-index: 1200;
 }
 .seaspire-logo {
-    opacity: 1;
-    z-index: 1050;
+    position:absolute;
+    z-index: 2000;
+    opacity: 0;
+    top: 50%;
+    transform:translateY(-50%);
     height: 50%;
-    background-color: #fff;
-    /* animation-duration: 3s;
+/*    background-color: #fff;*/
+    animation-duration: 3s;
     animation-timing-function: ease-out;
-    animation-delay: 0.5s;
+    animation-delay: 2s;
     animation-iteration-count: 1;
-    animation-name: fadeOutNleave; */
+    animation-name: fadeOutNleave;
 }
 .logo {
     position:relative;
@@ -890,17 +911,17 @@ a.phone {
     align-items: center;
     overflow:hidden;
     position:absolute;
-    z-index: 2000;
+    z-index: 1900;
     width: 100%;
     height: 100%;
     opacity: 0;
-    bottom: 0%;
+/*    bottom: 0%;*/
     visibility: hidden;
-    animation-duration: 4s;
+    animation-duration: 5s;
     animation-timing-function: ease-out;
     animation-delay: 0s;
     animation-iteration-count: 1;
-    animation-name: fadeOutNleave;
+    animation-name: fadeOut;
 }
 .logo-container {
     background-color: transparent;
@@ -916,22 +937,22 @@ a.phone {
 }
 
 @keyframes fadeOutNleave {
-  0%   { opacity : 1;  visibility: visible; }
-  50%  { opacity: 1; bottom: 0%; }
+  0%   { opacity: 1; visibility: visible; top: 50%; }
+  50%  { opacity: 1; top: 50%; }
   75%  { opacity: 0.9;  }
   90%  { opacity: 0.8;  }
-  100% { opacity: 0; bottom: 100%; }
+  100% { opacity: 0.7; top: -50%; }
 }
 @keyframes fadeOutNleaveMob {
   0%   { transform: translateY(100%)  }
   100% { transform: translateY(-120%)  }
 }
 @keyframes fadeOut {
-  0%   { opacity : 1;   background-color: #ffffff;  }
-  50%  { opacity: 1;    background-color: #ffffff;}
-  75%  { opacity: 0.9;  background-color: #ffffff;  }
-  90%  { opacity: 0.8;  background-color: #ffffff;  }
-  100% { opacity: 0;    background-color: transparent;   }
+  0%   { opacity: 1; visibility: visible;  }
+  50%  { opacity: 0.9; }
+  75%  { opacity: 0.8; }
+  90%  { opacity: 0.7; }
+  100% { opacity: 0.6; }
 }
 @keyframes fadeIn {
   0%   { opacity : 1;   }
@@ -947,39 +968,23 @@ a.phone {
 
 
 @media only screen and (max-width: 600px) {
-  body {
-    min-height: 100vh;
-    /* min-height: -moz-available;
-    min-height: -webkit-fill-available;
-    min-height: fill-available; */
-  }
-  /* html {
-    height: -webkit-fill-available;
-  } */
+  body { min-height: 100vh; }
   .App,
   .App-Header,
   .menu,
   .dropdown-content,
-  .site-page {
-    width: 100%;
-  }
-  .App-footer {
-      font-size:1em;
-      justify-content: flex-start;
-  }
+  .site-page { width: 100%; }
+  .App-footer { font-size:1em; justify-content: flex-start; }
   .bg {
       background-attachment: scroll;
   }
   .bg-a1 {
     background-image: linear-gradient(rgba(0,0,0,0.6), 15%, transparent), url('./images/bg-header.jpeg');
   }
-  .section {
-     /* height: calc(100vh - calc(100vh - 100%)); */
-     /* min-height: 100vh;
-     min-height: -moz-available;
-     min-height: -webkit-fill-available;
-     min-height: fill-available; */
-  }
+  /*.section {
+    height: 100vh;
+    min-height: -webkit-fill-available;
+  }*/
   .section-text {
     margin: 10px auto;
     font-size: 1.4em;
@@ -989,13 +994,11 @@ a.phone {
   .emailtext,
   .addresstext { font-size:16px; }
   .mainlogo {
-    /* height: 300px; */
     width: 100%;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
-    /* transform: translateX(-50%); */
     left:50%;
     display: block;
   }
@@ -1003,6 +1006,9 @@ a.phone {
     display:none;
   }
   .moboff { display: none}
+  .disclaimer {
+    height: 10vh;
+  }
   .mainpic {
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -1058,7 +1064,7 @@ a.phone {
   }
   .text strong { text-align: center; padding: 15px 5px; }
   .about_tag {
-      top:51%;
+      top:55%;
       left:50%;
       transform:translateX(-50%);
       padding: 10px;
