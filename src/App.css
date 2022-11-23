@@ -297,7 +297,7 @@ html {
   display: block;
   margin: auto;
   position:relative;
-  height: 2px;
+  height: 3px;
   width: 0;
   top: 5px;
   left: 0;
@@ -892,12 +892,12 @@ a.phone {
     z-index: 2000;
     opacity: 0;
     top: 50%;
-    transform:translateY(-50%);
+    left: 50%;
+    transform:translate(-50%,-50%);
     height: 50%;
-/*    background-color: #fff;*/
     animation-duration: 3s;
     animation-timing-function: ease-out;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-iteration-count: 1;
     animation-name: fadeOutNleave;
 }
@@ -911,13 +911,13 @@ a.phone {
     align-items: center;
     overflow:hidden;
     position:absolute;
-    z-index: 1900;
+    z-index: 1500;
     width: 100%;
     height: 100%;
     opacity: 0;
 /*    bottom: 0%;*/
     visibility: hidden;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-timing-function: ease-out;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -928,6 +928,7 @@ a.phone {
     position:relative;
     width:100%;
     height:100vh;
+
 }
 .css-1gdwtqt-MuiAccordionSummary-content.Mui-expanded {
     margin: 10px 0 !important;
@@ -949,10 +950,10 @@ a.phone {
 }
 @keyframes fadeOut {
   0%   { opacity: 1; visibility: visible;  }
-  50%  { opacity: 0.9; }
-  75%  { opacity: 0.8; }
-  90%  { opacity: 0.7; }
-  100% { opacity: 0.6; }
+  50%  { opacity: 1; }
+  80%  { opacity: 1; }
+  90%  { opacity: 0.5; }
+  100% { opacity: 0.1; }
 }
 @keyframes fadeIn {
   0%   { opacity : 1;   }

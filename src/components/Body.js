@@ -37,14 +37,13 @@ function Body(props) {
           <div className="section bg bg-a1" >
               <div className="about" ref={ref0}>
                 <div className="logo-container">
-                    <div className="logo-bg">
-                        <img src={logo} alt="Seaspire Maritime" className="seaspire-logo" />
-                    </div>
+                    <img src={logo} alt="Seaspire Maritime" className="seaspire-logo" />
+                    <div className="logo-bg"></div>                  
                 </div>
-                <Fade in={inView0} timeout={2000} style={{ transitionDelay: '1000ms' }}>
+                <Fade in={inView0} timeout={1500} style={{ transitionDelay: '0ms' }}>
                     <img src={sm} alt="Seaspire Maritime" className="sm-official" />
                 </Fade>
-                <Fade in={inView0} timeout={2000} style={{ transitionDelay: '2000ms' }}>
+                <Fade in={inView0} timeout={1500} style={{ transitionDelay: '0ms' }}>
                     <p className="about_tag" >
                         <span className="sea">Sea</span>-<span className="spire">spire</span>:
                         <br/><i>noun [sē - spī(ə)r]</i>

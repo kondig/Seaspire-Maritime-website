@@ -76,29 +76,34 @@ function TabPanel(props) {
                         </Box>
                       </Fade>
                       <Box boxShadow={0} display={{ xs: 'none', sm:props.discard, md:props.discard, lg:props.discard, xl:props.discard }} sx={{ justifyContent: 'flex-end' }} ref={containerRef}>
-                          <Card sx={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', alignItems: 'center', width: {xs:'90%',sm:'80%',md:'70%',lg:'65%',xl:'60%'},
+                          <Card sx={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', alignItems: 'center', width: {xs:'90%',sm:'80%',md:'60%',lg:'50%',xl:'45%'},
                                       backgroundColor:'transparent', boxShadow:'0px 0px', }}>
                             <Box sx={{ display: 'flex', flexDirection: 'column', backgroundColor:'transparent' }} >
                               <CardContent sx={{ padding: '5px', paddingBottom: '5px !important' }}>
-                                <Typography component="div" variant="h5" sx={{ color:theme.palette.primary.main, textShadow: '1px 1px 1px #000',
-                                                                               fontWeight: '700', margin: '10px 5px'}}>
+                                <Typography component="div" variant="h5" sx={{ color:theme.palette.primary.main, fontWeight: '700', margin: '10px 0px'}}>
                                   {props.service}
                                 </Typography>
                                 <Typography variant="subtitle1" color="text.secondary" component="div"
-                                            sx={{ color:'#ffffff', fontSize: {xs:'0.8em', sm:'0.9em', md:'1em',lg:'1.1em',xl:'1.2em'},
-                                                  textShadow: '1px 1px 1px #000', textAlign:'center', margin: '10px 5px !important'}}>
+                                            sx={{ color:'#ffffff', fontSize: {xs:'0.8em', sm:'0.9em', md:'1em',lg:'1em',xl:'1.1em'},
+                                                  textShadow: '1px 1px 1px #000', textAlign:'center', margin: '10px 0px !important'}}>
                                   {props.desc}
                                 </Typography>
                               </CardContent>
                             </Box>
                             <Slide direction="left" container={containerRef.current} appear={true} in={true} timeout={1000}>
-                                <CardMedia
+                                {/*<CardMedia
                                   component="img"
                                   sx={{ width: {xs:'90%',sm:'80%',md:'450px',lg:'500px',xl:'550px'}, borderRadius: '10px', }}
                                   image={props.image}
                                   alt={props.service}
                                   title={props.service}
-                                />
+                                />*/}
+                                <Box sx={{ display: 'flex', justifyContent:'space-around', flexDirection:'column', alignItems:'center', width: '100%',
+                                           backgroundSize:'cover', backgroundRepeat:'no-repeat', backgroundPosition:'center',
+                                           height:{sm:300,md:330,lg:370,xl:420},
+                                           backgroundImage: `url(${props.image})`,
+                                }}>
+                               </Box>
                             </Slide>
                           </Card>
                       </Box>
@@ -182,11 +187,11 @@ export default function STabs(props) {
       <Tabs value={value} onChange={handleChange} textColor="primary" orientation={'vertical'}
                           scrollButtons="auto" sx={{ width:{xs:'35vw',sm:'30vw', md:'25vw', lg:'20vw', xl:'15vw'}, borderRight: 1, borderColor: 'divider', textAlign:'left',
                                                      marginTop:{xs:'15vh', sm:0, md:0, lg:0, xl:0}, alignSelf: {xs:'flex-start', sm:'center',md:'center', lg:'center', xl:'center'} }}>
-        <Tab label={items[0].title} {...a11yProps(0)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
-        <Tab label={items[1].title} {...a11yProps(1)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
-        <Tab label={items[2].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
-        <Tab label={items[3].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
-        <Tab label={items[4].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textShadow:'1px 1px 1px #000', textTransform:'initial', padding:{xs:'15px 5px'}}} />
+        <Tab label={items[0].title} {...a11yProps(0)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textTransform:'initial', padding:{xs:'15px 5px'}}} />
+        <Tab label={items[1].title} {...a11yProps(1)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textTransform:'initial', padding:{xs:'15px 5px'}}} />
+        <Tab label={items[2].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textTransform:'initial', padding:{xs:'15px 5px'}}} />
+        <Tab label={items[3].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textTransform:'initial', padding:{xs:'15px 5px'}}} />
+        <Tab label={items[4].title} {...a11yProps(2)} sx={{ width:'100%', color: '#ffffff', fontSize:{xs:'0.8em',sm:'1em', md:'1.2em', lg:'1.4em', xl:'1.6em'}, textTransform:'initial', padding:{xs:'15px 5px'}}} />
       </Tabs>
       <SwipeableViews
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}

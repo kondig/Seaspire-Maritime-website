@@ -25,6 +25,7 @@ yarn-error.log*
 /src/images/*.jpg
 /src/components/slider/*.jpg
 /src/components/carousel/*.jpg
+/public/*.png
 
 #SMTP
 /api/config.js
