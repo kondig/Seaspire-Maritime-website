@@ -76,7 +76,8 @@ function TabPanel(props) {
                         </Box>
                       </Fade>
                       <Box boxShadow={0} display={{ xs: 'none', sm:props.discard, md:props.discard, lg:props.discard, xl:props.discard }} sx={{ justifyContent: 'flex-end' }} ref={containerRef}>
-                          <Card sx={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', alignItems: 'center', width: {xs:'90%',sm:'80%',md:'60%',lg:'50%',xl:'45%'},
+                          <Card sx={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', alignItems: 'center', 
+                                      width: {xs:'90%',sm:'80%',md:'70%',lg:'50%',xl:'45%'},
                                       backgroundColor:'transparent', boxShadow:'0px 0px', }}>
                             <Box sx={{ display: 'flex', flexDirection: 'column', backgroundColor:'transparent' }} >
                               <CardContent sx={{ padding: '5px', paddingBottom: '5px !important' }}>
@@ -84,7 +85,7 @@ function TabPanel(props) {
                                   {props.service}
                                 </Typography>
                                 <Typography variant="subtitle1" color="text.secondary" component="div"
-                                            sx={{ color:'#ffffff', fontSize: {xs:'0.8em', sm:'0.9em', md:'1em',lg:'1em',xl:'1.1em'},
+                                            sx={{ color:'#ffffff', fontSize: {xs:'0.8em',sm:'0.9em',md:'0.9em',lg:'1em',xl:'1.1em'},
                                                   textShadow: '1px 1px 1px #000', textAlign:'center', margin: '10px 0px !important'}}>
                                   {props.desc}
                                 </Typography>
@@ -100,7 +101,7 @@ function TabPanel(props) {
                                 />*/}
                                 <Box sx={{ display: 'flex', justifyContent:'space-around', flexDirection:'column', alignItems:'center', width: '100%',
                                            backgroundSize:'cover', backgroundRepeat:'no-repeat', backgroundPosition:'center',
-                                           height:{sm:300,md:330,lg:370,xl:420},
+                                           height:{sm:300,md:300,lg:370,xl:420},
                                            backgroundImage: `url(${props.image})`,
                                 }}>
                                </Box>

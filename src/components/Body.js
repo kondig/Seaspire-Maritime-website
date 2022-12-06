@@ -19,10 +19,10 @@ import { useInView } from 'react-intersection-observer';
 
 function Body(props) {
 
-    const [ref0, inView0] = useInView({ threshold: 0.3 });
-    const [ref1, inView1] = useInView({ threshold: 0.3 });
-    const [ref2, inView2] = useInView({ threshold: 0.3 });
-    const [ref3, inView3] = useInView({ threshold: 0.3 });
+    const [ref0, inView0] = useInView({ threshold: 0.6 });
+    const [ref1, inView1] = useInView({ threshold: 0.6 });
+    const [ref2, inView2] = useInView({ threshold: 0.6 });
+    const [ref3, inView3] = useInView({ threshold: 0.6 });
     // const ref0 = React.useRef();
     // const ref1 = React.useRef();
     // const ref2 = React.useRef();
