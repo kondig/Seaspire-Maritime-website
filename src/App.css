@@ -11,8 +11,8 @@
 }
 
 html {
-    scrollbar-color: #3d5ba6 #e0e0e0;
-    scrollbar-width: thin;
+  scrollbar-color: #3d5ba6 #e0e0e0;
+  scrollbar-width: thin;
 }
 .App {
   text-align: center;
@@ -1190,7 +1190,7 @@ a.phone {
         padding: 2px;
     }
     .news-title {
-      top: 10vh;
+      top: 15vh;
     }
     .sm-official {
         width: 30vw;

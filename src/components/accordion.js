@@ -14,8 +14,42 @@ function SmAccordion() {
   };
 
   return (
-    <Box sx={{ zIndex:'1000', }}>
+    <Box sx={{ zIndex:'1000', overflowY:'scroll', height:'50vh', scrollbarWidth: 'none' }}>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
+          aria-controls="panel1bh-content" id="panel1bh-header"
+        >
+          <Typography color='primary' sx={{ width: '25%', flexShrink: 0, fontSize: '0.8rem', textAlign: 'left' }}>2023 May</Typography>
+          <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>Delphi Economic Forum VIII</Typography>
+        </AccordionSummary>
+        <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
+          <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
+            Navigating challenges in the world of shipping.
+            <br/><a href="https://www.youtube.com/watch?v=I3d4GysFG4I"
+                    target="_blank" rel="noopener noreferrer" className="news-link">
+                Watch the video
+            </a>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+        <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
+          aria-controls="panel1bh-content" id="panel1bh-header"
+        >
+          <Typography color='primary' sx={{ width: '25%', flexShrink: 0, fontSize: '0.8rem', textAlign: 'left' }}>2023 May</Typography>
+          <Typography sx={{ color: 'text.primary', fontSize: '0.9rem' }}>Interview at Nafteboriki</Typography>
+        </AccordionSummary>
+        <AccordionDetails sx={{padding:{xs:'5px 10px 10px', md:'8px 16px 16px'}}}>
+          <Typography sx={{ textAlign: 'left', fontSize:'0.8rem', lineHeight:'1.2' }}>
+            Γ. Καραούζας (Seaspire Maritime): H ναυτιλία θέλει «βουτιά», δεν παίζεις με όρους στεριανούς.
+            <br/><a href="https://www.naftemporiki.gr/afieromata/naftilia-afieromata/1467091/g-karaoyzas-seaspire-maritime-i-naytilia-thelei-voytia-den-paizeis-me-oroys-sterianoys/"
+                    target="_blank" rel="noopener noreferrer" className="news-link">
+                Watch the interview
+            </a>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel1bh-content" id="panel1bh-header"
         >
@@ -32,7 +66,7 @@ function SmAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel2bh-content" id="panel2bh-header"
         >
@@ -49,7 +83,7 @@ function SmAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+      <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel3bh-content" id="panel3bh-header"
         >
@@ -63,7 +97,7 @@ function SmAccordion() {
             </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+      <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel4bh-content" id="panel4bh-header"
         >
@@ -77,7 +111,7 @@ function SmAccordion() {
             </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+      <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel5bh-content" id="panel5bh-header"
         >
@@ -94,7 +128,7 @@ function SmAccordion() {
             </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+      <Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel6bh-content" id="panel6bh-header"
         >
@@ -111,7 +145,7 @@ function SmAccordion() {
             </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
+      <Accordion expanded={expanded === 'panel9'} onChange={handleChange('panel9')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel7bh-content" id="panel7bh-header"
         >
@@ -128,7 +162,7 @@ function SmAccordion() {
             </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')}>
+      <Accordion expanded={expanded === 'panel10'} onChange={handleChange('panel10')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel8bh-content" id="panel8bh-header"
         >
@@ -142,7 +176,7 @@ function SmAccordion() {
             </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel9'} onChange={handleChange('panel9')}>
+      <Accordion expanded={expanded === 'panel11'} onChange={handleChange('panel11')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel9bh-content" id="panel9bh-header"
         >
@@ -156,7 +190,7 @@ function SmAccordion() {
             </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel10'} onChange={handleChange('panel10')}>
+      <Accordion expanded={expanded === 'panel12'} onChange={handleChange('panel12')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel10bh-content" id="panel10bh-header"
         >
@@ -170,7 +204,7 @@ function SmAccordion() {
             </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel11'} onChange={handleChange('panel11')}>
+      <Accordion expanded={expanded === 'panel13'} onChange={handleChange('panel13')}>
         <AccordionSummary sx={{width:'100%', alignItems:'center'}} expandIcon={<ExpandMoreIcon sx={{padding:'5px'}}/>}
           aria-controls="panel11bh-content" id="panel11bh-header"
         >
